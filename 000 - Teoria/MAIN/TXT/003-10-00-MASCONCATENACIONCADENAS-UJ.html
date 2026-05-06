@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>003-10-00-MASCONCATENACIONCADENAS-UJ</title>
+        </head>
+        <body>
+            <p>
+    ¿Qué es la Concatenación de Cadenas?<br>
+- La concatenación de cadenas es el proceso de unir dos o más cadenas para formar una nueva cadena. En Java, existen varios métodos para concatenar cadenas, cada uno con sus propias características y usos.<br>
+<br>
+Métodos de Concatenación en Java<br>
+&emsp;1. Operador +<br>
+&emsp;2. Método concat()<br>
+&emsp;3. Clase StringBuilder<br>
+&emsp;4. Clase StringBuffer<br>
+&emsp;5. Método String.join()<br>
+<br>
+1. Operador +<br>
+- El operador + es el método más sencillo y común para concatenar cadenas en Java. Es fácil de usar y leer.<br>
+&emsp;Sintaxis:<br>
+&emsp;&emsp;String resultado = cadena1 + cadena2;<br>
+- Ejemplo:<br>
+&emsp;public class ConcatenacionOperador {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var saludo = "Hola";<br>
+&emsp;&emsp;&emsp;var nombre = "Mundo";<br>
+&emsp;&emsp;&emsp;var mensaje = saludo + ", " + nombre + "!";<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+- De momento sólo estudiaremos la concatenación usando el operador +, sin embargo, les agregamos más formas de realizar concatenaciones y en el tema de Manejo de Cadenas profundizaremos en el uso de estos métodos. Así que sólo les dejamos estas formas de concatenar como referencia.<br>
+<br>
+2. Método concat()<br>
+- El método concat() de la clase String concatena la cadena especificada al final de la cadena actual.<br>
+&emsp;Sintaxis:<br>
+&emsp;&emsp;String resultado = cadena1.concat(cadena2);<br>
+- Ejemplo:<br>
+&emsp;public class ConcatenacionConcat {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var saludo = "Hola";<br>
+&emsp;&emsp;&emsp;var nombre = "Mundo";<br>
+&emsp;&emsp;&emsp;var mensaje = saludo.concat(", ").concat(nombre).concat("!");<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+3. Clase StringBuilder<br>
+- StringBuilder es más eficiente para concatenaciones repetitivas y en bucles, ya que es mutable y no crea nuevas instancias de cadena.<br>
+&emsp;Sintaxis:<br>
+&emsp;&emsp;var sb = new StringBuilder();<br>
+&emsp;&emsp;sb.append(cadena1);<br>
+&emsp;&emsp;sb.append(cadena2);<br>
+&emsp;&emsp;var resultado = sb.toString();<br>
+- Ejemplo:<br>
+&emsp;public class ConcatenacionStringBuilder {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var saludo = "Hola";<br>
+&emsp;&emsp;&emsp;var nombre = "Mundo";<br>
+&emsp;&emsp;&emsp;var sb = new StringBuilder();<br>
+&emsp;&emsp;&emsp;sb.append(saludo);<br>
+&emsp;&emsp;&emsp;sb.append(", ");<br>
+&emsp;&emsp;&emsp;sb.append(nombre);<br>
+&emsp;&emsp;&emsp;sb.append("!");<br>
+&emsp;&emsp;&emsp;String mensaje = sb.toString();<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+4. Clase StringBuffer<br>
+- StringBuffer es similar a StringBuilder, pero es seguro para hilos (thread-safe), lo que lo hace adecuado para entornos multihilo.<br>
+&emsp;Sintaxis:<br>
+&emsp;&emsp;var sb = new StringBuffer();<br>
+&emsp;&emsp;sb.append(cadena1);<br>
+&emsp;&emsp;sb.append(cadena2);<br>
+&emsp;&emsp;var resultado = sb.toString();<br>
+- Ejemplo:<br>
+&emsp;public class ConcatenacionStringBuffer {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var saludo = "Hola";<br>
+&emsp;&emsp;&emsp;var nombre = "Mundo";<br>
+&emsp;&emsp;&emsp;var sb = new StringBuffer();<br>
+&emsp;&emsp;&emsp;sb.append(saludo);<br>
+&emsp;&emsp;&emsp;sb.append(", ");<br>
+&emsp;&emsp;&emsp;sb.append(nombre);<br>
+&emsp;&emsp;&emsp;sb.append("!");<br>
+&emsp;&emsp;&emsp;var mensaje = sb.toString();<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+5. Método String.join()<br>
+- String.join() es útil cuando se necesita unir una colección de cadenas con un delimitador.<br>
+&emsp;Sintaxis:<br>
+&emsp;&emsp;var resultado = String.join(delimitador, cadena1, cadena2);<br>
+- Ejemplo:<br>
+&emsp;public class ConcatenacionJoin {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var saludo = "Hola";<br>
+&emsp;&emsp;&emsp;var nombre = "Mundo";<br>
+&emsp;&emsp;&emsp;var mensaje = String.join(", ", saludo, nombre) + "!";<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Ventajas y Desventajas
+</p>
+<table>
+	<tbody>
+		<tr class="even ">
+			<td>Método</td>
+			<td>Ventajas</td>
+			<td>Desventajas</td>
+		</tr>
+		<tr class="odd ">
+			<td>+</td>
+			<td>Simple y legible</td>
+			<td>Ineficiente para muchas concatenaciones</td>
+		</tr>
+		<tr class="odd ">
+			<td>concat()</td>
+			<td>Método específico de String</td>
+			<td>Similar a + en términos de eficiencia</td>
+		</tr>
+		<tr class="odd ">
+			<td>StringBuilder</td>
+			<td>Eficiente para muchas concatenaciones, mutable</td>
+			<td>No es seguro para hilos</td>
+		</tr>
+		<tr class="odd ">
+			<td>StringBuffer</td>
+			<td>Eficiente y seguro para hilos</td>
+			<td>Ligeramente más lento que StringBuilder debido a la sincronización</td>
+		</tr>
+		<tr class="odd ">
+			<td>String.join()</td>
+			<td>Útil para unir múltiples cadenas con un delimitador</td>
+			<td>Menos flexible para concatenaciones complejas</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+Conclusión<br>
+- La concatenación de cadenas es una operación común en Java, y es importante conocer las diferentes formas de realizarla y cuándo usar cada método. + y concat() son sencillos y legibles, mientras que StringBuilder y StringBuffer son más eficientes para operaciones repetitivas. String.join() es útil para unir colecciones de cadenas con un delimitador.<br>
+<br>
+Recursos Adicionales<br>
+&emsp;• Java Documentation - String<br>
+&emsp;• Java Documentation - StringBuilder<br>
+&emsp;• Java Documentation - StringBuffer<br>
+- Estos recursos proporcionan información detallada sobre las clases y métodos utilizados para la concatenación de cadenas en Java.<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                < = <
+                > = >
+            -->

@@ -1,0 +1,39 @@
+/*Cuerpo del documento*/
+body {
+    background-color: gainsboro;
+}
+
+/*Título*/
+.titulo_enlace {
+    font-size: 35px;
+    font-weight:bold;
+    text-align: center;
+}
+
+/*Botón "Cerrar"*/
+#cerrar {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/*Botón "Cerrar" al pasar por encima*/
+#cerrar:hover {
+    color: white;
+    background-color: red;
+}
+
+/*Cuadro donde se muestra la info de la información*/
+#datos {
+    width: 95%;
+    margin-left: 2%;
+    height: 800px;
+    overflow: hidden;
+    border: 10px double #000;
+    border-radius: 15px;
+}

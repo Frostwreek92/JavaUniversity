@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>004-08-00-FORMATOCADENAS-UJ</title>
+        </head>
+        <body>
+            <p>
+    public class FormateoCadenas {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Formateo de Cadenas ***");<br>
+&emsp;&emsp;var nombre = "Matías";<br>
+&emsp;&emsp;var edad = 35;<br>
+&emsp;&emsp;var salario = 21000.50;<br>
+<br>
+&emsp;&emsp;// String.format<br>
+&emsp;&emsp;var mensaje = String.format("Nombre: %s, Edad: %d, Salario: $%.2f"<br>
+&emsp;&emsp;&emsp;&emsp;,nombre, edad, salario);<br>
+&emsp;&emsp;System.out.println(mensaje);<br>
+<br>
+&emsp;&emsp;// Metodo printf<br>
+&emsp;&emsp;System.out.printf("Nombre: %s, Edad: %d, Salario: $%.2f%n",<br>
+&emsp;&emsp;&emsp;&emsp;nombre, edad, salario);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

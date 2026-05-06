@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>002-14-00-EJEMPLOTIPOVAR-UJ</title>
+        </head>
+        <body>
+            <p>
+    public class TipoVar {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Uso de var en Java ***");<br>
+&emsp;&emsp;// Sin el uso de var<br>
+&emsp;&emsp;String nombre1 = "Juan";<br>
+&emsp;&emsp;System.out.println("nombre1 = " + nombre1);<br>
+&emsp;&emsp;// Con el uso de var<br>
+&emsp;&emsp;var nombre2 = "Carlos";<br>
+&emsp;&emsp;System.out.println("nombre2 = " + nombre2);<br>
+&emsp;&emsp;// Definir otras variables usando<br>
+&emsp;&emsp;var edad = 30; // Se infiere el tipo int<br>
+&emsp;&emsp;System.out.println("edad = " + edad);<br>
+&emsp;&emsp;var sueldo = 5000.5F; // Se infiere tipo float<br>
+&emsp;&emsp;var esCasado = false; // Se infiere tipo boolean<br>
+&emsp;&emsp;esCasado = true;<br>
+&emsp;&emsp;//esCasado = "No"; No podemos asignar un tipo distinto<br>
+<br>
+&emsp;&emsp;// Se debe definir su valor<br>
+&emsp;&emsp;//var precio; esto lanza un error, tenemos asignar un valor<br>
+&emsp;&emsp;//precio = 10;<br>
+<br>
+&emsp;&emsp;// Se debe poder inferir el tipo de dato<br>
+&emsp;&emsp;//var apellido = null; no se puede inferir el tipo de dato<br>
+&emsp;&emsp;<br>
+&emsp;&emsp;<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

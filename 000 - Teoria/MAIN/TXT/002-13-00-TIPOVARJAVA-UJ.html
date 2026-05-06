@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>002-13-00-TIPOVARJAVA-UJ</title>
+        </head>
+        <body>
+            <p>
+    Introducción a var en Java<br>
+- El tipo var fue introducido en Java 10 como una forma de inferencia de tipos en variables locales. Permite a los desarrolladores declarar variables sin especificar explícitamente su tipo, haciendo que el código sea más conciso y legible.<br>
+<br>
+Sintaxis Básica de var<br>
+- La sintaxis para usar var es muy sencilla. Simplemente reemplaza el tipo de la variable con var y deja que el compilador infiera el tipo basándose en el valor inicial asignado.<br>
+&emsp;// Sintaxis uso var<br>
+&emsp;var variableName = value;<br>
+<br>
+- Ejemplos de Uso de var<br>
+&emsp;public class EjemploVar {<br>
+&emsp;&emsp;public static void main (String[] args) {<br>
+&emsp;&emsp;&emsp;// Inferencia de tipo para un entero<br>
+&emsp;&emsp;&emsp;var numero = 10;<br>
+&emsp;&emsp;&emsp;System.out.println("Número: " + numero);<br>
+<br>
+&emsp;&emsp;&emsp;// Inferencia de tipo para una cadena<br>
+&emsp;&emsp;&emsp;var mensaje = "Hola, Mundo!";<br>
+&emsp;&emsp;&emsp;System.out.println("Mensaje: " + mensaje);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- Limitaciones y Reglas de Uso de var<br>
+&emsp;1. Solo para Variables Locales:<br>
+&emsp;&emsp;o var solo puede ser usado en variables locales dentro de métodos, inicializadores de bucles, y bloques de inicialización. Los bucles (ciclos) y bloques de inicialización los estudiaremos a detalle más adelante.<br>
+&emsp;&emsp;o No puede ser usado para variables de clase, variables de instancia, o parámetros de métodos. El tema de clases y objectos lo estudiaremos a detalle más adelante.<br>
+&emsp;2. Debe ser Inicializada al Declararse:<br>
+&emsp;&emsp;o La variable debe ser inicializada en la misma línea donde se declara.<br>
+&emsp;&emsp;o Ejemplo Incorrecto:<br>
+&emsp;&emsp;&emsp;var numero; // Error: La variable debe ser inicializada<br>
+&emsp;&emsp;&emsp;numero = 10;<br>
+&emsp;3. El Tipo Debe ser Inferrible:<br>
+&emsp;&emsp;o El compilador debe ser capaz de inferir el tipo de la variable a partir del valor asignado.<br>
+&emsp;&emsp;o Ejemplo Incorrecto:<br>
+&emsp;&emsp;&emsp;var lista = null; // Error: No se puede inferir el tipo<br>
+<br>
+- Buenas Prácticas al Usar var<br>
+&emsp;1. Claridad del Código:<br>
+&emsp;&emsp;o Usa var solo cuando la inferencia del tipo sea obvia y clara para otros desarrolladores que lean el código.<br>
+&emsp;&emsp;o Ejemplo:<br>
+&emsp;&emsp;&emsp;var nombre = "Juan"; // Claro: el tipo es obviamente String<br>
+&emsp;2. Evita Usar var para Tipos Complejos:<br>
+&emsp;&emsp;o Si el tipo no es evidente a primera vista, considera declarar el tipo explícitamente para mejorar la legibilidad.<br>
+&emsp;&emsp;o Ejemplo:<br>
+&emsp;&emsp;&emsp;Map&lt;String, List&lt;Integer&gt;&gt; mapa = new HashMap&lt;&gt;(); // Más claro que usar 'var'<br>
+&emsp;&emsp;&emsp;El uso de HashMap y el tema de colecciones lo estudiaremos a detalle posteriormente.<br>
+Conlusión<br>
+- El uso de var en Java puede hacer que tu código sea más limpio y conciso, pero es importante usarlo de manera adecuada para mantener la claridad y legibilidad del código. Recuerda que var es solo una herramienta para la inferencia de tipos y no reemplaza la necesidad de una buena documentación y un código bien estructurado.<br>
+<br>
+Recursos Adicionales<br>
+&emsp;• Java 10 Local Variable Type Inference (var)<br>
+&emsp;• Java 21 Documentation<br>
+- Estos recursos te proporcionarán más información sobre el uso de var y otras características avanzadas en Java.<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

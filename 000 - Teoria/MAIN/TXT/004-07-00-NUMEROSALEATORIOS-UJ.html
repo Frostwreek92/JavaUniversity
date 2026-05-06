@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>004-07-00-NUMEROSALEATORIOS-UJ</title>
+        </head>
+        <body>
+            <p>
+    Lección: Generación de Números Aleatorios en Java<br>
+- En esta lección, aprenderemos a generar números aleatorios en Java utilizando la clase Random del paquete java.util. Veremos la sintaxis, ejemplos prácticos y discutiremos las diversas formas de generar números aleatorios en diferentes rangos.<br>
+<br>
+Introducción a la Clase Random<br>
+- La clase Random en Java se utiliza para generar números aleatorios. Esta clase proporciona métodos para generar diferentes tipos de números aleatorios, como enteros, flotantes, y booleanos.<br>
+<br>
+Importar la Clase Random<br>
+- Para utilizar la clase Random, primero debemos importarla del paquete java.util:<br>
+&emsp;import java.util.Random;<br>
+<br>
+Creación de una Instancia de Random<br>
+- A continuación, creamos una instancia de la clase Random:<br>
+&emsp;Random random = new Random();<br>
+<br>
+Generación de Números Aleatorios<br>
+&emsp;1. Generar un Número Entero Aleatorio<br>
+&emsp;- Para generar un número entero aleatorio dentro de un rango específico, utilizamos el método nextInt.<br>
+&emsp;&emsp;/* Generar un número aleatorio entre 0 y 9 */<br>
+&emsp;&emsp;int numeroAleatorio = random.nextInt(10);<br>
+&emsp;&emsp;/* Agregar 1 para obtener un rango de 1 a 10 */<br>
+&emsp;&emsp;int numeroEntre1y10 = random.nextInt(10) + 1;<br>
+&emsp;&emsp;System.out.println("Número aleatorio entre 1 y 10: " + numeroEntre1y10);<br>
+<br>
+&emsp;2. Generar un Número de Punto Flotante Aleatorio<br>
+&emsp;- Para generar un número de punto flotante aleatorio, utilizamos el método nextFloat o nextDouble.<br>
+&emsp;&emsp;/* Generar un número de punto flotante aleatorio entre 0.0 y 1.0 */<br>
+&emsp;&emsp;float floatAleatorio = random.nextFloat();<br>
+&emsp;&emsp;System.out.println("Número flotante aleatorio: " + floatAleatorio);<br>
+&emsp;&emsp;/* Generar un número de punto flotante aleatorio entre 0.0 y 1.0 */<br>
+&emsp;&emsp;double doubleAleatorio = random.nextDouble();<br>
+&emsp;&emsp;System.out.println("Número doble aleatorio: " + doubleAleatorio);<br>
+<br>
+&emsp;3. Generar un Valor Booleano Aleatorio<br>
+&emsp;- Para generar un valor booleano aleatorio, utilizamos el método nextBoolean.<br>
+&emsp;&emsp;/* Generar un valor booleano aleatorio */<br>
+&emsp;&emsp;boolean booleanAleatorio = random.nextBoolean();<br>
+&emsp;&emsp;System.out.println("Valor booleano aleatorio: " + booleanAleatorio);<br>
+<br>
+4. Simulación de un Dado de Seis Caras<br>
+- Un ejemplo práctico es la simulación del lanzamiento de un dado de seis caras.<br>
+&emsp;/* Simular el lanzamiento de un dado de seis caras */<br>
+&emsp;int dado = random.nextInt(6) + 1;<br>
+&emsp;System.out.println("Resultado de lanzar el dado: " + dado);<br>
+<br>
+Ejemplo Completo<br>
+- A continuación, presentamos un ejemplo completo que combina los diferentes métodos de generación de números aleatorios:<br>
+&emsp;import java.util.Random;<br>
+<br>
+&emsp;public class GeneracionNumerosAleatorios {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;Random random = new Random();<br>
+<br>
+&emsp;&emsp;&emsp;/* Generar un número entero aleatorio entre 1 y 10 */<br>
+&emsp;&emsp;&emsp;int numeroEntre1y10 = random.nextInt(10) + 1;<br>
+&emsp;&emsp;&emsp;System.out.println("Número aleatorio entre 1 y 10: " + numeroEntre1y10);<br>
+<br>
+&emsp;&emsp;&emsp;/* Generar un número de punto flotante aleatorio entre 0.0 y 1.0 */<br>
+&emsp;&emsp;&emsp;float floatAleatorio = random.nextFloat();<br>
+&emsp;&emsp;&emsp;System.out.println("Número flotante aleatorio: " + floatAleatorio);<br>
+<br>
+&emsp;&emsp;&emsp;/* Generar un número de punto flotante aleatorio entre 0.0 y 1.0 */<br>
+&emsp;&emsp;&emsp;double doubleAleatorio = random.nextDouble();<br>
+&emsp;&emsp;&emsp;System.out.println("Número doble aleatorio: " + doubleAleatorio);<br>
+<br>
+&emsp;&emsp;&emsp;/* Generar un valor booleano aleatorio */<br>
+&emsp;&emsp;&emsp;boolean booleanAleatorio = random.nextBoolean();<br>
+&emsp;&emsp;&emsp;System.out.println("Valor booleano aleatorio: " + booleanAleatorio);<br>
+<br>
+&emsp;&emsp;&emsp;/* Simular el lanzamiento de un dado de seis caras */<br>
+&emsp;&emsp;&emsp;int dado = random.nextInt(6) + 1;<br>
+&emsp;&emsp;&emsp;System.out.println("Resultado de lanzar el dado: " + dado);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Consideraciones Adicionales<br>
+&emsp;1. Semilla del Generador de Números Aleatorios:<br>
+&emsp;&emsp;o La clase Random utiliza una semilla para generar números aleatorios. Si no se proporciona una semilla explícita, se utiliza la hora actual del sistema.<br>
+&emsp;&emsp;o Para reproducir la misma secuencia de números aleatorios, se puede proporcionar una semilla fija: Random random = new Random(12345);.<br>
+&emsp;2. Uso de ThreadLocalRandom:<br>
+&emsp;&emsp;o En aplicaciones concurrentes, se recomienda usar ThreadLocalRandom para mejorar el rendimiento.<br>
+&emsp;&emsp;o Ejemplo: int numeroAleatorio = ThreadLocalRandom.current().nextInt(1, 11);.<br>
+&emsp;&emsp;o El tema de hilos lo estudiaremos a detalle en el tema de Manejo de Hilos más adelante. Esto es solo para que sepan que se puede utilizar y mejorar la generación de números aleatorios para hacerlo aún más real.<br>
+<br>
+Conclusión<br>
+- La generación de números aleatorios es una funcionalidad fundamental en muchas aplicaciones, desde simulaciones y juegos hasta pruebas y algoritmos. La clase Random en Java proporciona una forma fácil y flexible de generar números aleatorios de diferentes tipos. Con esta lección, ahora sabes cómo utilizar esta clase para generar números aleatorios en tus programas Java.<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>006-12-00-OPERADORTERNARIO-UJ</title>
+        </head>
+        <body>
+            <p>
+    Operador Ternario en Java<br>
+- El operador ternario en Java es una forma concisa de realizar una operación if-else en una sola línea. Este operador es especialmente útil para asignar valores a variables basándose en una condición.<br>
+<br>
+Sintaxis del Operador Ternario<br>
+- La sintaxis del operador ternario es la siguiente:<br>
+&emsp;condicion ? expresion1 : expresion2;<br>
+&emsp;&emsp;• condicion: Es una expresión booleana que se evalúa.<br>
+&emsp;&emsp;• expresion1: Es el valor que se devuelve si la condición es verdadera.<br>
+&emsp;&emsp;• expresion2: Es el valor que se devuelve si la condición es falsa.<br>
+<br>
+Ejemplos Básicos<br>
+- Ejemplo 1: Determinar si un número es par o impar<br>
+&emsp;public class OperadorTernarioEjemplo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var numero = 5;<br>
+&emsp;&emsp;&emsp;var resultado = (numero % 2 == 0) ? "Par" : "Impar";<br>
+&emsp;&emsp;&emsp;System.out.println("El número " + numero + " es " + resultado);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- Ejemplo 2: Verificar si una persona es mayor de edad<br>
+&emsp;public class VerificarEdad {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var edad = 18;<br>
+&emsp;&emsp;&emsp;var mensaje = (edad &gt;= 18) ? "Eres mayor de edad" : "Eres menor de edad";<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Ejercicios Prácticos<br>
+- Ejercicio 1: Calcular el mayor de dos números<br>
+&emsp;public class MayorDeDosNumeros {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var num1 = 10;<br>
+&emsp;&emsp;&emsp;var num2 = 20;<br>
+&emsp;&emsp;&emsp;var mayor = (num1 &gt; num2) ? num1 : num2;<br>
+&emsp;&emsp;&emsp;System.out.println("El mayor de " + num1 + " y " + num2 + " es " + mayor);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Ejercicio 2: Asignar descuento basado en la membresía<br>
+&emsp;public class DescuentoMembresia {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var esMiembro = true;<br>
+&emsp;&emsp;&emsp;var descuento = esMiembro ? 0.1 : 0.05;<br>
+&emsp;&emsp;&emsp;System.out.println("Descuento aplicado: " + (descuento * 100) + "%");<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Ejemplos Avanzados<br>
+- Ejemplo 3: Evaluar una condición anidada<br>
+&emsp;public class CondicionAnidada {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var nota = 85;<br>
+&emsp;&emsp;&emsp;var calificacion = (nota &gt;= 90) ? "A" :<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   (nota &gt;= 80) ? "B" :<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   (nota &gt;= 70) ? "C" :<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   (nota &gt;= 60) ? "D" : "F";<br>
+&emsp;&emsp;&emsp;System.out.println("La calificación es " + calificacion);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- Ejemplo 4: Uso del operador ternario para inicializar una variable<br>
+&emsp;public class InicializarVariable {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;boolean esActivo = true;<br>
+&emsp;&emsp;&emsp;String estado = esActivo ? "Activo" : "Inactivo";<br>
+&emsp;&emsp;&emsp;System.out.println("El estado es " + estado);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Ejercicio Final<br>
+- Ejercicio: Determinar si un número es positivo, negativo o cero utilizando el operador ternario<br>
+&emsp;public class NumeroPositivoNegativo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var numero = -5;<br>
+&emsp;&emsp;&emsp;var resultado = (numero &gt; 0) ? "Positivo" : (numero &lt; 0) ? "Negativo" : "Cero";<br>
+&emsp;&emsp;&emsp;System.out.println("El número " + numero + " es " + resultado);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Resumen<br>
+- El operador ternario en Java es una herramienta poderosa para simplificar las operaciones if-else en una sola línea de código. Es útil para asignar valores a variables basándose en una condición, haciendo el código más legible y conciso. Sin embargo, es importante no abusar de su uso para mantener la claridad del código.<br>
+<br>
+Puntos Clave<br>
+&emsp;• Condiciones Simples: Ideal para situaciones donde una condición simple determina el valor de una variable.<br>
+&emsp;• Concisión: Reduce la cantidad de líneas de código.<br>
+&emsp;• Legibilidad: Mantiene el código limpio y legible, pero puede ser menos claro si se anida o se complica demasiado.<br>
+<br>
+¡Espero que esta lección te haya sido útil y que la hayas encontrado clara y enriquecedora!<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>004-11-00-SOLUCION-GENERADORIDUNICO-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Random;<br>
+import java.util.Scanner;<br>
+<br>
+public class GeneradorIdUnico {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Sistema Generador de ID Único ***");<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+&emsp;&emsp;var aleatorio = new Random();<br>
+<br>
+&emsp;&emsp;// Solicitamos nombre de usuario<br>
+&emsp;&emsp;System.out.print("Cual es tu nombre? ");<br>
+&emsp;&emsp;var nombre = consola.nextLine();<br>
+<br>
+&emsp;&emsp;// Solicitamos el apellido<br>
+&emsp;&emsp;System.out.print("Cual es tu apellido? ");<br>
+&emsp;&emsp;var apellido = consola.nextLine();<br>
+<br>
+&emsp;&emsp;// Solicitamos el año de nacimiento<br>
+&emsp;&emsp;System.out.print("Cual es tu año de nacimiento (YYYY)? ");<br>
+&emsp;&emsp;var anioNacimiento = consola.nextLine();<br>
+<br>
+&emsp;&emsp;// Normalizar los valores<br>
+&emsp;&emsp;var nombre2 = nombre.trim().toUpperCase().substring(0, 2);<br>
+&emsp;&emsp;var apellido2 = apellido.trim().toUpperCase().substring(0,2);<br>
+&emsp;&emsp;var anioNacimiento2 = anioNacimiento.trim().substring(2);<br>
+<br>
+&emsp;&emsp;// Generar el valor aleatorio (1 y 9999)<br>
+&emsp;&emsp;var numeroAleatorio = aleatorio.nextInt(9999) + 1;<br>
+<br>
+&emsp;&emsp;// Formato de 4 digitos<br>
+&emsp;&emsp;var numeroAleatorioFormato = String.format("%04d", numeroAleatorio);<br>
+<br>
+&emsp;&emsp;// Generar el ID Único<br>
+&emsp;&emsp;var idUnico = nombre2 + apellido2 + anioNacimiento2 + numeroAleatorioFormato;<br>
+<br>
+&emsp;&emsp;// Imprimir el ID unico<br>
+&emsp;&emsp;System.out.printf("""<br>
+&emsp;&emsp;&emsp;&emsp;%nHola %s,<br>
+&emsp;&emsp;&emsp;&emsp;\tTu nuevo número de identificación (ID) generado por el sistema es:<br>
+&emsp;&emsp;&emsp;&emsp;\t%s<br>
+&emsp;&emsp;&emsp;&emsp;\t¡Felicidades!<br>
+&emsp;&emsp;&emsp;&emsp;""", nombre, idUnico);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

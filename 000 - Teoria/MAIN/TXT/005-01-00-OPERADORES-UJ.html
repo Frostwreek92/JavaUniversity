@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>005-01-00-OPERADORES-UJ</title>
+        </head>
+        <body>
+            <p>
+    Operadores en Java<br>
+- En esta lección, aprenderemos sobre los operadores en Java. Estudiaremos cuales son los operadores más comunes en Java.<br>
+<br>
+1. Introducción a los Operadores<br>
+- En Java, los operadores son símbolos especiales que se utilizan para realizar operaciones sobre variables y valores. Los operadores más comunes se pueden agrupar en varias categorías:<br>
+&emsp;• Operadores Aritméticos: +, -, *, /, %<br>
+&emsp;• Operadores de Asignación: =, +=, -=, *=, /=, %=<br>
+&emsp;• Operadores de Comparación: ==, !=, >, &lt;, >=, &lt;=<br>
+&emsp;• Operadores Lógicos: &&, ||, !<br>
+&emsp;• Operadores Unarios: +, -, ++, --, !<br>
+&emsp;• Operadores de Incremento y Decremento: ++, --<br>
+&emsp;• Operador Condicional Ternario: ? :<br>
+&emsp;• Operadores de Bits: &, |, ^, ~, &lt;, >>, >>><br>
+<br>
+2. Operadores Aritméticos<br>
+- Los operadores aritméticos se utilizan para realizar operaciones matemáticas comunes como suma, resta, multiplicación, y división.<br>
+&emsp;• + Suma<br>
+&emsp;• - Resta<br>
+&emsp;• * Multiplicación<br>
+&emsp;• / División<br>
+&emsp;• % Módulo (resto de la división)<br>
+<br>
+- Ejemplo de Operadores Aritméticos<br>
+&emsp;public class OperadoresAritmeticos {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int a = 10;<br>
+&emsp;&emsp;&emsp;int b = 3;<br>
+&emsp;&emsp;&emsp;System.out.println("Suma: " + (a + b)); // Salida: Suma: 13<br>
+&emsp;&emsp;&emsp;System.out.println("Resta: " + (a - b)); // Salida: Resta: 7<br>
+&emsp;&emsp;&emsp;System.out.println("Multiplicación: " + (a * b)); // Salida: Multiplicación: 30<br>
+&emsp;&emsp;&emsp;System.out.println("División: " + (a / b)); // Salida: División: 3<br>
+&emsp;&emsp;&emsp;System.out.println("Módulo: " + (a % b)); // Salida: Módulo: 1<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+3. Operadores de Asignación<br>
+- Los operadores de asignación se utilizan para asignar valores a las variables.<br>
+&emsp;• = Asignación simple<br>
+&emsp;• += Suma y asignación<br>
+&emsp;• -= Resta y asignación<br>
+&emsp;• *= Multiplicación y asignación<br>
+&emsp;• /= División y asignación<br>
+&emsp;• %= Módulo y asignación<br>
+<br>
+- Ejemplo de Operadores de Asignación<br>
+&emsp;public class OperadoresAsignacion {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int a = 10;<br>
+&emsp;&emsp;&emsp;int b = 3;<br>
+&emsp;&emsp;&emsp;a += b; // a = a + b<br>
+&emsp;&emsp;&emsp;System.out.println("Suma y asignación: " + a); // Salida: 13<br>
+&emsp;&emsp;&emsp;a -= b; // a = a - b<br>
+&emsp;&emsp;&emsp;System.out.println("Resta y asignación: " + a); // Salida: 10<br>
+&emsp;&emsp;&emsp;a *= b; // a = a * b<br>
+&emsp;&emsp;&emsp;System.out.println("Multiplicación y asignación: " + a); // Salida: 30<br>
+&emsp;&emsp;&emsp;a /= b; // a = a / b<br>
+&emsp;&emsp;&emsp;System.out.println("División y asignación: " + a); // Salida: 10<br>
+&emsp;&emsp;&emsp;a %= b; // a = a % b<br>
+&emsp;&emsp;&emsp;System.out.println("Módulo y asignación: " + a); // Salida: 1<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+4. Operadores de Comparación<br>
+- Los operadores de comparación se utilizan para comparar dos valores y devuelven un valor booleano (true o false).<br>
+&emsp;• == Igual a<br>
+&emsp;• != No igual a<br>
+&emsp;• > Mayor que<br>
+&emsp;• &lt; Menor que<br>
+&emsp;• >= Mayor o igual que<br>
+&emsp;• &lt;= Menor o igual que<br>
+- Ejemplo de Operadores de Comparación<br>
+&emsp;public class OperadoresComparacion {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int a = 10;<br>
+&emsp;&emsp;&emsp;int b = 3;<br>
+&emsp;&emsp;&emsp;System.out.println("Igual a: " + (a == b)); // Salida: false<br>
+&emsp;&emsp;&emsp;System.out.println("No igual a: " + (a != b)); // Salida: true<br>
+&emsp;&emsp;&emsp;System.out.println("Mayor que: " + (a > b)); // Salida: true<br>
+&emsp;&emsp;&emsp;System.out.println("Menor que: " + (a &lt; b)); // Salida: false<br>
+&emsp;&emsp;&emsp;System.out.println("Mayor o igual que: " + (a >= b)); // Salida: true<br>
+&emsp;&emsp;&emsp;System.out.println("Menor o igual que: " + (a &lt;= b)); // Salida: false<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+5. Operadores Lógicos<br>
+- Los operadores lógicos se utilizan para combinar expresiones booleanas.<br>
+&emsp;• && AND lógico. Regresa verdadero, si ambos operandos son verdaderos.
+</p>
+&emsp;&emsp;<table>
+&emsp;&emsp;&emsp;<tbody>
+&emsp;&emsp;&emsp;&emsp;<tr class="even">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td colspan="3">// Tabla de Verdad del Operador &amp;&amp; (AND Lógico)</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="even">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>Expresión 1</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>Expresión 2</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>Resultado (Expresión 1 &amp;&amp; Expresión 2)</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="odd">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="odd">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>false</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>false</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="odd">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>false</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>false</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="odd">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>false</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>flase</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>false</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;</tbody>
+&emsp;&emsp;</table>
+<p>
+&emsp;• || OR lógico. Regresa verdadero, si cualquiera de los operandos es verdadero.
+</p>
+&emsp;&emsp;<table>
+&emsp;&emsp;&emsp;<tbody>
+&emsp;&emsp;&emsp;&emsp;<tr class="even">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td colspan="3">// Tabla de Verdad del Operador || (OR Lógico)</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="even">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>Expresión 1</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>Expresión 2</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>Resultado (Expresión 1 || Expresión 2)</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="odd">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="odd">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>false</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="odd">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>false</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="odd">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>false</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>flase</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>false</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;</tbody>
+&emsp;&emsp;</table>
+<p>
+&emsp;• ! NOT lógico. Invierte el valor lógico, si es false regresa true, si es true regresa false.
+</p>
+&emsp;&emsp;<table>
+&emsp;&emsp;&emsp;<tbody>
+&emsp;&emsp;&emsp;&emsp;<tr class="even">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td colspan="2">// Tabla de Verdad del Operador ! (NOT Lógico)</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="even">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>Expresión</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>Resultado (!Expresión)</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="odd">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>false</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;&emsp;<tr class="odd">
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>false</td>
+&emsp;&emsp;&emsp;&emsp;&emsp;<td>true</td>
+&emsp;&emsp;&emsp;&emsp;</tr>
+&emsp;&emsp;&emsp;</tbody>
+&emsp;&emsp;</table>
+<p>
+- Ejemplo de Operadores Lógicos<br>
+&emsp;public class OperadoresLogicos {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;boolean x = true;<br>
+&emsp;&emsp;&emsp;boolean y = false;<br>
+&emsp;&emsp;&emsp;System.out.println("AND lógico: " + (x && y)); // Salida: false<br>
+&emsp;&emsp;&emsp;System.out.println("OR lógico: " + (x || y)); // Salida: true<br>
+&emsp;&emsp;&emsp;System.out.println("NOT lógico: " + (!x)); // Salida: false<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+6. Operadores Unarios<br>
+- Los operadores unarios se aplican a un solo operando.<br>
+&emsp;• + Operador unario positivo<br>
+&emsp;• - Operador unario negativo<br>
+&emsp;• ++ Incremento<br>
+&emsp;• -- Decremento<br>
+&emsp;• ! Negación lógica<br>
+- Ejemplo de Operadores Unarios<br>
+&emsp;public class OperadoresUnarios {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int a = 10;<br>
+&emsp;&emsp;&emsp;System.out.println("Operador unario más: " + (+a)); // Salida: 10<br>
+&emsp;&emsp;&emsp;System.out.println("Operador unario menos: " + (-a)); // Salida: -<br>
+&emsp;&emsp;&emsp;a++; System.out.println("Incremento: " + a); // Salida: 11<br>
+&emsp;&emsp;&emsp;a--; System.out.println("Decremento: " + a); // Salida: 10<br>
+&emsp;&emsp;&emsp;boolean x = true; System.out.println("Negación lógica: " + (!x)); // Salida: false<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+7. Operador Condicional Ternario<br>
+- El operador ternario es una forma abreviada de la instrucción if-else.<br>
+&emsp;• ? : Operador ternario<br>
+- Ejemplo del Operador Condicional Ternario<br>
+&emsp;public class OperadorTernario {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int a = 10;<br>
+&emsp;&emsp;&emsp;int b = 20;<br>
+&emsp;&emsp;&emsp;int mayor = (a > b) ? a : b;<br>
+&emsp;&emsp;&emsp;System.out.println("El mayor es: " + mayor); // Salida: El mayor es: 20<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Conclusión<br>
+- Los operadores son fundamentales para realizar diversas operaciones en Java. Esta lección ha cubierto la sintaxis y ejemplos de los operadores más comunes, proporcionándote una base sólida para comprender y utilizar los operadores en tus aplicaciones Java.<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

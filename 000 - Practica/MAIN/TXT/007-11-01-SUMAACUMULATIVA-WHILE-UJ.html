@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>007-11-01-SUMAACUMULATIVA-WHILE-UJ</title>
+        </head>
+        <body>
+            <p>
+    public class SumaAcumulativa {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;// Suma Acumulativa (Iterativa)<br>
+&emsp;&emsp;final var MAXIMO = 10;<br>
+&emsp;&emsp;var acumuladorSuma = 0;<br>
+&emsp;&emsp;// Iterar los valores<br>
+&emsp;&emsp;var numero = 1;<br>
+&emsp;&emsp;while(numero &lt;= MAXIMO){<br>
+&emsp;&emsp;&emsp;// Imprimir lo que se va a sumar<br>
+&emsp;&emsp;&emsp;System.out.println("(acumuladorSuma + numero) -&gt; " + acumuladorSuma + " + " + numero);<br>
+&emsp;&emsp;&emsp;acumuladorSuma += numero++; // acumularSuma = acumuladorSuma + numero<br>
+&emsp;&emsp;&emsp;System.out.println("Suma parcial acumulada: " + acumuladorSuma + "\n");<br>
+&emsp;&emsp;}<br>
+&emsp;&emsp;System.out.println("Suma de los primeros " + MAXIMO + " números: " + acumuladorSuma);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>006-27-00-SOLUCION-SISTEMAENVIOS-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class SistemaEnvios {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Sistema de Envíos ***");<br>
+<br>
+&emsp;&emsp;// Definimos las tarifas de envío por kg<br>
+&emsp;&emsp;final var TARIFA_NACIONAL = 10.0;<br>
+&emsp;&emsp;final var TARIFA_INTERNACIONAL = 20.0;<br>
+<br>
+&emsp;&emsp;// Solicitamos los valores de destino y peso<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;System.out.print("Ingresa el destino del paquete (nacional/internacional): ");<br>
+&emsp;&emsp;var destino = consola.nextLine().strip().toLowerCase();<br>
+<br>
+&emsp;&emsp;System.out.print("Ingresa el peso del paquete (en kg): ");<br>
+&emsp;&emsp;var peso = Double.parseDouble(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Calculo del envío del paquete<br>
+&emsp;&emsp;Double costoEnvio = switch (destino) {<br>
+&emsp;&emsp;&emsp;case "nacional" -&gt; peso * TARIFA_NACIONAL;<br>
+&emsp;&emsp;&emsp;case "internacional" -&gt; peso * TARIFA_INTERNACIONAL;<br>
+&emsp;&emsp;&emsp;default -&gt; {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Destino inválido. Ingresa nacional/internacional");<br>
+&emsp;&emsp;&emsp;&emsp;yield null;<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;};<br>
+&emsp;&emsp;// Mostramos el costo de envío<br>
+&emsp;&emsp;if (costoEnvio != null)<br>
+&emsp;&emsp;&emsp;System.out.printf("El costo de envío de paquete es: $%.2f", costoEnvio);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

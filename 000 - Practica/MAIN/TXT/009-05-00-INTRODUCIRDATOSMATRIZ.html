@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>009-05-00-INTRODUCIRDATOSMATRIZ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class Matrices {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;// Introducir valores a una matriz<br>
+&emsp;&emsp;int renglones, columnas;<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+&emsp;&emsp;// Definir la matriz<br>
+&emsp;&emsp;System.out.print("Proporciona los renglones: ");<br>
+&emsp;&emsp;renglones = Integer.parseInt(consola.nextLine());<br>
+&emsp;&emsp;System.out.print("Proporciona las columnas: ");<br>
+&emsp;&emsp;columnas = Integer.parseInt(consola.nextLine());<br>
+&emsp;&emsp;var matriz = new int[renglones][columnas];<br>
+&emsp;&emsp;// Solicitar los valores<br>
+&emsp;&emsp;for(var ren=0; ren &lt; renglones; ren++){<br>
+&emsp;&emsp;&emsp;for(var col=0; col &lt; columnas; col++){<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Valor[" + ren + "][" + col + "] = ");<br>
+&emsp;&emsp;&emsp;&emsp;matriz[ren][col] = Integer.parseInt(consola.nextLine());<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;&emsp;// Iterar los valores de la matriz<br>
+&emsp;&emsp;System.out.println();<br>
+&emsp;&emsp;for(var ren=0; ren &lt; renglones; ren++){<br>
+&emsp;&emsp;&emsp;for(var col=0; col &lt; columnas; col++){<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Matriz[" + ren + "][" + col + "] = "<br>
+&emsp;&emsp;&emsp;&emsp;+ matriz[ren][col]);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

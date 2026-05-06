@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>004-03-00-CONVERSIONTIPOSDATOSCONSOLA-UJ</title>
+        </head>
+        <body>
+            <p>
+    Ejemplo Completo de Clases Wrapper en Java con Entrada desde la Consola<br>
+- En Java, las clases wrapper (clases envolventes) proporcionan una forma de utilizar tipos de datos primitivos como objetos. Estas clases se encuentran en el paquete java.lang y cada tipo primitivo tiene una clase wrapper correspondiente. A continuación, se muestra cómo utilizar estas clases wrapper para convertir datos ingresados desde la consola.<br>
+<br>
+Clases Wrapper Disponibles en Java<br>
+&emsp;1. Integer: Para convertir cadenas en enteros.<br>
+&emsp;2. Float: Para convertir cadenas en números de punto flotante de precisión simple.<br>
+&emsp;3. Double: Para convertir cadenas en números de punto flotante de doble precisión.<br>
+&emsp;4. Boolean: Para convertir cadenas en valores booleanos.<br>
+&emsp;5. Long: Para convertir cadenas en números largos.<br>
+&emsp;6. Short: Para convertir cadenas en números cortos.<br>
+&emsp;7. Byte: Para convertir cadenas en bytes.<br>
+&emsp;8. Character: No tiene un método parse, pero puede ser utilizado para convertir un único carácter.<br>
+<br>
+Código Completo con Ejemplos<br>
+&emsp;import java.util.Scanner;<br>
+<br>
+&emsp;public class ClasesWrapperEjemplo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;Scanner consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;&emsp;/* Integer.parseInt() */<br>
+&emsp;&emsp;&emsp;System.out.print("Proporciona un valor entero: ");<br>
+&emsp;&emsp;&emsp;int entero = Integer.parseInt(consola.nextLine());<br>
+&emsp;&emsp;&emsp;System.out.println("entero = " + entero);<br>
+<br>
+&emsp;&emsp;&emsp;/* Float.parseFloat() */<br>
+&emsp;&emsp;&emsp;System.out.print("Proporciona un valor flotante: ");<br>
+&emsp;&emsp;&emsp;float flotante = Float.parseFloat(consola.nextLine());<br>
+&emsp;&emsp;&emsp;System.out.println("flotante = " + flotante);<br>
+<br>
+&emsp;&emsp;&emsp;/* Double.parseDouble() */<br>
+&emsp;&emsp;&emsp;System.out.print("Proporciona un valor doble: ");<br>
+&emsp;&emsp;&emsp;double doble = Double.parseDouble(consola.nextLine());<br>
+&emsp;&emsp;&emsp;System.out.println("doble = " + doble);<br>
+<br>
+&emsp;&emsp;&emsp;/* Boolean.parseBoolean() */<br>
+&emsp;&emsp;&emsp;System.out.print("Proporciona un valor booleano (true/false): ");<br>
+&emsp;&emsp;&emsp;boolean booleano = Boolean.parseBoolean(consola.nextLine());<br>
+&emsp;&emsp;&emsp;System.out.println("booleano = " + booleano);<br>
+<br>
+&emsp;&emsp;&emsp;/* Long.parseLong() */<br>
+&emsp;&emsp;&emsp;System.out.print("Proporciona un valor largo: ");<br>
+&emsp;&emsp;&emsp;long largo = Long.parseLong(consola.nextLine());<br>
+&emsp;&emsp;&emsp;System.out.println("largo = " + largo);<br>
+<br>
+&emsp;&emsp;&emsp;/* Short.parseShort() */<br>
+&emsp;&emsp;&emsp;System.out.print("Proporciona un valor corto: ");<br>
+&emsp;&emsp;&emsp;short corto = Short.parseShort(consola.nextLine());<br>
+&emsp;&emsp;&emsp;System.out.println("corto = " + corto);<br>
+<br>
+&emsp;&emsp;&emsp;/* Byte.parseByte() */<br>
+&emsp;&emsp;&emsp;System.out.print("Proporciona un valor byte: ");<br>
+&emsp;&emsp;&emsp;byte byteValue = Byte.parseByte(consola.nextLine());<br>
+&emsp;&emsp;&emsp;System.out.println("byte = " + byteValue);<br>
+<br>
+&emsp;&emsp;&emsp;/*<br>
+&emsp;&emsp;&emsp;Character no tiene un método parse,<br>
+&emsp;&emsp;&emsp;pero se puede usar para un único carácter<br>
+&emsp;&emsp;&emsp;*/<br>
+&emsp;&emsp;&emsp;System.out.print("Proporciona un solo carácter: ");<br>
+&emsp;&emsp;&emsp;char caracter = consola.nextLine().charAt(0);<br>
+&emsp;&emsp;&emsp;System.out.println("caracter = " + caracter);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Explicación del Código<br>
+&emsp;1. Integer.parseInt():<br>
+&emsp;&emsp;o Convierte una cadena en un entero.<br>
+&emsp;&emsp;o int entero = Integer.parseInt(consola.nextLine());<br>
+&emsp;2. Float.parseFloat():<br>
+&emsp;&emsp;o Convierte una cadena en un número de punto flotante de precisión simple.<br>
+&emsp;&emsp;o float flotante = Float.parseFloat(consola.nextLine());<br>
+&emsp;3. Double.parseDouble():<br>
+&emsp;&emsp;o Convierte una cadena en un número de punto flotante de doble precisión.<br>
+&emsp;&emsp;o double doble = Double.parseDouble(consola.nextLine());<br>
+&emsp;4. Boolean.parseBoolean():<br>
+&emsp;&emsp;o Convierte una cadena en un valor booleano.<br>
+&emsp;&emsp;o boolean booleano = Boolean.parseBoolean(consola.nextLine());<br>
+&emsp;5. Long.parseLong():<br>
+&emsp;&emsp;o Convierte una cadena en un número largo.<br>
+&emsp;&emsp;o long largo = Long.parseLong(consola.nextLine());<br>
+&emsp;6. Short.parseShort():<br>
+&emsp;&emsp;o Convierte una cadena en un número corto.<br>
+&emsp;&emsp;o short corto = Short.parseShort(consola.nextLine());<br>
+&emsp;7. Byte.parseByte():<br>
+&emsp;&emsp;o Convierte una cadena en un byte.<br>
+&emsp;&emsp;o byte byteValue = Byte.parseByte(consola.nextLine());<br>
+&emsp;8. Character:<br>
+&emsp;&emsp;o Para obtener un carácter, utilizamos el método charAt en la cadena.<br>
+&emsp;&emsp;o char caracter = consola.nextLine().charAt(0);<br>
+<br>
+Conclusión<br>
+- El manejo de las clases wrapper en Java es esencial para convertir y manipular tipos de datos primitivos como objetos. A través de ejemplos prácticos, hemos demostrado cómo utilizar cada una de las clases wrapper disponibles en Java para leer y convertir datos ingresados desde la consola.<br>
+<br>
+Recursos Adicionales<br>
+&emsp;• Java Documentation - Wrapper Classes<br>
+- Estos recursos proporcionan información adicional sobre el uso de las clases wrapper en Java.<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>006-10-00-SISTEMABANCARIO-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class SistemaBancario {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Bienvenidos al Sistema Bancario ***");<br>
+<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;System.out.print("Deseas salir del sistema (true/false)? ");<br>
+&emsp;&emsp;var salirSistema = Boolean.parseBoolean(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Veirificamos (aplicando una lógica inversa)<br>
+&emsp;&emsp;if (!salirSistema) {<br>
+&emsp;&emsp;&emsp;System.out.println("Continuamos dentro del sistema...");<br>
+&emsp;&emsp;} else {<br>
+&emsp;&emsp;&emsp;System.out.println("Saliendo de sistema...");<br>
+&emsp;&emsp;}<br>
+<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

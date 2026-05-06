@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>001-03-00-INSTALACIONJDK-UJ</title>
+        </head>
+        <body>
+            <p>
+    ¡Hola a todos! Bienvenidos a la segunda lección de nuestro curso de Universidad Java. Vamos a aprender cómo instalar el Java Development Kit (JDK). El JDK es fundamental para comenzar a programar en Java, ya que incluye todas las herramientas necesarias para compilar, ejecutar y depurar aplicaciones Java.<br>
+<br>
+¿Qué Necesitamos Previamente?<br>
+- 1. Computadora con Sistema Operativo Compatible:<br>
+&emsp;o Windows (versiones recientes como Windows 10 o 11)<br>
+&emsp;o macOS (11 Big Sur o superior)<br>
+&emsp;o Linux (distribuciones populares como Ubuntu, Fedora)<br>
+- 2. Conexión a Internet:<br>
+&emsp;o Para descargar el JDK desde el sitio oficial de Oracle.<br>
+<br>
+Pasos para la Instalación del JDK<br>
+<br>
+Paso 1: Descargar el JDK<br>
+&emsp;1. Visitar el Sitio Oficial:<br>
+&emsp;&emsp;o Dirígete a la página de descargas de Oracle JDK.<br>
+&emsp;&emsp;o Selecciona la versión más reciente del JDK. Java 21 es la última versión LTS (Long Term Support).<br>
+&emsp;2. Seleccionar el Instalador Adecuado:<br>
+&emsp;&emsp;o Elige el instalador correspondiente a tu sistema operativo (Windows, macOS, Linux).<br>
+<br>
+Paso 2: Instalar el JDK en Windows<br>
+&emsp;1. Ejecutar el Instalador:<br>
+&emsp;&emsp;o Abre el archivo descargado y sigue las instrucciones del instalador.<br>
+&emsp;&emsp;o Acepta los términos de la licencia y selecciona la ubicación de instalación. La ubicación predeterminada suele ser C:\Program Files\Java\jdk-21.<br>
+&emsp;2. Configurar Variables de Entorno (Estos pasos son opcionales):<br>
+&emsp;&emsp;o Abre el Panel de Control y busca "Variables de entorno".<br>
+&emsp;&emsp;o En la sección "Variables del sistema", busca y selecciona la variable Path, luego haz clic en "Editar".<br>
+&emsp;&emsp;o Añade una nueva entrada con la ruta del directorio bin del JDK, por ejemplo, C:\Program Files\Java\jdk-21\bin<br>
+&emsp;&emsp;o Crea una nueva variable de entorno llamada JAVA_HOME y establece su valor en la ruta de instalación del JDK, por ejemplo, C:\Program Files\Java\jdk-21<br>
+&emsp;3. Verificar la Instalación:<br>
+&emsp;&emsp;o Abre una ventana de comandos (CMD) y escribe java -version.<br>
+&emsp;&emsp;o Deberías ver información sobre la versión de Java instalada.<br>
+<br>
+Paso 2: Instalar el JDK en macOS<br>
+&emsp;1. Ejecutar el Instalador:<br>
+&emsp;&emsp;o Abre el archivo .dmg descargado y sigue las instrucciones del instalador.<br>
+&emsp;&emsp;o Acepta los términos de la licencia y completa la instalación.<br>
+&emsp;2. Configurar Variables de Entorno (Estos pasos son opcionales):<br>
+&emsp;&emsp;o Abre la Terminal.<br>
+&emsp;&emsp;o Abre o crea el archivo .zshrc en tu directorio principal: nano ~/.zshrc.<br>
+&emsp;&emsp;o Añade la siguiente línea para configurar JAVA_HOME:<br>
+&emsp;&emsp;&emsp;sh<br>
+&emsp;&emsp;&emsp;Copiar código<br>
+&emsp;&emsp;&emsp;export JAVA_HOME=$(/usr/libexec/java_home)<br>
+&emsp;&emsp;o Guarda los cambios y recarga el archivo: source ~/.zshrc.<br>
+&emsp;3. Verificar la Instalación:<br>
+&emsp;&emsp;o En la Terminal, escribe java -version.<br>
+&emsp;&emsp;o Deberías ver la información sobre la versión de Java instalada.<br>
+<br>
+Paso 2: Instalar el JDK en Linux (Ubuntu)<br>
+&emsp;1. Usar el Gestor de Paquetes:<br>
+&emsp;&emsp;o Abre la Terminal.<br>
+&emsp;&emsp;o Actualiza el índice de paquetes: sudo apt update.<br>
+&emsp;&emsp;o Instala el JDK: sudo apt install openjdk-21-jdk.<br>
+&emsp;2. Configurar Variables de Entorno (Estos pasos son opcionales):<br>
+&emsp;&emsp;o Abre el archivo de configuración del shell, por ejemplo, .bashrc o .zshrc: nano ~/.bashrc.<br>
+&emsp;&emsp;o Añade las siguientes líneas:<br>
+&emsp;&emsp;&emsp;sh<br>
+&emsp;&emsp;&emsp;Copiar código<br>
+&emsp;&emsp;&emsp;export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64<br>
+&emsp;&emsp;&emsp;export PATH=$PATH:$JAVA_HOME/bin<br>
+&emsp;&emsp;o Guarda los cambios y recarga el archivo: source ~/.bashrc.<br>
+&emsp;3. Verificar la Instalación:<br>
+&emsp;&emsp;o En la Terminal, escribe java -version.<br>
+&emsp;&emsp;o Deberías ver la información sobre la versión de Java instalada.<br>
+<br>
+Conclusión<br>
+<br>
+- ¡Y eso es todo! Ahora tienes el JDK instalado y listo para usar. Este es el primer paso para convertirte en un desarrollador Java experto. Con el JDK en su lugar, puedes comenzar a escribir, compilar y ejecutar tus programas Java.<br>
+<br>
+- Recuerda que aprender a configurar tu entorno de desarrollo es fundamental y te ayudará a enfrentar cualquier problema técnico en el futuro. ¡Buena suerte y adelante con el aprendizaje!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>004-06-00-SOLUCION-RECETASCOCINA-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class RecetasCocina {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Recetas de Cocina ***");<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;// Nombre de la receta<br>
+&emsp;&emsp;System.out.print("Ingresa el nombre de la receta: ");<br>
+&emsp;&emsp;var nombreReceta = consola.nextLine();<br>
+<br>
+&emsp;&emsp;// Ingredientes<br>
+&emsp;&emsp;System.out.print("Ingresa los ingredientes: ");<br>
+&emsp;&emsp;var ingredientes = consola.nextLine();<br>
+<br>
+&emsp;&emsp;// Tiempo de preparación<br>
+&emsp;&emsp;System.out.print("Ingresa el tiempo de preparación (min): ");<br>
+&emsp;&emsp;var tiempoPreparacion = Integer.parseInt(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Dificultad de la preperación<br>
+&emsp;&emsp;System.out.print("Ingresa la dificultad (Fácil/Medio/Dificil): ");<br>
+&emsp;&emsp;var dificultadPreperacion = consola.nextLine();<br>
+<br>
+&emsp;&emsp;// Imprimir los valores de la receta<br>
+&emsp;&emsp;System.out.println("\n--- Receta de Cocina ---");<br>
+&emsp;&emsp;System.out.println("\tNombre receta: " + nombreReceta);<br>
+&emsp;&emsp;System.out.println("\tIngredientes: " + ingredientes);<br>
+&emsp;&emsp;System.out.println("\tTiempo de preparación: " + tiempoPreparacion + " minutos");<br>
+&emsp;&emsp;System.out.println("\tDificultad: " + dificultadPreperacion);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

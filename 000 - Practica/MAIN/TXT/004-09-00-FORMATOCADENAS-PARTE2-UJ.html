@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>004-09-00-FORMATOCADENAS-PARTE2-UJ</title>
+        </head>
+        <body>
+            <p>
+    public class FormateoCadenas {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Formateo de Cadenas ***");<br>
+&emsp;&emsp;var nombre = "Matías";<br>
+&emsp;&emsp;var edad = 35;<br>
+&emsp;&emsp;var salario = 21000.50;<br>
+<br>
+&emsp;&emsp;// String.format<br>
+&emsp;&emsp;var mensaje = String.format("Nombre: %s, Edad: %d, Salario: $%.2f"<br>
+&emsp;&emsp;&emsp;&emsp;,nombre, edad, salario);<br>
+&emsp;&emsp;System.out.println(mensaje);<br>
+<br>
+&emsp;&emsp;// Metodo printf<br>
+&emsp;&emsp;System.out.printf("Nombre: %s, Edad: %d, Salario: $%.2f%n",<br>
+&emsp;&emsp;&emsp;&emsp;nombre, edad, salario);<br>
+<br>
+&emsp;&emsp;var numeroEmpleado = 12;<br>
+&emsp;&emsp;// Formateo con text block<br>
+&emsp;&emsp;mensaje = """<br>
+&emsp;&emsp;&emsp;&emsp;%nDetalle Persona:\s<br>
+&emsp;&emsp;&emsp;&emsp;-----------------<br>
+&emsp;&emsp;&emsp;&emsp;\tNombre: %s<br>
+&emsp;&emsp;&emsp;&emsp;\tNo. Empleado: %04d<br>
+&emsp;&emsp;&emsp;&emsp;\tEdad: %d años<br>
+&emsp;&emsp;&emsp;&emsp;\tSalario: $%.2f<br>
+&emsp;&emsp;&emsp;&emsp;""".formatted(nombre, numeroEmpleado, edad, salario);<br>
+&emsp;&emsp;System.out.println(mensaje);<br>
+<br>
+&emsp;&emsp;// Formateo con tex block y printf directamente<br>
+&emsp;&emsp;System.out.printf("""<br>
+&emsp;&emsp;&emsp;&emsp;%nDetalle Persona:\s<br>
+&emsp;&emsp;&emsp;&emsp;-----------------<br>
+&emsp;&emsp;&emsp;&emsp;\tNombre: %s<br>
+&emsp;&emsp;&emsp;&emsp;\tNo. Empleado: %04d<br>
+&emsp;&emsp;&emsp;&emsp;\tEdad: %d años<br>
+&emsp;&emsp;&emsp;&emsp;\tSalario: $%.2f<br>
+&emsp;&emsp;&emsp;&emsp;""", nombre, numeroEmpleado, edad, salario);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

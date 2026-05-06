@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>006-29-00-SOLUCION-SISTEMAAUTENTICACION-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class SistemaAutenticacion {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Sistema de Autenticación ***");<br>
+<br>
+&emsp;&emsp;final var USUARIO_VALIDO = "admin";<br>
+&emsp;&emsp;final var PASSWORD_VALIDO = "123";<br>
+<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;System.out.print("Ingresa tu usuario: ");<br>
+&emsp;&emsp;var usuario = consola.nextLine().strip();<br>
+<br>
+&emsp;&emsp;System.out.print("Ingresa tu password: ");<br>
+&emsp;&emsp;var password = consola.nextLine().strip();<br>
+<br>
+&emsp;&emsp;// Cada caso de validacion de usuario y password<br>
+&emsp;&emsp;var mensajeAutenticacion = switch (usuario) {<br>
+&emsp;&emsp;&emsp;case USUARIO_VALIDO -&gt; {<br>
+&emsp;&emsp;&emsp;&emsp;if (PASSWORD_VALIDO.equals(password))<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;yield "Bienvenido al Sistema!";<br>
+&emsp;&emsp;&emsp;&emsp;else<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;yield "Password incorrecto, favor de corregirlo!";<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;default -&gt; {<br>
+&emsp;&emsp;&emsp;&emsp;if (PASSWORD_VALIDO.equals(password))<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;yield "Usuario incorrecto, favor de corregirlo!";<br>
+&emsp;&emsp;&emsp;&emsp;else<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;yield "Usuario y password incorrectos, favor de corregirlos!";<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;};<br>
+&emsp;&emsp;// Imprimir el mensaje<br>
+&emsp;&emsp;System.out.println(mensajeAutenticacion);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

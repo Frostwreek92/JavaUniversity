@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>002-01-00-VARIABLESJAVA-UJ</title>
+        </head>
+        <body>
+            <p>
+    ¿Qué es una Variable?<br>
+- Una variable es un contenedor que almacena datos que pueden cambiar durante la ejecución de un programa. Cada variable tiene un nombre, un tipo de datos, y un valor.<br>
+<br>
+- Tipos de Variables en Java<br>
+&emsp;1. Variables Primitivas:<br>
+&emsp;&emsp;o Enteros: byte, short, int, long<br>
+&emsp;&emsp;o Punto Flotante: float, double<br>
+&emsp;&emsp;o Carácter: char<br>
+&emsp;&emsp;o Booleano: boolean<br>
+&emsp;2. Variables de Referencia:<br>
+&emsp;&emsp;o Objetos y arreglos: cualquier clase o tipo definido por el usuario<br>
+<br>
+Declaración y Asignación de Variables<br>
+<br>
+Sintaxis de Declaración<br>
+- Para declarar una variable en Java, necesitas especificar el tipo de datos seguido del nombre de la variable.<br>
+&emsp;tipo nombreVariable;<br>
+<br>
+Asignación de Valores<br>
+- Puedes asignar un valor a una variable en el momento de su declaración o posteriormente.<br>
+&emsp;// Declaración<br>
+&emsp;int numero;<br>
+&emsp;numero = 10; // Asignación<br>
+&emsp;// Declaración y Asignación Simultánea<br>
+&emsp;int edad = 25;<br>
+<br>
+- Ejemplos de Variables Primitivas<br>
+&emsp;1. Enteros<br>
+&emsp;&emsp;int edad = 30;<br>
+&emsp;&emsp;long distancia = 123456789L; // 'L' indica que es un long literal<br>
+&emsp;2. Punto Flotante<br>
+&emsp;&emsp;float temperatura = 36.6F; // 'F' indica que es un float literal<br>
+&emsp;&emsp;double pi = 3.14159;<br>
+&emsp;3. Carácter<br>
+&emsp;&emsp;char inicial = 'A';<br>
+&emsp;4. Booleano<br>
+&emsp;&emsp;boolean esMayor = true;<br>
+<br>
+- Ejemplos de Variables de Referencia<br>
+&emsp;String nombre = "Juan";<br>
+&emsp;int[] numeros = {1, 2, 3, 4, 5}; // Arreglo de enteros<br>
+<br>
+Uso de var para Inferencia de Tipos (Introducido en Java 10)<br>
+- Java permite la inferencia de tipos usando la palabra clave var, simplificando la declaración de variables.<br>
+&emsp;var mensaje = "Hola, Mundo"; // `mensaje` será de tipo `String`<br>
+&emsp;var numero = 10; // `numero` será de tipo `int`<br>
+<br>
+- Ejemplo Completo<br>
+&emsp;- Vamos a crear un programa completo que utiliza diferentes tipos de variables.<br>
+&emsp;&emsp;public class VariablesDemo {<br>
+&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;// Variables primitivas<br>
+&emsp;&emsp;&emsp;&emsp;int edad = 25;<br>
+&emsp;&emsp;&emsp;&emsp;double salario = 1234.56;<br>
+&emsp;&emsp;&emsp;&emsp;char inicial = 'J';<br>
+&emsp;&emsp;&emsp;&emsp;boolean esEmpleado = true;<br>
+&emsp;&emsp;&emsp;&emsp;// Variables de referencia<br>
+&emsp;&emsp;&emsp;&emsp;String nombre = "Juan Pérez";<br>
+&emsp;&emsp;&emsp;&emsp;int[] numeros = {1, 2, 3, 4, 5};<br>
+&emsp;&emsp;&emsp;&emsp;// Uso de `var`<br>
+&emsp;&emsp;&emsp;&emsp;var mensaje = "Bienvenido a Java!";<br>
+&emsp;&emsp;&emsp;&emsp;var numero = 100;<br>
+&emsp;&emsp;&emsp;&emsp;// Imprimir valores<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Nombre: " + nombre);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Edad: " + edad);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Salario: " + salario);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Inicial: " + inicial);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Es empleado: " + esEmpleado);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Mensaje: " + mensaje);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Número: " + numero);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+<br>
+- Explicación del Ejemplo<br>
+&emsp;1. Declaración y Asignación:<br>
+&emsp;&emsp;o Declaramos y asignamos valores a variables primitivas y de referencia.<br>
+&emsp;&emsp;o Utilizamos var para que el compilador infiera el tipo de las variables.<br>
+&emsp;2. Salida de Datos:<br>
+&emsp;&emsp;o Imprimimos los valores de las variables usando System.out.println.<br>
+Conclusión<br>
+- Las variables son fundamentales en cualquier lenguaje de programación, y Java ofrece una variedad de tipos de variables para manejar diferentes tipos de datos. La capacidad de inferir tipos con var también simplifica la escritura de código, haciéndolo más legible y fácil de mantener.<br>
+<br>
+Recursos Adicionales<br>
+&emsp;• Documentación Oficial de Java<br>
+&emsp;• Java Tutorials by Oracle<br>
+<br>
+¡Esto es lo básico del manejo de variables en Java. En las siguientes lecciones profundizaremos mucho más en este tema. ¡Vamos a programar!<br>
+<br>
+Si tienes dudas de temas como puede ser tipos de memoria, tipos de sistemas como el sistema hexadecimal, etc, te dejamos esta información básica para que puedas familiarizarte con estos conceptos.<br>
+<br>
+Memoria RAM y ROM: Relevancia en el Manejo de Variables en Java<br>
+- Cuando hablamos de programación y manejo de variables en Java, es útil entender la diferencia entre los tipos de memoria de una computadora, específicamente la RAM (Random Access Memory) y la ROM (Read-Only Memory). A continuación, te explico estos conceptos y su relevancia en el contexto de Java.<br>
+<br>
+Memoria RAM (Random Access Memory)<br>
+- La RAM es un tipo de memoria de almacenamiento volátil en una computadora que se utiliza para almacenar datos y programas que están siendo utilizados activamente por la CPU. La RAM permite que la CPU acceda a los datos mucho más rápidamente que desde un disco duro o una unidad SSD, lo que es esencial para el rendimiento del sistema.<br>
+<br>
+Memoria ROM (Read-Only Memory)<br>
+¿Qué es la Memoria ROM?<br>
+- La ROM es una forma de almacenamiento no volátil que se utiliza para almacenar el firmware del sistema y otros datos permanentes que no cambian, como el bios de la computadora. No volátil significa que su contenido se conserva incluso cuando se apaga el sistema. La ROM NO se utiliza directamente para el manejo de variables en la programación Java, así que nos enfocaremos en la memoria RAM y cómo se utiliza cuando hablamos de variables en Java.<br>
+<br>
+Función de la RAM en Java<br>
+- Cuando ejecutas un programa Java, el manejo de variables y la gestión de memoria se realizan principalmente en la RAM. Aquí está una explicación detallada de cómo funciona este proceso:<br>
+&emsp;1. Carga del Programa en Memoria<br>
+&emsp;&emsp;Cuando ejecutas un programa Java:<br>
+&emsp;&emsp;&emsp;• Compilación: El código fuente Java (.java) se compila en bytecode (.class) por el compilador javac.<br>
+&emsp;&emsp;&emsp;• Ejecución: La JVM (Java Virtual Machine) carga el bytecode en la memoria RAM para su ejecución.<br>
+&emsp;2. Áreas de Memoria en la JVM dentro de la memoria RAM<br>
+<br>
+- La JVM gestiona la memoria en diferentes áreas de la RAM, cada una con su propósito específico:<br>
+&emsp;1. Stack:<br>
+&emsp;&emsp;o Es el área de memoria donde se almacenan las variables locales, así como los valores de variables primitivas definidas dentro de un método.<br>
+&emsp;&emsp;o Cada vez que se llama a un método, se crea un nuevo marco (frame) en el stack que contiene las variables locales y los datos necesarios para la ejecución del método.<br>
+&emsp;2. Heap:<br>
+&emsp;&emsp;o Es el área donde se almacenan los objetos y sus datos asociados.<br>
+&emsp;&emsp;o La memoria en el heap es gestionada automáticamente por el recolector de basura (Garbage Collector).<br>
+&emsp;3. Existen más clasificaciones de memoria, pero para el tema de variables que estamos estudiando es suficiente con entender y conocer los dos anteriores.<br>
+<br>
+Funcionamiento del Garbage Collector<br>
+- El Garbage Collector (GC) es una parte crucial de la JVM que administra la memoria heap. Su trabajo principal es:<br>
+&emsp;• Liberar memoria: Recolectar objetos que ya no son accesibles y liberar la memoria que ocupan.<br>
+&emsp;• Optimizar el uso de memoria: Garantizar que la memoria se utilice de manera eficiente y minimizar la fragmentación.<br>
+<br>
+- El proceso de recolección de basura ocurre automáticamente y se activa según las necesidades de la aplicación y las políticas de la JVM.<br>
+<br>
+En resumen: Relevancia de la memoria RAM y ROM<br>
+&emsp;• RAM:<br>
+&emsp;&emsp;o Volátil: Pierde su contenido al apagar el sistema.<br>
+&emsp;&emsp;o Uso en Java: Almacena variables y objetos temporales durante la ejecución del programa.<br>
+&emsp;• ROM:<br>
+&emsp;&emsp;o No Volátil: Conserva su contenido incluso al apagar el sistema.<br>
+&emsp;&emsp;o Uso en Java: No se usa directamente para variables, pero almacena el firmware que permite que la computadora funcione.<br>
+<br>
+Recursos adicionales:<br>
+&emsp;Java Memory Management<br>
+<br>
+Sistemas de Numeración: Binario, Octal, Decimal y Hexadecimal<br>
+&emsp;1. Sistema Binario<br>
+&emsp;&emsp;• Base: 2<br>
+&emsp;&emsp;• Dígitos: 0, 1<br>
+&emsp;&emsp;• Uso: Computadoras y sistemas digitales.<br>
+&emsp;&emsp;• Ejemplo: El número decimal 10 es 1010 en binario.<br>
+&emsp;2. Sistema Octal<br>
+&emsp;&emsp;• Base: 8<br>
+&emsp;&emsp;• Dígitos: 0-7<br>
+&emsp;&emsp;• Uso: Sistemas de control y programación en ciertas aplicaciones históricas.<br>
+&emsp;&emsp;• Ejemplo: El número decimal 10 es 12 en octal.<br>
+&emsp;3. Sistema Decimal<br>
+&emsp;&emsp;• Base: 10<br>
+&emsp;&emsp;• Dígitos: 0-9<br>
+&emsp;&emsp;• Uso: Sistema numérico cotidiano para los humanos.<br>
+&emsp;&emsp;• Ejemplo: El número 10 en decimal es 10.<br>
+&emsp;4. Sistema Hexadecimal<br>
+&emsp;&emsp;• Base: 16<br>
+&emsp;&emsp;• Dígitos: 0-9, A-F (donde A=10, B=11, ..., F=15)<br>
+&emsp;&emsp;• Uso: Representación compacta de datos binarios y direcciones de memoria.<br>
+&emsp;&emsp;• Ejemplo: El número decimal 255 es FF en hexadecimal.<br>
+<br>
+Relevancia del Sistema Hexadecimal en Java<br>
+- Cuando se almacenan variables en la memoria RAM, la representación hexadecimal es útil para:<br>
+&emsp;• Direcciones de Memoria: Los sistemas operativos y las herramientas de depuración suelen usar hexadecimal para mostrar las direcciones de memoria.<br>
+&emsp;• Depuración y Análisis: Permite una visualización compacta y legible de los valores binarios.<br>
+<br>
+Ejemplo de Uso de Hexadecimal para Representar Direcciones de Memoria<br>
+- Aunque no podemos directamente acceder y manipular direcciones de memoria en Java, podemos mostrar los valores donde están almacenadas las variables y cómo se visualizan.<br>
+<br>
+En resumen: Sistemas de Numeración<br>
+&emsp;1. Binario: El más básico para computadoras, usa solo 0 y 1.<br>
+&emsp;2. Octal: Menos común hoy, pero era usado en computadoras más antiguas.<br>
+&emsp;3. Decimal: El sistema que usamos a diario.<br>
+&emsp;4. Hexadecimal: Muy útil en informática para representar datos binarios de manera compacta y legible.<br>
+<br>
+Uso del Sistema Hexadecimal<br>
+&emsp;1. Direcciones de Memoria: Representar ubicaciones de memoria de manera compacta.<br>
+&emsp;2. Depuración: Ver valores de variables y direcciones de manera que sea fácil de leer y entender.<br>
+<br>
+Conclusión<br>
+- Comprender estos sistemas de numeración es crucial para trabajar eficientemente en programación y depuración. El sistema hexadecimal, en particular, es muy útil para representar datos binarios y direcciones de memoria de una manera más legible. Con estos conceptos claros, estarán mejor preparados para trabajar con datos y depurar programas en Java.<br>
+<br>
+Explicación Breve de Clases y Objetos en Java<br>
+<br>
+¿Qué es una Clase?<br>
+- Una clase en Java es una plantilla o molde que define las propiedades (atributos) y comportamientos (métodos) que los objetos creados a partir de la clase pueden tener. Es un concepto central en la programación orientada a objetos.<br>
+&emsp;• Atributos: Características o propiedades de la clase.<br>
+&emsp;• Métodos: Acciones o comportamientos que la clase puede realizar.<br>
+<br>
+¿Qué es un Objeto?<br>
+- Un objeto es una instancia de una clase. Cuando creamos un objeto, estamos utilizando la plantilla definida por la clase para crear una entidad concreta con valores específicos.<br>
+&emsp;• Instancia: Una copia concreta de la clase.<br>
+&emsp;• Estado: Valores actuales de los atributos del objeto.<br>
+<br>
+Analogía Sencilla<br>
+&emsp;• Clase: Imagina un plano de construcción de una casa. El plano describe cómo se verá la casa y qué características tendrá.<br>
+&emsp;• Objeto: Es la casa real construida a partir del plano. Cada casa construida a partir del mismo plano es una instancia del plano (la clase).<br>
+<br>
+- Ejemplo Simplificado:<br>
+&emsp;public class Main {<br>
+&emsp;&emsp;public static void main {String[] args) {<br>
+&emsp;&emsp;&emsp;// Crear un nuevo objeto de la clase Object<br>
+&emsp;&emsp;&emsp;Object obj1 = new Object(); // Crea un nuevo objeto de tipo Object<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Explicación en Clase:<br>
+&emsp;• Clase: Object es una plantilla básica que Java proporciona para crear objetos.<br>
+&emsp;• Objeto: obj1 es una instancia de esta plantilla, una entidad concreta que se crea en la memoria.<br>
+<br>
+Resumen<br>
+&emsp;• Clase: Plantilla o molde que define atributos y métodos.<br>
+&emsp;• Objeto: Instancia concreta de una clase con valores específicos para sus atributos.<br>
+&emsp;• Object obj1 = new Object(); Crea un nuevo objeto de la clase Object y almacena su referencia en obj1.<br>
+<br>
+- Esta explicación te puede ayudar a comprender los conceptos básicos de clases y objetos sin profundizar demasiado. En el tema de clases y objetos continuaremos con el estudio de clases y objetos en profundidad, pero de momento es suficiente para entender el tema de variables en Java y su manejo de la memoria.<br>
+<br>
+- Esperamos que con estas explicaciones puedas continuar sin problemas con el tema de variables en Java. Recuerda tener paciencia y avanzar paso a paso.<br>
+<br>
+Saludos y continúa así!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

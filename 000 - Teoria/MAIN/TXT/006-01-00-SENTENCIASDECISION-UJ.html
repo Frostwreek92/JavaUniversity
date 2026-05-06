@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>006-01-00-SENTENCIASDECISION-UJ</title>
+        </head>
+        <body>
+            <p>
+    Sentencias de Decisión en Java<br>
+- Las sentencias de decisión en Java permiten a los programas tomar diferentes acciones basadas en condiciones específicas. Las sentencias de decisión más comunes en Java son if, if-else, if-else if-else y switch.<br>
+<br>
+Sentencia if<br>
+- La sentencia if se utiliza para ejecutar un bloque de código solo si una condición específica es verdadera.<br>
+- Sintaxis:<br>
+&emsp;if (condicion) {<br>
+&emsp;&emsp;// Bloque de código a ejecutar si la condición es verdadera<br>
+&emsp;}<br>
+- Ejemplo:<br>
+&emsp;public class EjemploIf {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int edad = 20;<br>
+&emsp;&emsp;&emsp;if (edad &gt;= 18) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Eres mayor de edad.");<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Sentencia if-else<br>
+- La sentencia if-else se utiliza para ejecutar un bloque de código si la condición es verdadera y otro bloque de código si la condición es falsa.<br>
+- Sintaxis:<br>
+&emsp;if (condicion) {<br>
+&emsp;&emsp;// Bloque de código a ejecutar si la condición es verdadera<br>
+&emsp;} else {<br>
+&emsp;&emsp;// Bloque de código a ejecutar si la condición es falsa<br>
+&emsp;}<br>
+- Ejemplo:<br>
+&emsp;public class EjemploIfElse {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int edad = 16;<br>
+&emsp;&emsp;&emsp;if (edad &gt;= 18) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Eres mayor de edad.");<br>
+&emsp;&emsp;&emsp;} else {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Eres menor de edad.");<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Sentencia if-else if-else<br>
+- La sentencia if-else if-else se utiliza para evaluar múltiples condiciones en secuencia.<br>
+- Sintaxis:<br>
+&emsp;if (condicion1) {<br>
+&emsp;&emsp;// Bloque de código a ejecutar si la condición1 es verdadera<br>
+&emsp;} else if (condicion2) {<br>
+&emsp;&emsp;// Bloque de código a ejecutar si la condición2 es verdadera<br>
+&emsp;} else {<br>
+&emsp;&emsp;// Bloque de código a ejecutar si ninguna condición anterior es verdadera<br>
+&emsp;}<br>
+- Ejemplo:<br>
+&emsp;public class EjemploIfElseIfElse {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int nota = 85;<br>
+&emsp;&emsp;&emsp;if (nota &gt;= 90) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Calificación: A");<br>
+&emsp;&emsp;&emsp;} else if (nota &gt;= 80) { <br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Calificación: B");<br>
+&emsp;&emsp;&emsp;} else if (nota &gt;= 70) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Calificación: C");<br>
+&emsp;&emsp;&emsp;} else if (nota &gt;= 60) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Calificación: D");<br>
+&emsp;&emsp;&emsp;} else {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Calificación: F");<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Sentencia switch<br>
+- La sentencia switch se utiliza para seleccionar una de entre muchas opciones de ejecución. Es especialmente útil cuando se desea comparar una variable con múltiples valores.<br>
+- Sintaxis:<br>
+&emsp;switch (expresion) {<br>
+&emsp;&emsp;case valor1:<br>
+&emsp;&emsp;&emsp;// Bloque de código a ejecutar si expresion == valor1<br>
+&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;case valor2:<br>
+&emsp;&emsp;&emsp;// Bloque de código a ejecutar si expresion == valor2<br>
+&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;// ...<br>
+&emsp;&emsp;default:<br>
+&emsp;&emsp;&emsp;// Bloque de código a ejecutar si ninguno // de los casos anteriores es verdadero<br>
+&emsp;}<br>
+- Ejemplo:<br>
+&emsp;public class EjemploSwitch {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int diaSemana = 3;<br>
+&emsp;&emsp;&emsp;switch (diaSemana) {<br>
+&emsp;&emsp;&emsp;&emsp;case 1:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Lunes");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 2:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Martes");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 3:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Miércoles");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 4:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Jueves");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 5:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Viernes");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 6:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Sábado");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 7:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Domingo");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;default:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Día inválido");<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Detalles Importantes<br>
+&emsp;1. Uso del bloque {}:<br>
+&emsp;&emsp;o Aunque no es obligatorio usar {} para un solo enunciado después de if, else if, else, o case, es una buena práctica hacerlo para evitar errores y mejorar la legibilidad.<br>
+&emsp;2. break en switch:<br>
+&emsp;&emsp;o La sentencia break se utiliza para salir del bloque switch después de ejecutar un caso. Si se omite, el flujo de ejecución continuará con el siguiente caso, lo cual puede no ser el comportamiento deseado.<br>
+&emsp;3. Asociatividad y Precedencia:<br>
+&emsp;&emsp;o Al usar múltiples operadores en una condición, es importante recordar las reglas de asociatividad y precedencia de operadores para asegurar que las condiciones se evalúen correctamente.<br>
+<br>
+Ejemplos Combinados<br>
+&emsp;public class EjemploDecision {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int edad = 20;<br>
+&emsp;&emsp;&emsp;int nota = 85;<br>
+&emsp;&emsp;&emsp;int diaSemana = 3;<br>
+<br>
+&emsp;&emsp;&emsp;// Ejemplo de if-else<br>
+&emsp;&emsp;&emsp;if (edad &gt;= 18) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Eres mayor de edad.");<br>
+&emsp;&emsp;&emsp;} else {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Eres menor de edad.");<br>
+&emsp;&emsp;&emsp;}<br>
+<br>
+&emsp;&emsp;&emsp;// Ejemplo de if-else if-else<br>
+&emsp;&emsp;&emsp;if (nota &gt;= 90) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Calificación: A");<br>
+&emsp;&emsp;&emsp;} else if (nota &gt;= 80) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Calificación: B");<br>
+&emsp;&emsp;&emsp;} else if (nota &gt;= 70) { <br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Calificación: C");<br>
+&emsp;&emsp;&emsp;} else if (nota &gt;= 60) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Calificación: D");<br>
+&emsp;&emsp;&emsp;} else {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Calificación: F");<br>
+&emsp;&emsp;&emsp;}<br>
+<br>
+&emsp;&emsp;&emsp;// Ejemplo de switch<br>
+&emsp;&emsp;&emsp;switch (diaSemana) {<br>
+&emsp;&emsp;&emsp;&emsp;case 1:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Lunes");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 2:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Martes");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 3:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Miércoles");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 4:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Jueves");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 5:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Viernes");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 6:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Sábado");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 7:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Domingo");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;default:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Día inválido");<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- La sentencia switch tiene una sintaxis mejorada, la cual estudiaremos a detalle en lecciones posteriores.<br>
+<br>
+Resumen<br>
+- Las sentencias de decisión son fundamentales para controlar el flujo de ejecución de un programa en Java. La capacidad de tomar decisiones basadas en condiciones permite a los desarrolladores crear programas dinámicos y adaptables. Al dominar if, if-else, if-else if-else, y switch, estarás bien equipado/a para enfrentar una amplia variedad de desafíos en la programación. ¡Espero que esta lección se te muy útil!<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

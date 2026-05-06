@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>005-12-00-FUERARANGO-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class RangoVariable {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;System.out.print("Proporciona un dato entero: ");<br>
+&emsp;&emsp;var dato = Integer.parseInt(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Revisamos si está dentro de rango (entre 1 y 10)<br>
+&emsp;&emsp;var estaDentroRango = dato &gt;= 1 && dato &lt;= 10;<br>
+&emsp;&emsp;System.out.println("Variable dentro de rango (1 y 10) ? " + estaDentroRango);<br>
+<br>
+&emsp;&emsp;// Revisar la logica inversa, si el dato está fuera de rango<br>
+&emsp;&emsp;var estaFueraRango = !(dato &gt;= 1 && dato &lt;= 10);<br>
+&emsp;&emsp;System.out.println("Variable fuera de rango (1 y 10)? " + estaFueraRango);<br>
+<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>005-14-00-TICKETVENTADESCUENTO-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class TicketVenta {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Generación Ticket de Venta ***");<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;System.out.print("Precio leche: ");<br>
+&emsp;&emsp;var precioLeche = Double.parseDouble(consola.nextLine());<br>
+<br>
+&emsp;&emsp;System.out.print("Precio pan: ");<br>
+&emsp;&emsp;var precioPan = Double.parseDouble(consola.nextLine());<br>
+<br>
+&emsp;&emsp;System.out.print("Precio lechuga: ");<br>
+&emsp;&emsp;var precioLechuga = Double.parseDouble(consola.nextLine());<br>
+<br>
+&emsp;&emsp;System.out.print("Precio plátanos: ");<br>
+&emsp;&emsp;var precioPlatanos = Double.parseDouble(consola.nextLine());<br>
+<br>
+&emsp;&emsp;System.out.print("Aplicar algún descuento (%)? ");<br>
+&emsp;&emsp;var descuentoPorcentaje = Integer.parseInt(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Cálculo del subtotal (sin impuestos)<br>
+&emsp;&emsp;var subtotal = precioLeche + precioPan + precioLechuga + precioPlatanos;<br>
+<br>
+&emsp;&emsp;// Aplicar el descuento<br>
+&emsp;&emsp;var descuento = subtotal * (descuentoPorcentaje/100.0);<br>
+<br>
+&emsp;&emsp;// Subtotal con descuento<br>
+&emsp;&emsp;var subtotalConDescuento = subtotal - descuento;<br>
+<br>
+&emsp;&emsp;// Cálculo con impuestos (16%)<br>
+&emsp;&emsp;var impuesto = subtotalConDescuento * 0.16;<br>
+<br>
+&emsp;&emsp;// Cálculo total de la compra (con impuestos)<br>
+&emsp;&emsp;var costoTotalCompra = subtotalConDescuento + impuesto;<br>
+<br>
+&emsp;&emsp;// Imprimir el ticket de venta<br>
+&emsp;&emsp;System.out.printf("""<br>
+&emsp;&emsp;&emsp;&emsp;%nTicket de Venta<br>
+&emsp;&emsp;&emsp;&emsp;---------------<br>
+&emsp;&emsp;&emsp;&emsp;Subtotal: $%.2f<br>
+&emsp;&emsp;&emsp;&emsp;Descuento: $%.2f (%d%%)<br>
+&emsp;&emsp;&emsp;&emsp;Impuesto (16%%): $%.2f<br>
+&emsp;&emsp;&emsp;&emsp;Costo total de la compra: $%.2f<br>
+&emsp;&emsp;&emsp;&emsp;""", subtotal, descuento, descuentoPorcentaje,<br>
+&emsp;&emsp;&emsp;&emsp;impuesto, costoTotalCompra);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

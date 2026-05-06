@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>007-16-00-SOLUCION-CALCULADORA-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class Calculadora {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+&emsp;&emsp;double operando1 = 0, operando2 = 0, resultado;<br>
+&emsp;&emsp;var salir = false;<br>
+&emsp;&emsp;// Ciclo para la aplicacion de Calculadora<br>
+&emsp;&emsp;while(!salir){<br>
+&emsp;&emsp;&emsp;System.out.print("""<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;*** Calculadora en Java ***<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;1. Suma<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;2. Resta<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;3. Multiplicación<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;4. División<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;5. Salir<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Escoge una opción:\s""");<br>
+&emsp;&emsp;&emsp;var opcion = consola.nextInt();<br>
+<br>
+&emsp;&emsp;&emsp;if(opcion &gt;= 1 && opcion &lt;= 4){<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Dame el valor 1: ");<br>
+&emsp;&emsp;&emsp;&emsp;operando1 = consola.nextDouble();<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Dame el valor 2: ");<br>
+&emsp;&emsp;&emsp;&emsp;operando2 = consola.nextDouble();<br>
+&emsp;&emsp;&emsp;}<br>
+<br>
+&emsp;&emsp;&emsp;switch(opcion){<br>
+&emsp;&emsp;&emsp;&emsp;case 1 -&gt; { // Suma<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;resultado = operando1 + operando2;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.printf("Resultado suma: %.2f%n%n", resultado);<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;case 2 -&gt; { // Resta<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;resultado = operando1 - operando2;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.printf("Resultado resta: %.2f%n%n", resultado);<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;case 3 -&gt; { // Multiplicación<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;resultado = operando1 * operando2;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.printf("Resultado multiplicación: %.2f%n%n", resultado);<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;case 4 -&gt; { // División<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;if(operando2 != 0) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;resultado = operando1 / operando2;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.printf("Resultado división: %.2f%n%n", resultado);<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;else<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Error: División entre cero.\n");<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;case 5 -&gt; { // Salir<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Saliendo del programa de Calculadora!");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;salir = true;<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;default -&gt; System.out.println("Opción inválida, " +<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"selecciona otra opción...\n");<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

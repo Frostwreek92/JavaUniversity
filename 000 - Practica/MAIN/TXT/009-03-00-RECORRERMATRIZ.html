@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>009-03-00-RECORRERMATRIZ</title>
+        </head>
+        <body>
+            <p>
+    public class Matrices {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;// Definimos una matriz<br>
+&emsp;&emsp;final var RENGLONES = 2;<br>
+&emsp;&emsp;final var COLUMNAS = 3;<br>
+&emsp;&emsp;var matriz = new int[RENGLONES][COLUMNAS];<br>
+&emsp;&emsp;// Modificar los valores de la matriz<br>
+&emsp;&emsp;matriz[0][0] = 100;<br>
+&emsp;&emsp;matriz[0][1] = 200;<br>
+&emsp;&emsp;matriz[0][2] = 300;<br>
+&emsp;&emsp;matriz[1][0] = 400;<br>
+&emsp;&emsp;matriz[1][1] = 500;<br>
+&emsp;&emsp;matriz[1][2] = 600;<br>
+&emsp;&emsp;// Recorrer una matriz<br>
+&emsp;&emsp;// 1. Ciclo mas externo. Recorrer los renglones<br>
+&emsp;&emsp;for(var ren = 0; ren &lt; RENGLONES; ren++){<br>
+&emsp;&emsp;&emsp;// 2. Ciclo interno. Recorrer las columnas<br>
+&emsp;&emsp;&emsp;for(var col = 0; col &lt; COLUMNAS; col++){<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Valor[" + ren + "][" + col + "] = " + matriz[ren][col]);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

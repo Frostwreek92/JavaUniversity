@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>007-22-00-BREAKCONTINUE-JAVA-UJ</title>
+        </head>
+        <body>
+            <p>
+    Uso de break y continue en Java<br>
+<br>
+- En esta lección, aprenderemos sobre las palabras clave break y continue en Java. Estas palabras clave se utilizan para controlar el flujo de los ciclos (for, while, do-while).<br>
+<br>
+break en Java<br>
+- La palabra clave break se utiliza para salir de un ciclo antes de que haya terminado normalmente. Cuando se encuentra break dentro de un ciclo, el control del programa se transfiere inmediatamente a la línea de código que sigue al ciclo.<br>
+<br>
+- Sintaxis de break:<br>
+&emsp;for (inicializacion; condicion; actualizacion) {<br>
+&emsp;&emsp;// código<br>
+&emsp;&emsp;if (condicion) {<br>
+&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;}<br>
+&emsp;&emsp;// más código<br>
+&emsp;}<br>
+<br>
+- Ejemplo de break:<br>
+&emsp;public class EjemploBreak {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;for (int i = 1; i &lt;= 10; i++) {<br>
+&emsp;&emsp;&emsp;&emsp;if (i == 5) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break; // Salir del ciclo cuando i es 5<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("i = " + i);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;System.out.println("Ciclo terminado");<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- En este ejemplo, el ciclo for se detendrá cuando i sea igual a 5, y la salida será:<br>
+&emsp;i = 1<br>
+&emsp;i = 2<br>
+&emsp;i = 3<br>
+&emsp;i = 4<br>
+&emsp;Ciclo terminado<br>
+<br>
+continue en Java<br>
+- La palabra clave continue se utiliza para saltar la iteración actual del ciclo y continuar con<br>
+la siguiente. Cuando se encuentra continue dentro de un ciclo, el control del programa se<br>
+transfiere inmediatamente al comienzo de la próxima iteración del ciclo.<br>
+<br>
+- Sintaxis de continue:<br>
+&emsp;for (inicializacion; condicion; actualizacion) {<br>
+&emsp;&emsp;// código<br>
+&emsp;&emsp;if (condicion) {<br>
+&emsp;&emsp;&emsp;continue;<br>
+&emsp;&emsp;}<br>
+&emsp;&emsp;// más código<br>
+&emsp;}<br>
+<br>
+- Ejemplo de continue:<br>
+&emsp;public class EjemploContinue {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;for (int i = 1; i &lt;= 10; i++) {<br>
+&emsp;&emsp;&emsp;&emsp;if (i % 2 == 0) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;continue; // Saltar los números pares<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("i = " + i);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- En este ejemplo, el ciclo for saltará los números pares y la salida será:<br>
+&emsp;i = 1<br>
+&emsp;i = 3<br>
+&emsp;i = 5<br>
+&emsp;i = 7<br>
+&emsp;i = 9<br>
+<br>
+Resumen<br>
+&emsp;• break: Se utiliza para salir de un ciclo prematuramente.<br>
+&emsp;• continue: Se utiliza para saltar la iteración actual y continuar con la siguiente.<br>
+<br>
+- Ambas palabras clave son útiles para controlar el flujo de los ciclos y hacer que tu código sea más legible y eficiente.<br>
+<br>
+¡Espero que esta lección te sea muy útil!<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

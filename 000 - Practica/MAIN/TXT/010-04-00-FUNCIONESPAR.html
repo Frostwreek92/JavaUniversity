@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>010-04-00-FUNCIONESPAR</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class FuncionPar {<br>
+&emsp;// Funcion para saber si un numero es par<br>
+&emsp;static boolean esPar(int numero){<br>
+//&emsp;&emsp;if(numero % 2 == 0)<br>
+//&emsp;&emsp;&emsp;return true;<br>
+//&emsp;&emsp;else<br>
+//&emsp;&emsp;&emsp;return false;<br>
+&emsp;&emsp;return (numero % 2 == 0) ? true : false;<br>
+&emsp;}<br>
+<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.print("Proporciona un valor numérico: ");<br>
+&emsp;&emsp;var numero = Integer.parseInt(new Scanner(System.in).nextLine());<br>
+&emsp;&emsp;System.out.println("Número par? " + esPar(numero));<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

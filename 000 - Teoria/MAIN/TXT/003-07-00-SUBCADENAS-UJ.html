@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>003-07-00-SUBCADENAS-UJ</title>
+        </head>
+        <body>
+            <p>
+    Manejo de Subcadenas en Java<br>
+- En esta lección aprenderemos cómo manejar subcadenas en Java utilizando métodos proporcionados por la clase String. Algunos métodos los estudiaremos en esta lección, y los métodos de indexOf y lastIndexOf los estudiaremos en lecciones siguientes.<br>
+<br>
+Métodos Principales para el Manejo de Subcadenas<br>
+&emsp;1. substring(int beginIndex):<br>
+&emsp;&emsp;o Devuelve una nueva cadena que es una subcadena de esta cadena. La subcadena comienza en el índice especificado y se extiende hasta el final de la cadena.<br>
+&emsp;2. substring(int beginIndex, int endIndex):<br>
+&emsp;&emsp;o Devuelve una nueva cadena que es una subcadena de esta cadena. La subcadena comienza en el índice especificado y se extiende hasta el carácter en el índice endIndex - 1.<br>
+&emsp;3. indexOf(String str):<br>
+&emsp;&emsp;o Devuelve el índice de la primera aparición de la subcadena especificada en esta cadena. Si la subcadena no se encuentra, devuelve -1.<br>
+&emsp;4. lastIndexOf(String str):<br>
+&emsp;&emsp;o Devuelve el índice de la última aparición de la subcadena especificada en esta cadena. Si la subcadena no se encuentra, devuelve -1.<br>
+<br>
+Ejemplos de Uso<br>
+- Ejemplo 1: Uso de substring(int beginIndex)<br>
+&emsp;public class SubstringEjemplo1 {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var str = "Aprender Java es divertido";<br>
+&emsp;&emsp;&emsp;// Obtener una subcadena desde el índice 9 hasta el final<br>
+&emsp;&emsp;&emsp;var subcadena = str.substring(9);<br>
+&emsp;&emsp;&emsp;System.out.println("Subcadena desde el índice 9: " + subcadena);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+&emsp;Salida:<br>
+&emsp;&emsp;Subcadena desde el índice 9: Java es divertido<br>
+<br>
+- Ejemplo 2: Uso de substring(int beginIndex, int endIndex)<br>
+&emsp;public class SubstringEjemplo2 {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var str = "Aprender Java es divertido";<br>
+&emsp;&emsp;&emsp;// Obtener una subcadena desde el índice 0 hasta el índice 8 (no incluido)<br>
+&emsp;&emsp;&emsp;var subcadena = str.substring(0, 8);<br>
+&emsp;&emsp;&emsp;System.out.println("Subcadena del índice 0 al 8: " + subcadena);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+&emsp;Salida:<br>
+&emsp;&emsp;Subcadena del índice 0 al 8: Aprender<br>
+<br>
+- Ejemplo 3: Uso de indexOf(String str)<br>
+&emsp;public class IndexOfEjemplo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var str = "Aprender Java es divertido";<br>
+&emsp;&emsp;&emsp;// Obtener el índice de la primera aparición de "Java"<br>
+&emsp;&emsp;&emsp;var indice = str.indexOf("Java");<br>
+&emsp;&emsp;&emsp;System.out.println("Índice de 'Java': " + indice);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+&emsp;Salida:<br>
+&emsp;&emsp;Índice de 'Java': 9<br>
+<br>
+- Ejemplo 4: Uso de lastIndexOf(String str)<br>
+&emsp;public class LastIndexOfEjemplo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var str = "Aprender Java es divertido y aprender es divertido";<br>
+&emsp;&emsp;&emsp;// Obtener el índice de la última aparición de "divertido"<br>
+&emsp;&emsp;&emsp;var ultimoIndice = str.lastIndexOf("divertido");<br>
+&emsp;&emsp;&emsp;System.out.println("Último índice de 'divertido': " + ultimoIndice);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+&emsp;Salida:<br>
+&emsp;&emsp;Último índice de 'divertido': 39<br>
+<br>
+Conclusión<br>
+- El manejo de subcadenas en Java es una habilidad esencial para la manipulación de cadenas de texto. Los métodos substring, indexOf, y lastIndexOf proporcionan formas eficientes de obtener y trabajar con partes de una cadena. Estos métodos son fáciles de usar y entender, y no requieren el uso de ciclos o funciones adicionales para realizar operaciones básicas de subcadenas.<br>
+<br>
+Recursos Adicionales<br>
+&emsp;• Java Documentation - String<br>
+- Estos recursos proporcionan información adicional y ejemplos sobre el uso de métodos de manipulación de cadenas en Java.<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

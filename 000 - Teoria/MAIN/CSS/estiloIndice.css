@@ -1,0 +1,91 @@
+/*Enlaces*/
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*Cuerpo completo*/
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    background-color:gainsboro;
+}
+
+/*Línea divisoria*/
+hr {
+    height: 5px;
+    background-color: black;
+}
+
+/*Botón borrar*/
+#borrar {
+    color: white;
+    font-size: 25px;
+    background-color: black;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+#borrar:hover {
+    color: white;
+    background-color: red;
+}
+
+/*Recuadro del buscador*/
+#buscador {
+    margin-left: 20px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+/*Lugar donde se encuentran todos los enlaces*/
+#contenedor {
+    margin-left: 50px;
+}
+
+/* Estilos para el enlace dentro del botón */
+#formulario {
+    float: right;
+    background-color:silver; /* Fondo transparente del botón */
+    border-radius: 5px;
+}
+
+/*Partes comunes*/
+#enlaceSeccion, #enlaceFormulario {
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: color 0.3s; /* Agrega una transición suave al cambio de color del texto del enlace */
+}
+
+#enlaceSeccion:hover, #formulario:hover, #enlaceFormulario:hover {
+    background-color: black;
+    color: white;
+}
+
+/*Contenedor de búsqueda*/
+#search-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+#search-container input {
+    margin-right: 10px;
+    color: burlywood;
+    background-color: black;
+}
+
+#search-container button {
+    flex-shrink: 0;
+}
+
+/*Título*/
+#titulo_enlace {
+    font-size: 40px;
+    font-weight:bold;
+    text-align: center;
+}

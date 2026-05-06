@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>006-20-00-SENTENCIASSWITCH-UJ</title>
+        </head>
+        <body>
+            <p>
+    Estructura switch en Java<br>
+- La estructura switch en Java permite seleccionar una de varias posibles acciones a realizar, basándose en el valor de una expresión. Es una alternativa más legible y manejable a las múltiples sentencias if-else if-else.<br>
+<br>
+Sintaxis Clásica de switch<br>
+&emsp;switch (expresion) {<br>
+&emsp;&emsp;case valor1:<br>
+&emsp;&emsp;&emsp;// Bloque de código para el caso valor1<br>
+&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;case valor2:<br>
+&emsp;&emsp;&emsp;// Bloque de código para el caso valor2<br>
+&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;// Puedes tener tantos casos como necesites<br>
+&emsp;&emsp;default:<br>
+&emsp;&emsp;&emsp;// Bloque de código para el caso por defecto<br>
+&emsp;&emsp;&emsp;break;<br>
+&emsp;}<br>
+<br>
+- Ejemplo 1: Días de la Semana<br>
+&emsp;public class DiasSemana {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var dia = 3; // Suponiendo que 1 es Lunes, 2 es Martes, etc.<br>
+&emsp;&emsp;&emsp;switch (dia) {<br>
+&emsp;&emsp;&emsp;&emsp;case 1:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Lunes");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 2:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Martes");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 3:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Miércoles");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 4:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Jueves");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 5:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Viernes");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 6:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Sábado");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;case 7:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Domingo");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;default:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Día inválido");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Mejoras en las Versiones Recientes de Java<br>
+- En Java 12 y versiones posteriores, se introdujeron las expresiones switch, que permiten utilizar una sintaxis más compacta y limpia. También soportan switch con múltiples etiquetas de caso y bloques de texto.<br>
+<br>
+- Ejemplo 2: Uso de Expresiones switch<br>
+&emsp;public class DiasSemanaExpresiones {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int dia = 3;<br>
+&emsp;&emsp;&emsp;String nombreDia;<br>
+&emsp;&emsp;&emsp;nombreDia = switch (dia) {<br>
+&emsp;&emsp;&emsp;&emsp;case 1 -&gt; "Lunes";<br>
+&emsp;&emsp;&emsp;&emsp;case 2 -&gt; "Martes";<br>
+&emsp;&emsp;&emsp;&emsp;case 3 -&gt; "Miércoles";<br>
+&emsp;&emsp;&emsp;&emsp;case 4 -&gt; "Jueves";<br>
+&emsp;&emsp;&emsp;&emsp;case 5 -&gt; "Viernes";<br>
+&emsp;&emsp;&emsp;&emsp;case 6 -&gt; "Sábado";<br>
+&emsp;&emsp;&emsp;&emsp;case 7 -&gt; "Domingo";<br>
+&emsp;&emsp;&emsp;&emsp;default -&gt; "Día inválido";<br>
+&emsp;&emsp;&emsp;};<br>
+<br>
+&emsp;&emsp;&emsp;System.out.println(nombreDia);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Ejercicios Prácticos<br>
+- Ejercicio 1: Calificaciones<br>
+&emsp;import java.util.Scanner;<br>
+<br>
+&emsp;public class SistemaCalificaciones {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;Scanner consola = new Scanner(System.in);<br>
+&emsp;&emsp;&emsp;System.out.print("Proporciona una calificación entre 0 y 10: ");<br>
+&emsp;&emsp;&emsp;var calificacion = Integer.parseInt(consola.nextLine());<br>
+&emsp;&emsp;&emsp;var calificacionLetra;<br>
+<br>
+&emsp;&emsp;&emsp;calificacionLetra = switch (calificacion) {<br>
+&emsp;&emsp;&emsp;&emsp;case 9, 10 -&gt; "A";<br>
+&emsp;&emsp;&emsp;&emsp;case 8 -&gt; "B";<br>
+&emsp;&emsp;&emsp;&emsp;case 7 -&gt; "C";<br>
+&emsp;&emsp;&emsp;&emsp;case 6 -&gt; "D";<br>
+&emsp;&emsp;&emsp;&emsp;case 0, 1, 2, 3, 4, 5 -&gt; "F";<br>
+&emsp;&emsp;&emsp;&emsp;default -&gt; "Calificación incorrecta";<br>
+&emsp;&emsp;&emsp;};<br>
+<br>
+&emsp;&emsp;&emsp;System.out.printf("Calificación %.1f es equivalente a %s%n",<br>
+&emsp;&emsp;&emsp;&emsp;calificacion, calificacionLetra);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Ejercicio Final<br>
+- Ejercicio: Estación del Año utilizando switch<br>
+<br>
+&emsp;import java.util.Scanner;<br>
+<br>
+&emsp;public class EstacionAnioSwitch {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;Scanner consola = new Scanner(System.in);<br>
+&emsp;&emsp;&emsp;System.out.print("Proporciona el valor del mes (1-12): ");<br>
+&emsp;&emsp;&emsp;int mes = Integer.parseInt(consola.nextLine());<br>
+&emsp;&emsp;&emsp;String estacion;<br>
+<br>
+&emsp;&emsp;&emsp;switch (mes) {<br>
+&emsp;&emsp;&emsp;&emsp;case 1, 2, 12 -&gt; estacion = "Invierno";<br>
+&emsp;&emsp;&emsp;&emsp;case 3, 4, 5 -&gt; estacion = "Primavera";<br>
+&emsp;&emsp;&emsp;&emsp;case 6, 7, 8 -&gt; estacion = "Verano";<br>
+&emsp;&emsp;&emsp;&emsp;case 9, 10, 11 -&gt; estacion = "Otoño";<br>
+&emsp;&emsp;&emsp;&emsp;default -&gt; estacion = "Estación desconocida";<br>
+&emsp;&emsp;&emsp;}<br>
+<br>
+&emsp;&emsp;&emsp;System.out.printf("La estación para el mes %d es %s%n", mes, estacion);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Significado de yield<br>
+- En la sintaxis de switch mejorado de Java (introducido en Java 12 y posterior, y formalizado en Java 14), el uso de yield es una característica clave para las expresiones switch. Aquí te explico qué significa y cómo se usa.<br>
+- El yield se utiliza dentro de una expresión switch para devolver un valor desde un caso específico. En la sintaxis clásica de switch, los casos no devuelven valores, solo ejecutan código. Con las nuevas expresiones switch, cada caso puede devolver un valor utilizando yield, lo que permite asignar el resultado del switch a una variable.<br>
+<br>
+Ejemplo y Explicación<br>
+- Veamos el ejemplo específico del código que has pedido y otros ejemplos adicionales.<br>
+<br>
+Ejemplo 1: Sistema de Envíos<br>
+&emsp;import java.util.Scanner;<br>
+<br>
+&emsp;public class SistemaEnvios {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;System.out.println("*** Sistema de Envíos ***");<br>
+&emsp;&emsp;&emsp;final double TARIFA_NACIONAL = 10;<br>
+&emsp;&emsp;&emsp;final double TARIFA_INTERNACIONAL = 20;<br>
+&emsp;&emsp;&emsp;Scanner consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;&emsp;System.out.print("Ingresa el destino del paquete (nacional/internacional): ");<br>
+&emsp;&emsp;&emsp;String destino = consola.nextLine().strip().toLowerCase();<br>
+<br>
+&emsp;&emsp;&emsp;System.out.print("Ingresa el peso del paquete (en kg): ");<br>
+&emsp;&emsp;&emsp;double peso = Double.parseDouble(consola.nextLine());<br>
+<br>
+&emsp;&emsp;&emsp;// Cálculo del envío del paquete usando switch con yield<br>
+&emsp;&emsp;&emsp;Double costoEnvio = switch (destino) {<br>
+&emsp;&emsp;&emsp;&emsp;case "nacional" -&gt; peso * TARIFA_NACIONAL;<br>
+&emsp;&emsp;&emsp;&emsp;case "internacional" -&gt; peso * TARIFA_INTERNACIONAL;<br>
+&emsp;&emsp;&emsp;&emsp;default -&gt; {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Destino no válido. Ingresa el valor de nacional o internacional");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;yield null;<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;};<br>
+<br>
+&emsp;&emsp;&emsp;if (costoEnvio != null) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.printf("El costo de envío del paquete es: $%.2f%n", costoEnvio);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Explicación del yield<br>
+&emsp;1. Uso en el default:<br>
+&emsp;&emsp;o En el default case, yield null; se utiliza para devolver null cuando el destino no es válido.<br>
+&emsp;&emsp;o yield actúa como una forma de devolver un valor desde el switch hacia la variable costoEnvio.<br>
+&emsp;2. Asignación del Resultado:<br>
+&emsp;&emsp;o El switch ahora puede ser utilizado como una expresión que devuelve un valor.<br>
+&emsp;&emsp;o Cada case puede devolver un valor utilizando yield, y ese valor se asigna a costoEnvio.<br>
+<br>
+Ejemplo Adicional: Días de la Semana<br>
+&emsp;public class DiasSemana {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int dia = 3; // Suponiendo que 1 es Lunes, 2 es Martes, etc.<br>
+&emsp;&emsp;&emsp;String nombreDia = switch (dia) {<br>
+&emsp;&emsp;&emsp;&emsp;case 1 -&gt; "Lunes";<br>
+&emsp;&emsp;&emsp;&emsp;case 2 -&gt; "Martes";<br>
+&emsp;&emsp;&emsp;&emsp;case 3 -&gt; "Miércoles";<br>
+&emsp;&emsp;&emsp;&emsp;case 4 -&gt; "Jueves";<br>
+&emsp;&emsp;&emsp;&emsp;case 5 -&gt; "Viernes";<br>
+&emsp;&emsp;&emsp;&emsp;case 6 -&gt; "Sábado";<br>
+&emsp;&emsp;&emsp;&emsp;case 7 -&gt; "Domingo";<br>
+&emsp;&emsp;&emsp;&emsp;default -&gt; {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;yield "Día inválido"; // Devolver un valor con yield<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;};<br>
+<br>
+&emsp;&emsp;&emsp;System.out.println(nombreDia);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Beneficios de yield en las Expresiones switch<br>
+&emsp;1. Concisión y Claridad:<br>
+&emsp;&emsp;o Permite escribir switch más concisos y legibles, eliminando la necesidad de múltiples variables temporales.<br>
+&emsp;2. Menos Errores:<br>
+&emsp;&emsp;o Reduce la posibilidad de olvidar break en los casos del switch clásico, lo que podría causar errores lógicos.<br>
+&emsp;3. Flexibilidad:<br>
+&emsp;&emsp;o Permite devolver valores directamente desde los casos, facilitando la asignación de resultados a variables.<br>
+<br>
+Resumen<br>
+- La estructura switch en Java es una herramienta poderosa para realizar selecciones múltiples. Con la sintaxis clásica, puedes manejar múltiples casos de forma clara, y con las mejoras recientes en Java, puedes hacer que tu código sea aún más conciso y legible. Estos ejemplos y ejercicios prácticos te ayudarán a entender y aplicar el switch en tus propios programas.<br>
+- El uso de yield en las expresiones switch en Java proporciona una forma elegante y eficiente de devolver valores desde los casos del switch. Esto hace que el switch sea más potente y flexible, permitiendo su uso en contextos donde se necesita devolver valores, no solo ejecutar bloques de código.<br>
+<br>
+¡Espero que esta lección sea útil para ti!<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

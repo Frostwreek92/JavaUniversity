@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>010-06-00-EJEMPLOFUNCIONRECURSIVA</title>
+        </head>
+        <body>
+            <p>
+    public class FuncionRecursiva {<br>
+&emsp;// Imprimir 1 al 5 usando una funcion recursiva<br>
+&emsp;// Funcion recursiva<br>
+&emsp;static void funcionRecursiva(int numero){<br>
+&emsp;&emsp;// Caso Base<br>
+&emsp;&emsp;if(numero == 1)<br>
+&emsp;&emsp;&emsp;System.out.print(numero + " ");<br>
+&emsp;&emsp;else{<br>
+&emsp;&emsp;&emsp;// Caso recursivo<br>
+&emsp;&emsp;&emsp;funcionRecursiva(numero - 1);<br>
+&emsp;&emsp;&emsp;System.out.print(numero + " ");<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;funcionRecursiva(10);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

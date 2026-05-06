@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>007-12-00-MENUITERATIVO-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class SistemaAdministracionCuentas {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+&emsp;&emsp;var salir = false;<br>
+&emsp;&emsp;// Comenzar con la iteracion del menu<br>
+&emsp;&emsp;while(!salir){<br>
+&emsp;&emsp;&emsp;System.out.print("""<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;*** Sistema de Administración de Cuentas ***<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Menu:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;1. Crear cuenta<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;2. Eliminar cuenta<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;3. Salir<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Escoge una opción:\s""");<br>
+&emsp;&emsp;&emsp;var opcion = consola.nextInt();<br>
+&emsp;&emsp;&emsp;// Evaluar cada opción<br>
+&emsp;&emsp;&emsp;switch (opcion){<br>
+&emsp;&emsp;&emsp;&emsp;case 1 -&gt; System.out.println("Creando tu cuenta...\n");<br>
+&emsp;&emsp;&emsp;&emsp;case 2 -&gt; System.out.println("Eliminando tu cuenta...\n");<br>
+&emsp;&emsp;&emsp;&emsp;case 3 -&gt; {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Saliendo del sistema. Hasta pronto!");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;salir = true;<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;default -&gt; System.out.println("Opción inválida...\n");<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;&emsp;System.out.println("Fin del Sistema de Administración de Cuentas");<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

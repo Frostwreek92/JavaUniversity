@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>005-19-00-PRECEDENCIAOPERADORES-UJ</title>
+        </head>
+        <body>
+            <p>
+    Precedencia de Operadores en Java<br>
+- La precedencia de operadores en Java determina el orden en que se evalúan las expresiones. Los operadores con mayor precedencia se evalúan antes que los operadores con menor precedencia. En caso de que los operadores tengan la misma precedencia, el orden de evaluación se determina por su asociatividad (izquierda a derecha o derecha a izquierda).<br>
+<br>
+Precedencia de Operadores más comunes en Java<br>
+&emsp;1. Postfijo: expr++, expr--<br>
+&emsp;2. Unarios: ++expr, --expr, +expr, -expr, ~, !<br>
+&emsp;3. Creación de Objetos: new, new[]<br>
+&emsp;4. Multiplicación/División: *, /, %<br>
+&emsp;5. Aditivos: +, -<br>
+&emsp;6. Relacionales: &lt;, &gt;, &lt;=, &gt;=<br>
+&emsp;7. Igualdad: ==, !=<br>
+&emsp;8. Lógicos AND Condicional: &&<br>
+&emsp;9. Lógicos OR Condicional: ||<br>
+&emsp;10. Ternario: ? :<br>
+&emsp;11. Asignación: =, +=, -=, *=, /=, %=<br>
+<br>
+A continuación, se detalla la precedencia de los operadores más comunes en Java, junto con su sintaxis y ejemplos.<br>
+&emsp;1. Operadores de Postfijo<br>
+&emsp;&emsp;• Precedencia más alta<br>
+&emsp;&emsp;• Asociatividad: Izquierda a derecha<br>
+&emsp;&emsp;• Operadores: expr++, expr-- int a = 5; int b = a++; // b = 5, a = 6<br>
+&emsp;2. Operadores Unarios<br>
+&emsp;&emsp;• Asociatividad: Derecha a izquierda<br>
+&emsp;&emsp;• Operadores: ++expr, --expr, +expr, -expr, ~, ! int a = 5; int b = ++a; // b = 6, a = 6<br>
+&emsp;3. Operador de Creación de Objetos<br>
+&emsp;&emsp;• Asociatividad: Derecha a izquierda<br>
+&emsp;&emsp;• Operadores: new, new[] String str = new String("Hola"); int[] arr = new int[5]; // Esta sintaxis la estudiaremos en el tema de Arreglos<br>
+&emsp;4. Operadores de Multiplicación y División<br>
+&emsp;&emsp;• Asociatividad: Izquierda a derecha<br>
+&emsp;&emsp;• Operadores: *, /, % int a = 10; int b = 5; int c = a * b; // c = 50<br>
+&emsp;5. Operadores Aditivos (Suma y Resta)<br>
+&emsp;&emsp;• Asociatividad: Izquierda a derecha<br>
+&emsp;&emsp;• Operadores: +, - int a = 10; int b = 5; int c = a + b; // c = 15<br>
+&emsp;6. Operadores Relacionales<br>
+&emsp;&emsp;• Asociatividad: Izquierda a derecha<br>
+&emsp;&emsp;• Operadores: &lt;, &gt;, &lt;=, &gt;= int a = 10; boolean result = a &gt; 5; // result = true<br>
+&emsp;7. Operadores de Igualdad<br>
+&emsp;&emsp;• Asociatividad: Izquierda a derecha<br>
+&emsp;&emsp;• Operadores: ==, != int a = 10; boolean result = a == 10; // result = true<br>
+&emsp;8. Operadores Lógicos AND Condicional<br>
+&emsp;&emsp;• Asociatividad: Izquierda a derecha<br>
+&emsp;&emsp;• Operadores: && boolean a = true; boolean b = false; boolean result = a && b; // result = false<br>
+&emsp;9. Operadores Lógicos OR Condicional<br>
+&emsp;&emsp;• Asociatividad: Izquierda a derecha<br>
+&emsp;&emsp;• Operadores: || boolean a = true; boolean b = false; boolean result = a || b; // result = true<br>
+&emsp;10. Operador Ternario. Este operador lo estudiaremos a detalle en el tema de Sentencias de Decisión.<br>
+&emsp;&emsp;• Asociatividad: Derecha a izquierda<br>
+&emsp;&emsp;• Operadores: ? : int a = 5; int b = (a &gt; 10) ? 1 : 0; // b = 0<br>
+&emsp;11. Operadores de Asignación<br>
+&emsp;&emsp;• Asociatividad: Derecha a izquierda<br>
+&emsp;&emsp;• Operadores: =, +=, -=, *=, /=, %=, &=, |=, ^=, &lt;&lt;=, &gt;&gt;=, &gt;&gt;&gt;= int a = 5; a += 10; // a = 15<br>
+<br>
+Ejemplos Detallados<br>
+- Ejemplo 1: Combinación de Operadores Aritméticos y de Asignación<br>
+&emsp;public class EjemploPrecedencia1 {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int a = 10;<br>
+&emsp;&emsp;&emsp;int b = 20;<br>
+&emsp;&emsp;&emsp;int c = 30;<br>
+&emsp;&emsp;&emsp;int resultado = a + b * c; // b * c se evalúa primero, luego a + (b * c)<br>
+&emsp;&emsp;&emsp;System.out.println("Resultado: " + resultado); // Resultado: 610<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- Ejemplo 2: Uso de Operadores Lógicos<br>
+&emsp;public class EjemploPrecedencia3 {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;boolean a = true;<br>
+&emsp;&emsp;&emsp;boolean b = false;<br>
+&emsp;&emsp;&emsp;boolean resultado = a && b || !b; // && se evalúa primero, luego || y finalmente !<br>
+&emsp;&emsp;&emsp;System.out.println("Resultado: " + resultado); // Resultado: true<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Con estos ejemplos y explicaciones, podrán tener una comprensión clara de la precedencia de operadores en Java y cómo aplicarlos en diferentes contextos.<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

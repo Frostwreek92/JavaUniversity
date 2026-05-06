@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>004-08-00-FORMATOCADENAS-UJ</title>
+        </head>
+        <body>
+            <p>
+    Lección: Formateo de Números y Cadenas en Java<br>
+- En esta lección, aprenderemos a dar formato a números y cadenas en Java utilizando tanto cadenas con cadenas simples, así como bloques de texto (text blocks). Veremos cómo usar métodos como String.format y System.out.printf para formatear la salida y cómo incluir saltos de línea y otros caracteres especiales en las cadenas.<br>
+<br>
+1. Formateo Básico de Números y Cadenas<br>
+<br>
+Uso de String.format<br>
+- String.format permite crear una nueva cadena con formato especificado.<br>
+&emsp;public class FormateoEjemplo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var nombre = "Juan";<br>
+&emsp;&emsp;&emsp;var edad = 35;<br>
+&emsp;&emsp;&emsp;var salario = 12345.6789;<br>
+<br>
+&emsp;&emsp;&emsp;// Formateo con comillas dobles<br>
+&emsp;&emsp;&emsp;var mensaje =<br>
+&emsp;&emsp;&emsp;&emsp;String.format("Nombre: %s, Edad: %d, Salario: %.2f", nombre, edad, salario);<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Uso de System.out.printf<br>
+- System.out.printf permite formatear la salida directamente en la consola.<br>
+&emsp;public class FormateoEjemplo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var nombre = "Juan";<br>
+&emsp;&emsp;&emsp;var edad = 35;<br>
+&emsp;&emsp;&emsp;var salario = 12345.6789;<br>
+<br>
+&emsp;&emsp;&emsp;// Formateo con comillas dobles<br>
+&emsp;&emsp;&emsp;System.out.printf("Nombre: %s, Edad: %d, Salario: %.2f%n", nombre, edad, salario);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+2. Uso de Bloques de Texto (Text Blocks)<br>
+- Los bloques de texto se introdujeron en Java 13 como una vista previa y se estabilizaron en Java 15. Permiten escribir cadenas de texto multilínea de manera más fácil y legible.<br>
+- Ejemplo con Text Blocks<br>
+&emsp;public class FormateoEjemplo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var nombre = "Juan";<br>
+&emsp;&emsp;&emsp;var edad = 35;<br>
+&emsp;&emsp;&emsp;var salario = 12345.67;<br>
+<br>
+&emsp;&emsp;&emsp;// Formateo con text block<br>
+&emsp;&emsp;&emsp;var mensaje = """<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Nombre: %s<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Edad: %d<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Salario: %.2f<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;""".formatted(nombre, edad, salario);<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+3. Caracteres Especiales y Saltos de Línea<br>
+<br>
+Uso de Caracteres Especiales en Formateo<br>
+- Los caracteres especiales como el salto de línea (\n), el tabulador (\t), y otros, se pueden usar para mejorar la legibilidad de la salida.<br>
+&emsp;public class FormateoEjemplo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var nombre = "Juan";<br>
+&emsp;&emsp;&emsp;var edad = 35;<br>
+&emsp;&emsp;&emsp;var salario = 12345.67;<br>
+<br>
+&emsp;&emsp;&emsp;// Uso de caracteres especiales<br>
+&emsp;&emsp;&emsp;var mensaje = String.format("Nombre:\t%s%nEdad:\t%d%nSalario:\t%.2f", nombre, edad, salario);<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+4. Ejemplos Complejos con Bloques de Texto<br>
+<br>
+Formateo Complejo con Text Blocks<br>
+&emsp;public class FormateoEjemplo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var nombre = "Juan";<br>
+&emsp;&emsp;&emsp;var edad = 35;<br>
+&emsp;&emsp;&emsp;var salario = 12345.67;<br>
+<br>
+&emsp;&emsp;&emsp;// Formateo complejo con text block<br>
+&emsp;&emsp;&emsp;var mensaje = """<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Información del Empleado:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;-------------------------<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Nombre: %s<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Edad: %d<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Salario: %.2f<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;-------------------------<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;""".formatted(nombre, edad, salario); System.out.println(mensaje);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Resumen de Especificadores de Formato<br>
+&emsp;• %s: Cadena de texto.<br>
+&emsp;• %d: Entero decimal.<br>
+&emsp;• %f: Número de punto flotante.<br>
+&emsp;• %n: Nueva línea independiente de la plataforma.<br>
+&emsp;• %t: Fecha y hora (requiere especificadores adicionales para el formato específico).<br>
+<br>
+Ejercicio Práctico<br>
+- Escribe un programa que solicite el nombre, la edad y el salario de un usuario, y luego imprima esta información utilizando tanto comillas dobles como bloques de texto, incluyendo formateo adecuado para los números y saltos de línea.<br>
+- Solución del Ejercicio<br>
+&emsp;import java.util.Scanner;<br>
+<br>
+&emsp;public class FormateoEjercicio {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;&emsp;// Solicitar datos del usuario<br>
+&emsp;&emsp;&emsp;System.out.print("Ingrese su nombre: ");<br>
+&emsp;&emsp;&emsp;var nombre = consola.nextLine();<br>
+&emsp;&emsp;&emsp;System.out.print("Ingrese su edad: ");<br>
+&emsp;&emsp;&emsp;var edad = Integer.parseInt(consola.nextLine());<br>
+&emsp;&emsp;&emsp;System.out.print("Ingrese su salario: ");<br>
+&emsp;&emsp;&emsp;var salario = Double.parseDouble(consola.nextLine());<br>
+<br>
+&emsp;&emsp;&emsp;// Formateo con comillas dobles<br>
+&emsp;&emsp;&emsp;var mensaje1 = String.format("Nombre: %s%nEdad: %d%nSalario: %.2f", nombre, edad, salario);<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje1);<br>
+<br>
+&emsp;&emsp;&emsp;// Formateo con text block<br>
+&emsp;&emsp;&emsp;var mensaje2 = """<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Información del Usuario:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;------------------------<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Nombre: %s<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Edad: %d<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Salario: %.2f<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;------------------------<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;""".formatted(nombre, edad, salario);<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje2);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Ejemplo Adicional: Asegurar Formato de 4 Dígitos y 2 Dígitos en Punto Flotante<br>
+- Para asegurar que un número entero tenga siempre 4 dígitos (rellenando con ceros a la izquierda si es necesario) y que un número de punto flotante tenga siempre 2 dígitos decimales, utilizamos el siguiente formato:<br>
+<br>
+- Uso de String.format<br>
+&emsp;public class FormateoNumeros {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var numero = 42;<br>
+&emsp;&emsp;&emsp;var valor = 123.456;<br>
+<br>
+&emsp;&emsp;&emsp;// Asegurar 4 dígitos para el número entero<br>
+&emsp;&emsp;&emsp;var numeroFormateado = String.format("%04d", numero);<br>
+<br>
+&emsp;&emsp;&emsp;// Asegurar 2 dígitos decimales para el número de punto flotante<br>
+&emsp;&emsp;&emsp;var valorFormateado = String.format("%.2f", valor);<br>
+&emsp;&emsp;&emsp;System.out.println("Número formateado (4 dígitos): " + numeroFormateado);<br>
+&emsp;&emsp;&emsp;System.out.println("Valor formateado (2 dígitos decimales): " + valorFormateado);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- Uso de System.out.printf<br>
+&emsp;public class FormateoNumeros {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var numero = 42;<br>
+&emsp;&emsp;&emsp;var valor = 123.456;<br>
+<br>
+&emsp;&emsp;&emsp;// Asegurar 4 dígitos para el número entero<br>
+&emsp;&emsp;&emsp;System.out.printf("Número formateado (4 dígitos): %04d%n", numero);<br>
+<br>
+&emsp;&emsp;&emsp;// Asegurar 2 dígitos decimales para el número de punto flotante<br>
+&emsp;&emsp;&emsp;System.out.printf("Valor formateado (2 dígitos decimales): %.2f%n", valor);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- Uso de Text Blocks<br>
+&emsp;public class FormateoNumeros {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var numero = 42;<br>
+&emsp;&emsp;&emsp;var valor = 123.456;<br>
+<br>
+&emsp;&emsp;&emsp;// Formateo con text block<br>
+&emsp;&emsp;&emsp;var mensaje = """<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Número formateado (4 dígitos): %04d<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Valor formateado (2 dígitos decimales): %.2f<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;""".formatted(numero, valor);<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Resumen de Especificadores de Formato<br>
+&emsp;• %s: Cadena de texto.<br>
+&emsp;• %d: Entero decimal.<br>
+&emsp;• %04d: Entero decimal con al menos 4 dígitos, rellenado con ceros a la izquierda si es necesario.<br>
+&emsp;• %f: Número de punto flotante.<br>
+&emsp;• %.2f: Número de punto flotante con 2 dígitos decimales.<br>
+&emsp;• %n: Nueva línea independiente de la plataforma.<br>
+&emsp;• %t: Fecha y hora (requiere especificadores adicionales para el formato específico).<br>
+<br>
+Desglose del Especificador de Formato %04d<br>
+&emsp;1. %:<br>
+&emsp;&emsp;o Este símbolo indica el comienzo de un especificador de formato. Todos los especificadores de formato en String.format y System.out.printf comienzan con %.<br>
+&emsp;2. 0:<br>
+&emsp;&emsp;o Este dígito indica que el número debe ser rellenado con ceros si no alcanza la longitud mínima especificada.<br>
+&emsp;&emsp;o En lugar de rellenar con espacios (que es el comportamiento predeterminado), los ceros se añadirán a la izquierda del número para asegurar que la longitud total sea la especificada.<br>
+&emsp;3. 4:<br>
+&emsp;&emsp;o Este dígito especifica la longitud mínima del campo, es decir, el número debe tener al menos 4 dígitos.<br>
+&emsp;&emsp;o Si el número tiene menos de 4 dígitos, se rellenará con ceros a la izquierda hasta alcanzar la longitud de 4 caracteres. El valor se puede adecuar a la cantidad de dígitos que se desean rellenar.<br>
+&emsp;4. d:<br>
+&emsp;&emsp;o Este carácter indica que el tipo de dato que se va a formatear es un entero decimal.<br>
+<br>
+Conclusión<br>
+- Esta lección cubre cómo formatear números y cadenas en Java utilizando String.format, System.out.printf, y bloques de texto (text blocks), proporcionando ejemplos claros y concisos para mejorar la legibilidad y el manejo de la salida en tus programas Java.<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>006-12-00-OPERADORTERNARIO-UJ</title>
+        </head>
+        <body>
+            <p>
+    public class OperadorTernario {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Operador Ternario ***");<br>
+&emsp;&emsp;// Sintaxis<br>
+&emsp;&emsp;// condicion ? exp1 : exp2<br>
+<br>
+&emsp;&emsp;// Determinar si un número es par o no<br>
+&emsp;&emsp;var numero = 5;<br>
+&emsp;&emsp;var resultado = (numero % 2 == 0) ? "Par": "Impar";<br>
+&emsp;&emsp;System.out.println("El número " + numero + " es " + resultado);<br>
+<br>
+&emsp;&emsp;// Calcular si es mayor de de edad<br>
+&emsp;&emsp;var edad = 18;<br>
+&emsp;&emsp;var mensaje = (edad &gt;= 18) ? "Eres mayor de edad" : "Eres menor de edad";<br>
+&emsp;&emsp;System.out.println("\nTienes " + edad + ", " + mensaje);<br>
+<br>
+&emsp;&emsp;// Valor positivo, negativo o cero (operador ternario anidado)<br>
+&emsp;&emsp;numero = 0;<br>
+&emsp;&emsp;resultado = (numero &gt; 0) ? "Positivo" : (numero &lt; 0) ? "Negativo" : "Cero";<br>
+&emsp;&emsp;System.out.println("\nEl número " + numero + " es " + resultado);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

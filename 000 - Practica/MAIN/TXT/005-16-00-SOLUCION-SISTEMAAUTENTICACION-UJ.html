@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>005-16-00-SOLUCION-SISTEMAAUTENTICACION-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class SistemaAutenticacion {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Sistema de Autenticación ***");<br>
+<br>
+&emsp;&emsp;final var USUARIO_VALIDO = "admin";<br>
+&emsp;&emsp;final var PASSWORD_VALIDO = "123";<br>
+<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;System.out.print("Cuál es tu usuario? ");<br>
+&emsp;&emsp;var usuarioIngresado = consola.nextLine();<br>
+<br>
+&emsp;&emsp;System.out.print("Cuál es tu password? ");<br>
+&emsp;&emsp;var passwordIngresado = consola.nextLine();<br>
+<br>
+&emsp;&emsp;var sonDatosCorrectos = usuarioIngresado.equals(USUARIO_VALIDO)<br>
+&emsp;&emsp;&emsp;&emsp;&& passwordIngresado.equals(PASSWORD_VALIDO);<br>
+<br>
+&emsp;&emsp;System.out.println("Datos son correctos? " + sonDatosCorrectos);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

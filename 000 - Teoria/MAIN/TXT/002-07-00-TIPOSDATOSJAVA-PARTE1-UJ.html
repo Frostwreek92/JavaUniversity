@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>0020700 TIPOS DE DATOS EN JAVA</title>
+        </head>
+        <body>
+            <p>
+    Tipos de Datos en Java<br>
+- Los tipos de datos en Java son una categorización de las variables que se utilizan en el lenguaje de programación. Estas categorizaciones determinan qué tipo de valores pueden almacenarse en las variables y cómo se pueden manipular estos valores. Java es un lenguaje de programación fuertemente tipado, lo que significa que cada variable se declara con un tipo específico.<br>
+<br>
+Java tiene dos categorías principales de tipos de datos:<br>
+&emsp;1. Tipos de Datos Primitivos<br>
+&emsp;2. Tipos de Datos de Referencia<br>
+<br>
+1. Tipos de Datos Primitivos<br>
+- Java tiene 8 tipos de datos primitivos. Son los tipos de datos más básicos y no derivan de ningún otro tipo.
+</p>
+<table>
+	<tbody>
+		<tr class="even ">
+			<td>&emsp;Tipo de Dato&emsp;</td>
+			<td>&emsp;Tamaño (bits)&emsp;</td>
+			<td>&emsp;Rango de Valores&emsp;</td>
+		</tr>
+		<tr class="odd ">
+			<td colspan="3">&emsp;Descripción&emsp;</td>
+		</tr>
+		<tr class="even ">
+			<td>&emsp;byte&emsp;</td>
+			<td>&emsp;8&emsp;</td>
+			<td>&emsp;-128 a 127&emsp;</td>
+		</tr>
+		<tr class="odd ">
+			<td colspan="3">&emsp;Un entero de 8 bits con signo.&emsp;</td>
+		</tr>
+		<tr class="even ">
+			<td>&emsp;short&emsp;</td>
+			<td>&emsp;16&emsp;</td>
+			<td>&emsp;-32,768 a 32,767&emsp;</td>
+		</tr>
+		<tr class="odd ">
+			<td colspan="3">&emsp;Un entero de 16 bits con signo.&emsp;</td>
+		</tr>
+		<tr class="even ">
+			<td>&emsp;int&emsp;</td>
+			<td>&emsp;32&emsp;</td>
+			<td>&emsp;-2,147,483,648 a 2,147,483,647&emsp;</td>
+		</tr>
+		<tr class="odd ">
+			<td colspan="3">&emsp;Un entero de 32 bits con signo.&emsp;</td>
+		</tr>
+		<tr class="even ">
+			<td>&emsp;long&emsp;</td>
+			<td>&emsp;64&emsp;</td>
+			<td>&emsp;-9,223,372,036,854,775,808 a 9,223,372,036,854,775,807&emsp;</td>
+		</tr>
+		<tr class="odd ">
+			<td colspan="3">&emsp;Un entero de 64 bits con signo.&emsp;</td>
+		</tr>
+		<tr class="even ">
+			<td>&emsp;float&emsp;</td>
+			<td>&emsp;32&emsp;</td>
+			<td>&emsp;3.40282347 x 10^38 (positivo y negativo)&emsp;</td>
+		</tr>
+		<tr class="odd ">
+			<td colspan="3">&emsp;Un número en coma flotante de precisión simple de 32 bits, sigue la IEEE 754.&emsp;</td>
+		</tr>
+		<tr class="even ">
+			<td>&emsp;double&emsp;</td>
+			<td>&emsp;64&emsp;</td>
+			<td>&emsp;1.79769313486231570 x 10^308 (positivo y negativo)&emsp;</td>
+		</tr>
+		<tr class="odd ">
+			<td colspan="3">&emsp;Un número en coma flotante de precisión doble de 64 bits, sigue la IEEE 754.&emsp;</td>
+		</tr>
+		<tr class="even ">
+			<td>&emsp;char&emsp;</td>
+			<td>&emsp;16&emsp;</td>
+			<td>&emsp;'\u0000' a '\uffff'&emsp;</td>
+		</tr>
+		<tr class="odd ">
+			<td colspan="3">&emsp;Un carácter Unicode de 16 bits.&emsp;</td>
+		</tr>
+		<tr class="even ">
+			<td>&emsp;boolean&emsp;</td>
+			<td>&emsp;1 (tamaño no definido)&emsp;</td>
+			<td>&emsp;true o false&emsp;</td>
+		</tr>
+		<tr class="odd ">
+			<td colspan="3">&emsp;Representa un valor booleano.&emsp;</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+Ejemplos de Tipos Primitivos<br>
+&emsp;public class TiposPrimitivos {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;// Enteros<br>
+&emsp;&emsp;&emsp;byte unByte = 127;<br>
+&emsp;&emsp;&emsp;short unShort = 32000;<br>
+&emsp;&emsp;&emsp;int unInt = 2147483647;<br>
+&emsp;&emsp;&emsp;long unLong = 9223372036854775807L;<br>
+<br>
+&emsp;&emsp;&emsp;// Punto flotante<br>
+&emsp;&emsp;&emsp;float unFloat = 3.14f;<br>
+&emsp;&emsp;&emsp;double unDouble = 3.141592653589793;<br>
+<br>
+&emsp;&emsp;&emsp;// Carácter<br>
+&emsp;&emsp;&emsp;char unChar = 'A';<br>
+<br>
+&emsp;&emsp;&emsp;// Booleano<br>
+&emsp;&emsp;&emsp;boolean unBoolean = true;<br>
+<br>
+&emsp;&emsp;&emsp;// Imprimir valores<br>
+&emsp;&emsp;&emsp;System.out.println("byte: " + unByte);<br>
+&emsp;&emsp;&emsp;System.out.println("short: " + unShort);<br>
+&emsp;&emsp;&emsp;System.out.println("int: " + unInt);<br>
+&emsp;&emsp;&emsp;System.out.println("long: " + unLong);<br>
+&emsp;&emsp;&emsp;System.out.println("float: " + unFloat);<br>
+&emsp;&emsp;&emsp;System.out.println("double: " + unDouble);<br>
+&emsp;&emsp;&emsp;System.out.println("char: " + unChar);<br>
+&emsp;&emsp;&emsp;System.out.println("boolean: " + unBoolean);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+2. Tipos de Datos de Referencia (Tipos Object)<br>
+- Los tipos de datos de referencia en Java incluyen:<br>
+&emsp;• Clases: Definen objetos y sus métodos.<br>
+&emsp;• Interfaces: Definen métodos que pueden ser implementados por las clases.<br>
+&emsp;• Arreglos: Colecciones de elementos del mismo tipo.<br>
+<br>
+Los tipos de referencia los vamos a ver a detalle en el tema de Clases y Objetos.<br>
+<br>
+Valores por Defecto<br>
+- Los valores por defecto son los valores asignados a las variables si no se inicializan explícitamente.<br>
+&emsp;• Primitivos:<br>
+&emsp;&emsp;o byte, short, int, long: 0<br>
+&emsp;&emsp;o float, double: 0.0<br>
+&emsp;&emsp;o char: '\u0000'<br>
+&emsp;&emsp;o boolean: false<br>
+&emsp;• Referencia:<br>
+&emsp;&emsp;o null<br>
+<br>
+Conceptos Clave<br>
+&emsp;1. Variables Primitivas: Contienen valores simples y directos.<br>
+&emsp;2. Variables de Referencia: Contienen referencias (punteros) a objetos.<br>
+<br>
+Usando Clases para Conocer Más Detalles de los Tipos Primitivos en Java<br>
+- En Java, puedes utilizar clases envolventes (wrapper classes) para obtener más detalles y funcionalidad adicional para los tipos de datos primitivos. Las clases envolventes proporcionan métodos útiles y permiten trabajar con tipos primitivos como si fueran objetos.<br>
+<br>
+Clases Envolventes<br>
+- Para cada tipo de dato primitivo, existe una clase envolvente correspondiente en el paquete java.lang. Estas clases permiten tratar los valores primitivos como objetos y proporcionan métodos para convertir y manipular datos.<br>
+<br>
+Tipo Primitivo
+</p>
+<table>
+    <tr class="even ">
+        <td>&emsp;Clase&emsp;</td>
+        <td>&emsp;Envolvente&emsp;</td>
+    </tr>
+    <tr class="odd ">
+        <td>&emsp;byte&emsp;</td>
+        <td>&emsp;Byte&emsp;</td>
+    </tr>
+    <tr class="odd ">
+        <td>&emsp;short&emsp;</td>
+        <td>&emsp;Short&emsp;</td>
+    </tr>
+    <tr class="odd ">
+        <td>&emsp;int&emsp;</td>
+        <td>&emsp;Integer&emsp;</td>
+    </tr>
+    <tr class="odd ">
+        <td>&emsp;long&emsp;</td>
+        <td>&emsp;Long&emsp;</td>
+    </tr>
+    <tr class="odd ">
+        <td>&emsp;float&emsp;</td>
+        <td>&emsp;Float&emsp;</td>
+    </tr>
+    <tr class="odd ">
+        <td>&emsp;double&emsp;</td>
+        <td>&emsp;Double&emsp;</td>
+    </tr>
+    <tr class="odd ">
+        <td>&emsp;char&emsp;</td>
+        <td>&emsp;Character&emsp;</td>
+    </tr>
+    <tr class="odd ">
+        <td>&emsp;boolean&emsp;</td>
+        <td>&emsp;Boolean&emsp;</td>
+    </tr>
+</table>
+<p>
+Ejemplos y Métodos Útiles<br>
+1. Integer (para int)<br>
+- La clase Integer proporciona métodos para trabajar con valores enteros.<br>
+- Métodos útiles:<br>
+&emsp;• Integer.parseInt(String s): Convierte una cadena a un entero.<br>
+&emsp;• Integer.toString(int i): Convierte un entero a una cadena.<br>
+&emsp;• Integer.MAX_VALUE: Valor máximo de un int.<br>
+&emsp;• Integer.MIN_VALUE: Valor mínimo de un int.<br>
+- Ejemplo:<br>
+&emsp;public class DetallesInteger {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int numero = 42;<br>
+<br>
+&emsp;&emsp;&emsp;// Convertir a cadena<br>
+&emsp;&emsp;&emsp;String numeroStr = Integer.toString(numero);<br>
+&emsp;&emsp;&emsp;System.out.println("Número como cadena: " + numeroStr);<br>
+<br>
+&emsp;&emsp;&emsp;// Valor máximo y mínimo<br>
+&emsp;&emsp;&emsp;System.out.println("Valor máximo de int: " + Integer.MAX_VALUE);<br>
+&emsp;&emsp;&emsp;System.out.println("Valor mínimo de int: " + Integer.MIN_VALUE);<br>
+<br>
+&emsp;&emsp;&emsp;// Parsear cadena a entero<br>
+&emsp;&emsp;&emsp;int parsedNumero = Integer.parseInt("123");<br>
+&emsp;&emsp;&emsp;System.out.println("Número parseado: " + parsedNumero);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+2. Double (para double)<br>
+- La clase Double proporciona métodos para trabajar con valores de punto flotante.<br>
+- Métodos útiles:<br>
+&emsp;• Double.parseDouble(String s): Convierte una cadena a un double.<br>
+&emsp;• Double.toString(double d): Convierte un double a una cadena.<br>
+&emsp;• Double.MAX_VALUE: Valor máximo de un double.<br>
+&emsp;• Double.MIN_VALUE: Valor mínimo de un double.<br>
+- Ejemplo:<br>
+&emsp;public class DetallesDouble {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;double numero = 3.14159;<br>
+<br>
+&emsp;&emsp;&emsp;// Convertir a cadena<br>
+&emsp;&emsp;&emsp;String numeroStr = Double.toString(numero);<br>
+&emsp;&emsp;&emsp;System.out.println("Número como cadena: " + numeroStr);<br>
+<br>
+&emsp;&emsp;&emsp;// Valor máximo y mínimo<br>
+&emsp;&emsp;&emsp;System.out.println("Valor máximo de double: " + Double.MAX_VALUE);<br>
+&emsp;&emsp;&emsp;System.out.println("Valor mínimo de double: " + Double.MIN_VALUE);<br>
+<br>
+&emsp;&emsp;&emsp;// Parsear cadena a double<br>
+&emsp;&emsp;&emsp;double parsedNumero = Double.parseDouble("2.71828");<br>
+&emsp;&emsp;&emsp;System.out.println("Número parseado: " + parsedNumero);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+3. Character (para char)<br>
+- La clase Character proporciona métodos para trabajar con caracteres.<br>
+- Métodos útiles:<br>
+&emsp;• Character.isDigit(char ch): Verifica si el carácter es un dígito.<br>
+&emsp;• Character.isLetter(char ch): Verifica si el carácter es una letra.<br>
+&emsp;• Character.toUpperCase(char ch): Convierte un carácter a mayúscula.<br>
+&emsp;• Character.toLowerCase(char ch): Convierte un carácter a minúscula.<br>
+- Ejemplo:<br>
+&emsp;public class DetallesCharacter {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;char letra = 'a';<br>
+<br>
+&emsp;&emsp;&emsp;// Convertir a mayúscula<br>
+&emsp;&emsp;&emsp;char mayuscula = Character.toUpperCase(letra);<br>
+&emsp;&emsp;&emsp;System.out.println("Letra en mayúscula: " + mayuscula);<br>
+<br>
+&emsp;&emsp;&emsp;// Verificar si es una letra<br>
+&emsp;&emsp;&emsp;System.out.println("Es una letra: " + Character.isLetter(letra));<br>
+<br>
+&emsp;&emsp;&emsp;// Verificar si es un dígito char digito = '1';<br>
+&emsp;&emsp;&emsp;System.out.println("Es un dígito: " + Character.isDigit(digito));<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Tipos de Datos char en Java y Unicode<br>
+- El tipo de dato char en Java soporta Unicode. En Java, un char es un entero de 16 bits que puede representar cualquier carácter del conjunto de caracteres Unicode.<br>
+<br>
+¿Qué es Unicode?<br>
+- Unicode es un estándar de codificación de caracteres diseñado para soportar el texto de la mayoría de los sistemas de escritura del mundo. Unicode asigna un código único a cada carácter, independientemente de la plataforma, el programa o el idioma. Esto permite que los sistemas informáticos representen y manipulen texto de manera consistente.<br>
+&emsp;• Rango de Unicode: El estándar Unicode puede representar más de 1.1 millones de caracteres, utilizando varios planes de codificación, pero la mayoría de los caracteres comunes se encuentran en el rango de 0x0000 a 0xFFFF, que es lo que soporta el tipo char en Java.<br>
+<br>
+Características del Juego de Caracteres Unicode<br>
+&emsp;1. Universalidad: Unicode incluye caracteres de prácticamente todos los sistemas de escritura del mundo, así como símbolos técnicos, puntuación y caracteres especiales.<br>
+&emsp;2. Interoperabilidad: Al usar Unicode, los sistemas y aplicaciones pueden intercambiar texto de manera confiable y consistente.<br>
+&emsp;3. Compatibilidad: Unicode es compatible con otros estándares de codificación de caracteres, permitiendo la conversión entre diferentes codificaciones.<br>
+<br>
+Ejemplo de Uso de char con Unicode en Java<br>
+&emsp;public class UnicodeExample {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;// Carácter Unicode para la letra 'A'<br>
+&emsp;&emsp;&emsp;char letra = 'A';<br>
+&emsp;&emsp;&emsp;System.out.println("Carácter: " + letra);<br>
+&emsp;&emsp;&emsp;System.out.println("Código Unicode: " + (int) letra);<br>
+<br>
+&emsp;&emsp;&emsp;// Carácter Unicode para el símbolo del euro (€)<br>
+&emsp;&emsp;&emsp;char simboloEuro = '\u20AC';<br>
+&emsp;&emsp;&emsp;System.out.println("Carácter: " + simboloEuro);<br>
+&emsp;&emsp;&emsp;System.out.println("Código Unicode: " + (int) simboloEuro);<br>
+<br>
+&emsp;&emsp;&emsp;// Carácter Unicode para un carácter chino (中)<br>
+&emsp;&emsp;&emsp;char caracterChino = '\u4E2D';<br>
+&emsp;&emsp;&emsp;System.out.println("Carácter: " + caracterChino);<br>
+&emsp;&emsp;&emsp;System.out.println("Código Unicode: " + (int) caracterChino);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Juego de Caracteres Unicode:<br>
+&emsp;https://home.unicode.org/<br>
+<br>
+Conclusión<br>
+- Conocer los tipos de datos en Java es fundamental para cualquier programador. Estos tipos determinan cómo se almacenan los datos y cómo se pueden manipular en un programa. Los tipos de datos primitivos son simples y eficientes, mientras que los tipos de datos de referencia permiten crear estructuras de datos complejas y objetos.<br>
+<br>
+- Las clases envolventes en Java proporcionan una manera poderosa de trabajar con tipos primitivos, ofreciendo métodos útiles para conversión, manipulación y obtención de información adicional sobre estos tipos. Esto permite aprovechar tanto la eficiencia de los tipos primitivos como la funcionalidad de los objetos en Java.<br>
+<br>
+Recursos Adicionales<br>
+- Estos recursos proporcionan información detallada y ejemplos adicionales sobre cómo utilizar y manipular los diferentes tipos de datos en Java.<br>
+&emsp;• Java Documentation on Primitive Data Types<br>
+&emsp;• Java Documentation on Reference Data Types<br>
+&emsp;• https://docs.oracle.com/en/java/javase/21/<br>
+<br>
+Estos recursos proporcionan información detallada sobre las clases envolventes y sus métodos, ayudándote a comprender mejor cómo trabajar con tipos de datos en Java.<br>
+&emsp;• Documentación de la clase Integer<br>
+&emsp;• Documentación de la clase Double<br>
+&emsp;• Documentación de la clase Character<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>006-11-00-CASAESPEJOS-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class CasaDeLosEspejos {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Bienvenidos a la Casa de los Espejos ***");<br>
+<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;System.out.print("Cuál es tu edad? ");<br>
+&emsp;&emsp;var edad = Integer.parseInt(consola.nextLine());<br>
+<br>
+&emsp;&emsp;System.out.print("Tienes miedo a la oscuridad (true/false)? ");<br>
+&emsp;&emsp;var tienesMiedoOscuridad = Boolean.parseBoolean(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Verificacion<br>
+&emsp;&emsp;if (!tienesMiedoOscuridad && edad &gt;= 10) {<br>
+&emsp;&emsp;&emsp;System.out.println("Puedes entrar a la Casa de los Espejos");<br>
+&emsp;&emsp;} else {<br>
+&emsp;&emsp;&emsp;System.out.println("Lo siento, la Casa de los Espejos podría darte miedo");<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

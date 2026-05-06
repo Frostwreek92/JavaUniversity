@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>003-05-00-COMPARACIONCADENAS-UJ</title>
+        </head>
+        <body>
+            <p>
+    public class ComparacionCadenas {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;// Comparacion de Cadenas (pool de cadenas)<br>
+&emsp;&emsp;var cadena1 = "Java";<br>
+&emsp;&emsp;var cadena2 = "Java";<br>
+&emsp;&emsp;var cadena3 = new String("Java");<br>
+<br>
+&emsp;&emsp;// Comparacion de cadenas (==) comparan la referencia<br>
+&emsp;&emsp;System.out.print("cadena1 es igual en referencia a cadena2: ");<br>
+&emsp;&emsp;System.out.println(cadena1 == cadena2);<br>
+&emsp;&emsp;// Comparamos cadena1 con cadena3 (referencias)<br>
+&emsp;&emsp;System.out.print("cadena1 es igual en referencia a cadena3: ");<br>
+&emsp;&emsp;System.out.println(cadena1 == cadena3);<br>
+<br>
+&emsp;&emsp;// Comparar contenido usaremos el metodo equals<br>
+&emsp;&emsp;System.out.print("cadena1 es igual en contenido a cadena3: ");<br>
+&emsp;&emsp;System.out.println(cadena1.equals(cadena3));<br>
+<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

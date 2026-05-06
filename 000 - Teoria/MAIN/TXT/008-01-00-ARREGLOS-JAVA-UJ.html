@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>008-01-00-ARREGLOS-JAVA-UJ</title>
+        </head>
+        <body>
+            <p>
+    Introducción a los Arreglos en Java<br>
+- Los arreglos (arrays) en Java son estructuras de datos que permiten almacenar múltiples valores del mismo tipo en una sola variable. Esta lección cubrirá la sintaxis básica para declarar, inicializar y manipular arreglos en Java, además de presentar algunos ejemplos y aplicaciones del mundo real.<br>
+<br>
+1. Declaración e Inicialización de Arreglos<br>
+&emsp;1. Declaración de un arreglo:<br>
+&emsp;&emsp;int[] numeros;<br>
+&emsp;2. Inicialización de un arreglo:<br>
+&emsp;&emsp;numeros = new int[5]; // Un arreglo de 5 elementos<br>
+&emsp;3. Declaración e inicialización en una sola línea:<br>
+&emsp;&emsp;int[] numeros = new int[5];<br>
+&emsp;4. Inicialización con valores específicos:<br>
+&emsp;&emsp;int[] numeros = {1, 2, 3, 4, 5};<br>
+<br>
+- Ejemplo Básico:<br>
+&emsp;public class ArreglosBasicos {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;// Declaración y inicialización de un arreglo de enteros<br>
+&emsp;&emsp;&emsp;int[] numeros = {10, 20, 30, 40, 50};<br>
+<br>
+&emsp;&emsp;&emsp;// Acceso a los elementos del arreglo <br>
+&emsp;&emsp;&emsp;System.out.println("El primer elemento es: " + numeros[0]); // Imprime 10<br>
+&emsp;&emsp;&emsp;System.out.println("El segundo elemento es: " + numeros[1]); // Imprime 20<br>
+<br>
+&emsp;&emsp;&emsp;// Modificación de un elemento del arreglo<br>
+&emsp;&emsp;&emsp;numeros[2] = 100;<br>
+&emsp;&emsp;&emsp;System.out.println("El tercer elemento modificado es: " + numeros[2]); //Imprime 100<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+2. Recorrer Arreglos<br>
+- Para recorrer un arreglo, podemos utilizar un bucle for:<br>
+&emsp;1. Bucle for tradicional:<br>
+&emsp;&emsp;for (int i = 0; i &lt; numeros.length; i++) {<br>
+&emsp;&emsp;&emsp;System.out.println(numeros[i]);<br>
+&emsp;&emsp;}<br>
+&emsp;2. Bucle for-each:<br>
+&emsp;&emsp;for (int numero : numeros) {<br>
+&emsp;&emsp;&emsp;System.out.println(numero);<br>
+&emsp;&emsp;}<br>
+- Ejemplo de Recorrido<br>
+&emsp;public class RecorrerArreglos {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;// Declaración e inicialización de un arreglo de cadenas<br>
+&emsp;&emsp;&emsp;String[] nombres = {"Ana", "Juan", "Pedro", "María"};<br>
+<br>
+&emsp;&emsp;&emsp;// Uso de bucle for tradicional<br>
+&emsp;&emsp;&emsp;System.out.println("Usando bucle for tradicional:"); <br>
+&emsp;&emsp;&emsp;for (int i = 0; i &lt; nombres.length; i++) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println(nombres[i]);<br>
+&emsp;&emsp;&emsp;}<br>
+<br>
+&emsp;&emsp;&emsp;// Uso de bucle for-each<br>
+&emsp;&emsp;&emsp;System.out.println("\nUsando bucle for-each:");<br>
+&emsp;&emsp;&emsp;for (String nombre : nombres) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println(nombre);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+3. Aplicaciones del Mundo Real<br>
+- Ejemplo 1: Cálculo del Promedio de Calificaciones<br>
+&emsp;public class PromedioCalificaciones {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;double[] calificaciones = {85.5, 90.3, 78.8, 92.0, 88.5};<br>
+&emsp;&emsp;&emsp;double suma = 0;<br>
+<br>
+&emsp;&emsp;&emsp;for (double calificacion : calificaciones) {<br>
+&emsp;&emsp;&emsp;&emsp;suma += calificacion;<br>
+&emsp;&emsp;&emsp;}<br>
+<br>
+&emsp;&emsp;&emsp;double promedio = suma / calificaciones.length;<br>
+&emsp;&emsp;&emsp;System.out.println("El promedio de calificaciones es: " + promedio);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+- Ejemplo 2: Encontrar el Valor Máximo en un Arreglo<br>
+&emsp;public class ValorMaximo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int[] numeros = {34, 67, 23, 89, 12, 45};<br>
+&emsp;&emsp;&emsp;int maximo = numeros[0];<br>
+&emsp;&emsp;&emsp;for (int numero : numeros) {<br>
+&emsp;&emsp;&emsp;&emsp;if (numero &gt; maximo) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;maximo = numero;<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;}<br>
+<br>
+&emsp;&emsp;&emsp;System.out.println("El valor máximo en el arreglo es: " + maximo);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Resumen<br>
+- Los arreglos en Java son una herramienta fundamental para manejar conjuntos de datos de manera eficiente. Aprender a declarar, inicializar y recorrer arreglos es esencial para cualquier programador. A través de ejemplos prácticos y aplicaciones del mundo real, hemos explorado cómo los arreglos pueden simplificar el manejo de datos en programas complejos.<br>
+<br>
+- Con esta base, estarás preparado para explorar estructuras de datos más avanzadas y técnicas de programación en Java.<br>
+<br>
+¡Espero que esta lección te sea muy útil!<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

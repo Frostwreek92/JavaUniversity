@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>004-04-00-SISTEMAEMPLEADOS-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class SistemaEmpleados {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Sistema de Empleados ***");<br>
+<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;// Nombre del empleado<br>
+&emsp;&emsp;System.out.print("Nombre del empleado: ");<br>
+&emsp;&emsp;var nombreEmpleado = consola.nextLine();<br>
+<br>
+&emsp;&emsp;// Edad del empleado<br>
+&emsp;&emsp;System.out.print("Edad del empleado: ");<br>
+&emsp;&emsp;var edadEmpleado = Integer.parseInt(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Salario del Empleado<br>
+&emsp;&emsp;System.out.print("Salario del empleado: ");<br>
+&emsp;&emsp;var salarioEmpleado = Double.parseDouble(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Es jefe de departamento<br>
+&emsp;&emsp;System.out.print("Es jefe de departamento (true/false)?: ");<br>
+&emsp;&emsp;var esJefeDepartamento = Boolean.parseBoolean(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Imprimir los valores del Empleado<br>
+&emsp;&emsp;System.out.println("\nDatos del Empleado: ");<br>
+&emsp;&emsp;System.out.println("\tNombre: " + nombreEmpleado);<br>
+&emsp;&emsp;System.out.println("\tEdad: " + edadEmpleado + " años");<br>
+&emsp;&emsp;//System.out.println("\tSalario: " + salarioEmpleado);<br>
+&emsp;&emsp;System.out.printf("\tSalario: $%.2f%n", salarioEmpleado);<br>
+&emsp;&emsp;System.out.println("\tEs Jefe de Departamento? " + esJefeDepartamento);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

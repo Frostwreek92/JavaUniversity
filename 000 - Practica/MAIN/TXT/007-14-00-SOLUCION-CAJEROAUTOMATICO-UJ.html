@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>007-14-00-SOLUCION-CAJEROAUTOMATICO-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class CajeroAutomatico {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+&emsp;&emsp;var saldo = 1000.0;<br>
+&emsp;&emsp;var salir = false;<br>
+&emsp;&emsp;// Menu de la aplicación<br>
+&emsp;&emsp;while(!salir){<br>
+&emsp;&emsp;&emsp;System.out.print("""<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;*** Aplicación de Cajero Automático ***<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Operaciones que puedes realizar:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;1. Consultar Saldo<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;2. Retirar<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;3. Depositar<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;4. Salir<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Esocoge una opcion:\s""");<br>
+&emsp;&emsp;&emsp;var opcion = consola.nextInt();<br>
+&emsp;&emsp;&emsp;// Procesamos cada caso<br>
+&emsp;&emsp;&emsp;switch (opcion){<br>
+&emsp;&emsp;&emsp;&emsp;case 1 -&gt; System.out.printf("Tu saldo actual es: %.2f%n%n", saldo);<br>
+&emsp;&emsp;&emsp;&emsp;case 2 -&gt; {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.print("Ingresa el monto a retirar: ");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;var retiro = consola.nextDouble();<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;if(retiro &lt;= saldo) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;saldo -= retiro; // saldo = saldo - retiro<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.printf("Tu nuevo saldo es: %.2f%n%n", saldo);<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;else<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.printf("No cuentas con el saldo suficiente. " +<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"Saldo actual es: %.2f%n%n", saldo);<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;case 3 -&gt; {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.print("Ingresa el monto a depositar: ");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;var deposito = consola.nextDouble();<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;saldo += deposito; // saldo = saldo + deposito<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.printf("Tu nuevo saldo es: %.2f%n%n", saldo);<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;case 4 -&gt; {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Saliendo del Cajero Automático. Hasta pronto!");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;salir = true;<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;default -&gt; System.out.println("Opción inválida." +<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"Seleciona otra opción.\n");<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

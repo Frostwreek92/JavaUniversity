@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>007-20-00-SOLUCION-JUEGOADIVINANZAS-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Random;<br>
+import java.util.Scanner;<br>
+<br>
+public class JuegoAdivinanzas {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Juego de Adivinanzas ***");<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+&emsp;&emsp;var random = new Random();<br>
+<br>
+&emsp;&emsp;// Generamos un número aleatorio entre 1 y 50<br>
+&emsp;&emsp;var numeroSecreto = random.nextInt(50) + 1;<br>
+&emsp;&emsp;var intentos = 0;<br>
+&emsp;&emsp;var adivinanza = 0;<br>
+&emsp;&emsp;final var INTENTOS_MAXIMOS = 5;<br>
+<br>
+&emsp;&emsp;while(adivinanza != numeroSecreto && intentos &lt; INTENTOS_MAXIMOS){<br>
+&emsp;&emsp;&emsp;System.out.print("Adivina el número secreto (1-50): ");<br>
+&emsp;&emsp;&emsp;adivinanza = consola.nextInt();<br>
+<br>
+&emsp;&emsp;&emsp;// Agregar una ayuda para orientar al jugador<br>
+&emsp;&emsp;&emsp;if(adivinanza &lt; numeroSecreto)<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("El número secreto es mayor");<br>
+&emsp;&emsp;&emsp;else if(adivinanza &gt; numeroSecreto)<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("El número secreto es menor");<br>
+<br>
+&emsp;&emsp;&emsp;// Incrementamos la variable de intentos<br>
+&emsp;&emsp;&emsp;intentos++;<br>
+&emsp;&emsp;}<br>
+<br>
+&emsp;&emsp;// Conclusión del juego<br>
+&emsp;&emsp;if(adivinanza == numeroSecreto){<br>
+&emsp;&emsp;&emsp;System.out.printf("Felicidades, " +<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;"advinaste el número secreto en %d intentos%n", intentos);<br>
+&emsp;&emsp;}<br>
+&emsp;&emsp;else{<br>
+&emsp;&emsp;&emsp;System.out.printf("Lo siento, has agotado tus intentos máximos: %d%n",<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;INTENTOS_MAXIMOS);<br>
+&emsp;&emsp;&emsp;System.out.printf("El número secreto era: %d%n", numeroSecreto);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

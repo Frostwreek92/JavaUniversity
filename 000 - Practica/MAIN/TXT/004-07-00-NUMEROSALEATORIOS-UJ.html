@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>004-07-00-NUMEROSALEATORIOS-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Random;<br>
+<br>
+public class NumerosAleatorios {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Números Aleatorios ***");<br>
+&emsp;&emsp;var random = new Random();<br>
+&emsp;&emsp;<br>
+&emsp;&emsp;// Generar un numero aleatorio entre 0 y 9<br>
+&emsp;&emsp;var numeroAleatorio = random.nextInt(10);<br>
+&emsp;&emsp;System.out.println("numeroAleatorio entre 0 y 9 = " + numeroAleatorio);<br>
+<br>
+&emsp;&emsp;// Generar un numero aleatorio entre 1 y 10<br>
+&emsp;&emsp;numeroAleatorio = random.nextInt(10) + 1;<br>
+&emsp;&emsp;System.out.println("numeroAleatorio entre 1 y 10 = " + numeroAleatorio);<br>
+<br>
+&emsp;&emsp;// Generar un numero flotante entre 0.0 y 1.0<br>
+&emsp;&emsp;var flotanteAleatorio = random.nextFloat();<br>
+&emsp;&emsp;System.out.println("flotanteAleatorio = " + flotanteAleatorio);<br>
+<br>
+&emsp;&emsp;// Simular el lanzamiento de un dado (1 y 6)<br>
+&emsp;&emsp;var dado = random.nextInt(6) + 1;<br>
+&emsp;&emsp;System.out.println("Resultado de lanzar el dado = " + dado);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

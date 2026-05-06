@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>002-16-00-CONSTANTESJAVA-UJ</title>
+        </head>
+        <body>
+            <p>
+    ¿Qué es una Constante?<br>
+- Una constante en Java es una variable cuyo valor no puede ser cambiado una vez que ha sido asignado. Las constantes se utilizan para valores que se sabe que no cambiarán durante la ejecución del programa, proporcionando claridad y evitando errores.<br>
+<br>
+Sintaxis para Declarar Constantes<br>
+- Para declarar una constante en Java, se utiliza la palabra clave final. Una vez asignado un valor a una variable final, no se puede cambiar.<br>
+&emsp;final tipo nombreConstante = valor;<br>
+<br>
+Ejemplos de Declaración de Constantes<br>
+&emsp;1. Constante de Tipo Entero:<br>
+&emsp;&emsp;final int DIAS_EN_SEMANA = 7;<br>
+&emsp;2. Constante de Tipo Doble:<br>
+&emsp;&emsp;final double PI = 3.14159;<br>
+&emsp;3. Constante de Tipo Cadena (String):<br>
+&emsp;&emsp;final String MENSAJE_BIENVENIDA = "Bienvenido al Curso de Java!";<br>
+<br>
+Ejemplos de Uso de Constantes<br>
+- Ejemplo Completo<br>
+&emsp;public class EjemploConstantes {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;// Declaración de constantes<br>
+&emsp;&emsp;&emsp;final int DIAS_EN_SEMANA = 7;<br>
+&emsp;&emsp;&emsp;final double PI = 3.14159;<br>
+&emsp;&emsp;&emsp;final String MENSAJE_BIENVENIDA = "Bienvenido al Curso de Java!";<br>
+&emsp;&emsp;&emsp;// Usando constantes en el código<br>
+&emsp;&emsp;&emsp;System.out.println(MENSAJE_BIENVENIDA);<br>
+&emsp;&emsp;&emsp;System.out.println("Hay " + DIAS_EN_SEMANA + " días en una semana.");<br>
+&emsp;&emsp;&emsp;System.out.println("El valor de PI es aproximadamente: " + PI);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Beneficios de Usar Constantes<br>
+&emsp;1. Claridad del Código:<br>
+&emsp;&emsp;o Las constantes hacen que el código sea más fácil de leer y entender, ya que se puede ver claramente cuáles valores no deben cambiar.<br>
+&emsp;2. Mantenibilidad:<br>
+&emsp;&emsp;o Facilitan la actualización del código, ya que los valores que pueden cambiar se definen en un solo lugar.<br>
+&emsp;3. Prevención de Errores:<br>
+&emsp;&emsp;o Reducen la posibilidad de errores accidentales al evitar cambios inadvertidos en valores críticos.<br>
+<br>
+Mejores Prácticas al Usar Constantes<br>
+&emsp;1. Nombres de Constantes en Mayúsculas:<br>
+&emsp;&emsp;o Es una convención común en Java escribir los nombres de las constantes en mayúsculas, usando guiones bajos para separar palabras.<br>
+&emsp;&emsp;o Ejemplo: MAX_VALUE, URL_BASE, TAMANIO_BUFFER.<br>
+&emsp;2. Uso de final:<br>
+&emsp;&emsp;o Asegúrate de que todas las constantes estén marcadas con la palabra clave final.<br>
+&emsp;3. Declaración en una Clase Separada:<br>
+&emsp;&emsp;o Si tienes muchas constantes, considera declararlas en una clase separada para mantener el código organizado.<br>
+&emsp;&emsp;o Ejemplo:<br>
+&emsp;&emsp;&emsp;public class Constantes {<br>
+&emsp;&emsp;&emsp;&emsp;public static final int DIAS_EN_SEMANA = 7;<br>
+&emsp;&emsp;&emsp;&emsp;public static final double PI = 3.14159;<br>
+&emsp;&emsp;&emsp;&emsp;public static final String MENSAJE_BIENVENIDA = "Bienvenido al Curso de Java!";<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;public class EjemploUsoConstantes {<br>
+&emsp;&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println(Constantes.MENSAJE_BIENVENIDA);<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Hay " + Constantes.DIAS_EN_SEMANA + " días en una semana.");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("El valor de PI es aproximadamente: " + Constantes.PI);<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;}<br>
+- Nota: También es posible usar el tipo var para definir constantes en Java.<br>
+<br>
+Conclusión<br>
+- Las constantes en Java son esenciales para crear un código claro, mantenible y libre de errores. Al entender cómo declarar y usar constantes, puedes mejorar significativamente la calidad de tu código.<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

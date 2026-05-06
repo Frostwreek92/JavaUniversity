@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>003-01-00-MANEJOCADENAS-UJ</title>
+        </head>
+        <body>
+            <p>
+    ¿Qué es una Cadena en Java?<br>
+- Una cadena en Java es una secuencia de caracteres. Las cadenas se utilizan para almacenar y manipular texto. En Java, las cadenas son objetos de la clase String del paquete java.lang<br>
+<br>
+Sintaxis para Crear Cadenas<br>
+- Existen varias formas de crear cadenas en Java:<br>
+&emsp;1. Literal de Cadena:<br>
+&emsp;&emsp;String saludo = "Hola, Mundo!";<br>
+&emsp;2. Usando el Constructor de String:<br>
+&emsp;&emsp;String saludo = new String("Hola, Mundo!");<br>
+<br>
+Ejemplos de Uso de Cadenas<br>
+- Declaración y Inicialización<br>
+&emsp;public class EjemploCadenas {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;String saludo = "Hola, Mundo!";<br>
+&emsp;&emsp;&emsp;String nombre = "Juan";<br>
+&emsp;&emsp;&emsp;System.out.println(saludo + " " + nombre);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- Métodos Comunes de la Clase String<br>
+&emsp;public class MetodosString {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;String mensaje = "Bienvenido a Java";<br>
+&emsp;&emsp;&emsp;// Obtener la longitud de la cadena<br>
+&emsp;&emsp;&emsp;int longitud = mensaje.length();<br>
+&emsp;&emsp;&emsp;System.out.println("Longitud: " + longitud);<br>
+&emsp;&emsp;&emsp;// Convertir a mayúsculas<br>
+&emsp;&emsp;&emsp;String mayusculas = mensaje.toUpperCase();<br>
+&emsp;&emsp;&emsp;System.out.println("Mayúsculas: " + mayusculas);<br>
+&emsp;&emsp;&emsp;// Subcadena<br>
+&emsp;&emsp;&emsp;String subcadena = mensaje.substring(11);<br>
+&emsp;&emsp;&emsp;System.out.println("Subcadena: " + subcadena);<br>
+&emsp;&emsp;&emsp;// Reemplazar caracteres<br>
+&emsp;&emsp;&emsp;String reemplazada = mensaje.replace("Java", "el curso");<br>
+&emsp;&emsp;&emsp;System.out.println("Reemplazada: " + reemplazada);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Representación en Memoria<br>
+- Las cadenas en Java son inmutables, lo que significa que una vez creadas, no pueden ser modificadas. Cuando se realizan operaciones que parecen modificar una cadena, en realidad se está creando una nueva cadena.<br>
+<br>
+&emsp;• Inmutabilidad: La inmutabilidad de las cadenas significa que cualquier operación que modifica una cadena en realidad devuelve una nueva cadena. Esto permite que las cadenas sean seguras para usar en entornos de múltiples hilos sin preocupaciones de concurrencia.<br>
+<br>
+- Representación en Memoria: Cuando se crea una cadena, se almacena en una región de memoria conocida como el "pool de cadenas". Si se crea otra cadena con el mismo contenido, se reutiliza la cadena existente en el pool en lugar de crear una nueva.<br>
+<br>
+Ejemplo de Inmutabilidad<br>
+&emsp;public class Inmutabilidad {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;String original = "Hola";<br>
+&emsp;&emsp;&emsp;String modificada = original.concat(", Mundo!");<br>
+&emsp;&emsp;&emsp;System.out.println("Original: " + original); // Imprime "Hola"<br>
+&emsp;&emsp;&emsp;System.out.println("Modificada: " + modificada); // Imprime "Hola, Mundo!"<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+- En este ejemplo, la cadena original no cambia después de la concatenación. En su lugar, se crea una nueva cadena modificada. En las siguientes lecciones estudiaremos a más detalle varios métodos de la clase String.<br>
+<br>
+Introducción a los Text Blocks<br>
+- Los text blocks son una característica introducida en Java 13 (y mejorada en versiones posteriores) que permiten definir cadenas de texto que abarcan múltiples líneas de manera más sencilla y legible. Usando text blocks, puedes evitar el uso de múltiples concatenaciones y mejorar la claridad del código.<br>
+<br>
+Sintaxis de los Text Blocks<br>
+- La sintaxis de los text blocks utiliza triples comillas dobles (""") para definir una cadena de múltiples líneas.<br>
+- Sintaxis Básica:<br>
+&emsp;String textBlock = """<br>
+&emsp;&emsp;Este es un ejemplo<br>
+&emsp;&emsp;de un text block en Java.<br>
+&emsp;&emsp;Puedes incluir múltiples líneas de texto<br>
+&emsp;&emsp;de una manera fácil y legible.<br>
+&emsp;&emsp;""";<br>
+<br>
+Características de los Text Blocks<br>
+&emsp;1. Múltiples Líneas:<br>
+&emsp;&emsp;o Puedes incluir tantas líneas como necesites dentro de un text block.<br>
+&emsp;2. Indentación:<br>
+&emsp;&emsp;o La indentación común de todas las líneas dentro del text block se elimina automáticamente, lo que facilita la alineación del texto con el código circundante.<br>
+&emsp;3. Comillas y Caracteres Especiales:<br>
+&emsp;&emsp;o No necesitas escapar las comillas dobles dentro de un text block.<br>
+&emsp;&emsp;o Puedes incluir caracteres especiales como tabulaciones (\t) y nuevas líneas (\n) sin problemas. Estos conceptos los veremos a detalle en las siguientes lecciones.<br>
+<br>
+Ejemplos de Uso de Text Blocks<br>
+- Ejemplo Básico<br>
+&emsp;public class EjemploTextBlock {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;String texto = """<br>
+&emsp;&emsp;&emsp;&emsp;Este es un ejemplo<br>
+&emsp;&emsp;&emsp;&emsp;de un text block en Java.<br>
+&emsp;&emsp;&emsp;&emsp;Puedes incluir múltiples líneas de texto<br>
+&emsp;&emsp;&emsp;&emsp;de una manera fácil y legible.<br>
+&emsp;&emsp;&emsp;&emsp;""";<br>
+&emsp;&emsp;&emsp;System.out.println(texto);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+- Ejemplo con Comillas y Caracteres Especiales<br>
+&emsp;public class EjemploTextBlockComillas {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;String texto = """<br>
+&emsp;&emsp;&emsp;&emsp;Este es un "text block".<br>
+&emsp;&emsp;&emsp;&emsp;Puedes incluir comillas dobles sin problemas.<br>
+&emsp;&emsp;&emsp;&emsp;También puedes incluir caracteres especiales como tabulaciones (\t) y nuevas líneas (\n).<br>
+&emsp;&emsp;&emsp;&emsp;""";<br>
+&emsp;&emsp;&emsp;System.out.println(texto);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Beneficios de Usar Text Blocks<br>
+&emsp;1. Legibilidad:<br>
+&emsp;&emsp;o Los text blocks hacen que el código sea más legible, especialmente cuando trabajas con cadenas largas o contenido HTML, JSON, SQL, etc.<br>
+&emsp;2. Mantenimiento:<br>
+&emsp;&emsp;o Facilitan el mantenimiento del código ya que no es necesario manejar concatenaciones y escapes complicados.<br>
+&emsp;3. Simplificación:<br>
+&emsp;&emsp;o Simplifican la creación de cadenas de múltiples líneas, haciendo que el código sea más limpio y menos propenso a errores.<br>
+<br>
+Comparación con la Concatenación Tradicional<br>
+- Sin text blocks, concatenar múltiples líneas requeriría algo como esto:<br>
+&emsp;public class EjemploConcatenacion {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;String texto = "Este es un ejemplo\n" +<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   "de una cadena de múltiples líneas\n" +<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;   "usando concatenación.\n";<br>
+&emsp;&emsp;&emsp;System.out.println(texto);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Uso de Text Blocks en Java: Solución al Error illegal text block open delimiter sequence<br>
+- El error illegal text block open delimiter sequence, missing line terminator ocurre cuando la apertura de un text block no está correctamente alineada con la sintaxis esperada en Java. En un text block, la secuencia de apertura """ debe estar seguida inmediatamente por un salto de línea.<br>
+<br>
+Causa del Error<br>
+- El error se produce debido a la falta de un salto de línea después de la secuencia de apertura de un text block. La correcta forma de definir un text block es asegurarse de que """ esté en una línea separada.<br>
+- Ejemplo del Error<br>
+&emsp;var cadena4 = """Este<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;es un texto<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;multilinea<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;se ignoran los tabuladores""";<br>
+<br>
+Solución<br>
+- Para corregir este error, asegúrate de que la secuencia de apertura """ esté en una línea por sí misma:<br>
+&emsp;var cadena4 = """<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Este<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;es un texto<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;multilinea<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;se ignoran los tabuladores<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;""";<br>
+<br>
+Código Correcto con Text Blocks<br>
+- A continuación se muestra el código corregido que define correctamente un text block:<br>
+&emsp;public class EjemploTextBlockCorregido {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var cadena4 = """<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Este<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;es un texto<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;multilinea<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;se ignoran los tabuladores<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;""";<br>
+&emsp;&emsp;&emsp;System.out.println(cadena4);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Conclusión<br>
+- Las cadenas en Java son una parte fundamental del lenguaje y se utilizan en casi todas las aplicaciones. Son inmutables, lo que significa que son seguras para usar en entornos multihilo y permiten un manejo eficiente de memoria. Usar cadenas y entender su comportamiento es crucial para escribir programas efectivos y eficientes en Java.<br>
+- Los text blocks son una poderosa característica en Java que facilita el trabajo con cadenas de múltiples líneas. Mejoran la legibilidad del código y simplifican el manejo de cadenas largas, haciendo que el desarrollo sea más eficiente y menos propenso a errores.<br>
+<br>
+Recursos Adicionales<br>
+&emsp;• Java String Documentation<br>
+&emsp;• Java Documentation - Text Blocks<br>
+- Estos recursos proporcionan información detallada y ejemplos adicionales sobre el uso de cadenas en Java.<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

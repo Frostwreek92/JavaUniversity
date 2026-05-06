@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>006-13-00-SALUDYFITNESS-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class SaludYFitness {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Salud y Fitness ***");<br>
+<br>
+&emsp;&emsp;// Constantes<br>
+&emsp;&emsp;final var META_PASOS_DIARIO = 10000;<br>
+&emsp;&emsp;final var CALORIAS_POR_PASO = 0.04; // Valor aproximado, son kilocalorias<br>
+<br>
+&emsp;&emsp;// Pedimos los valores al usuario<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;System.out.print("Cuál es tu nombre? ");<br>
+&emsp;&emsp;var nombreUsuario = consola.nextLine();<br>
+<br>
+&emsp;&emsp;System.out.print("Cuántos pasos has caminado hoy? ");<br>
+&emsp;&emsp;var pasosDiarios = Integer.parseInt(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Veirificar si el usuario alcanzó la meta de pasos diarios<br>
+&emsp;&emsp;var metaAlcanzada = (pasosDiarios &gt;= META_PASOS_DIARIO) ? "Si :)" : "No :(";<br>
+<br>
+&emsp;&emsp;// Calculamos las calorías quemadas<br>
+&emsp;&emsp;var caloriasQuemadas = pasosDiarios * CALORIAS_POR_PASO;<br>
+<br>
+&emsp;&emsp;// Mostramos la información<br>
+&emsp;&emsp;System.out.printf("""<br>
+&emsp;&emsp;&emsp;&emsp;%nUsuario: %s<br>
+&emsp;&emsp;&emsp;&emsp;Pasos dados hoy: %d<br>
+&emsp;&emsp;&emsp;&emsp;Calorías quemadas: %.2f kcal<br>
+&emsp;&emsp;&emsp;&emsp;Meta de pasos diario alcanzada: %s<br>
+&emsp;&emsp;&emsp;&emsp;----------------------------------<br>
+&emsp;&emsp;&emsp;&emsp;La meta de pasos diarios es de: %d pasos<br>
+&emsp;&emsp;&emsp;&emsp;""", nombreUsuario, pasosDiarios, caloriasQuemadas,<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;metaAlcanzada, META_PASOS_DIARIO);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

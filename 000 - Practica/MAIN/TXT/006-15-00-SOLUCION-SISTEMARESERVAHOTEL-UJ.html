@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>006-15-00-SOLUCION-SISTEMARESERVAHOTEL-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class SistemaReservaHotel {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Sistema de Reserva de Hotel ***");<br>
+<br>
+&emsp;&emsp;// Variables del hotel<br>
+&emsp;&emsp;final var TARIFA_DIARIA_SIN_VISTA_MAR = 150.50;<br>
+&emsp;&emsp;final var TARIFA_DIARIA_CON_VISTA_MAR = 190.50;<br>
+<br>
+&emsp;&emsp;// Pedimos la información al cliente<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;System.out.print("Nombre del Cliente: ");<br>
+&emsp;&emsp;var nombreCliente = consola.nextLine();<br>
+<br>
+&emsp;&emsp;System.out.print("Días de estadía: ");<br>
+&emsp;&emsp;var diasEstadia = Integer.parseInt(consola.nextLine());<br>
+<br>
+&emsp;&emsp;System.out.print("Con vista al mar (true/false)? ");<br>
+&emsp;&emsp;var conVistaAlMar = Boolean.parseBoolean(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Cálculo de costo total de la estadía<br>
+&emsp;&emsp;var costoTotal = 0.0;<br>
+&emsp;&emsp;if(conVistaAlMar)<br>
+&emsp;&emsp;&emsp;costoTotal = diasEstadia * TARIFA_DIARIA_CON_VISTA_MAR;<br>
+&emsp;&emsp;else<br>
+&emsp;&emsp;&emsp;costoTotal = diasEstadia * TARIFA_DIARIA_SIN_VISTA_MAR;<br>
+<br>
+&emsp;&emsp;// Mostramos los detalles de la reserva<br>
+&emsp;&emsp;System.out.printf("""<br>
+&emsp;&emsp;&emsp;&emsp;%n------------ Detalles de la Reservación -----------<br>
+&emsp;&emsp;&emsp;&emsp;Cliente: %s<br>
+&emsp;&emsp;&emsp;&emsp;Días de estadía: %d<br>
+&emsp;&emsp;&emsp;&emsp;Costo total: $%.2f<br>
+&emsp;&emsp;&emsp;&emsp;Habitación con vista al mar: %s<br>
+&emsp;&emsp;&emsp;&emsp;""", nombreCliente, diasEstadia, costoTotal,<br>
+&emsp;&emsp;&emsp;&emsp;conVistaAlMar ? "Sí :)" : "No :(");<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

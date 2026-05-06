@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>002-15-00-CONCATENACIONCADENASJAVA-UJ</title>
+        </head>
+        <body>
+            <p>
+    ¿Qué es la Concatenación de Cadenas?<br>
+- La concatenación de cadenas es el proceso de unir dos o más cadenas para formar una nueva cadena. En Java, existen varios métodos para concatenar cadenas, cada uno con sus propias características y usos.<br>
+<br>
+Métodos de Concatenación en Java<br>
+&emsp;1. Operador +<br>
+&emsp;2. Método concat()<br>
+&emsp;3. Clase StringBuilder<br>
+&emsp;4. Clase StringBuffer<br>
+&emsp;5. Método String.join()<br>
+<br>
+1. Operador +<br>
+- El operador + es el método más sencillo y común para concatenar cadenas en Java. Es fácil de usar y leer.<br>
+- Sintaxis:<br>
+&emsp;String resultado = cadena1 + cadena2;<br>
+- Ejemplo:<br>
+&emsp;public class ConcatenacionOperador {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;String saludo = "Hola";<br>
+&emsp;&emsp;&emsp;String nombre = "Mundo";<br>
+&emsp;&emsp;&emsp;String mensaje = saludo + ", " + nombre + "!";<br>
+&emsp;&emsp;&emsp;System.out.println(mensaje);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+- De momento sólo estudiaremos la concatenación usando el operador +, y en el tema de Manejo de Cadenas profundizaremos en el uso de otras formas de realizar concatenación de cadenas. Veamos más detalles del uso del operador + como operador de concatenación:<br>
+<br>
+Concatenación de Cadenas con Valores Numéricos<br>
+- Cuando se concatena una cadena con un valor numérico, el valor numérico se convierte en una cadena y luego se une.<br>
+&emsp;Ejemplo: Cadena Primero, Número Después<br>
+&emsp;&emsp;public class ConcatenacionConNumeros1 {<br>
+&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;String mensaje = "El resultado es: ";<br>
+&emsp;&emsp;&emsp;&emsp;int numero = 42;<br>
+&emsp;&emsp;&emsp;&emsp;String resultado = mensaje + numero;<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println(resultado);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;&emsp;Salida:<br>
+&emsp;&emsp;&emsp;El resultado es: 42<br>
+&emsp;Ejemplo: Número Primero, Cadena Después<br>
+&emsp;&emsp;public class ConcatenacionConNumeros2 {<br>
+&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;int numero = 42;<br>
+&emsp;&emsp;&emsp;&emsp;String mensaje = " es el resultado.";<br>
+&emsp;&emsp;&emsp;&emsp;String resultado = numero + mensaje;<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println(resultado);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;&emsp;Salida:<br>
+&emsp;&emsp;&emsp;42 es el resultado.<br>
+<br>
+Concatenación de Múltiples Tipos<br>
+- Es importante entender cómo se evalúan las expresiones cuando se combinan múltiples tipos de datos.<br>
+- Ejemplo: Mezcla de Cadenas y Números<br>
+&emsp;public class ConcatenacionMixta {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;String mensaje = "El resultado de ";<br>
+&emsp;&emsp;&emsp;int numero1 = 5;<br>
+&emsp;&emsp;&emsp;int numero2 = 3;<br>
+&emsp;&emsp;&emsp;String resultado = mensaje + numero1 + " + " + numero2 + " es " + (numero1 + numero2);<br>
+&emsp;&emsp;&emsp;System.out.println(resultado);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+&emsp;Salida:<br>
+&emsp;&emsp;El resultado de 5 + 3 es 8<br>
+<br>
+Detalles Importantes<br>
+&emsp;1. Orden de Concatenación:<br>
+&emsp;&emsp;o Cuando una cadena es el primer operando, el operador + se comporta como un operador de concatenación.<br>
+&emsp;&emsp;o Si un número es el primer operando y se concatenan otros números sin paréntesis, se realizará la suma en lugar de la concatenación.<br>
+&emsp;&emsp;- Ejemplo: Número Primero sin Paréntesis<br>
+&emsp;&emsp;&emsp;public class ConcatenacionNumeroPrimero {<br>
+&emsp;&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;int numero1 = 5;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;int numero2 = 3;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;String resultado = numero1 + numero2 + " es el resultado.";<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println(resultado);<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;Salida:<br>
+&emsp;&emsp;&emsp;&emsp;8 es el resultado.<br>
+&emsp;&emsp;- Ejemplo: Número Primero con Paréntesis<br>
+&emsp;&emsp;&emsp;public class ConcatenacionNumeroPrimeroParentesis {<br>
+&emsp;&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;int numero1 = 5;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;int numero2 = 3;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;String resultado = numero1 + (numero2 + " es el resultado.");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println(resultado);<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;Salida:<br>
+&emsp;&emsp;&emsp;&emsp;53 es el resultado.<br>
+<br>
+Conclusión<br>
+- El operador + en Java es una herramienta poderosa y flexible para concatenar cadenas y otros tipos de datos. Es esencial comprender cómo se evalúan las expresiones y cómo se manejan los diferentes tipos de datos en la concatenación para evitar errores y asegurar que el código se comporte como se espera.<br>
+<br>
+Recursos Adicionales<br>
+&emsp;• Java String Concatenation (Oracle Documentation)<br>
+- Estos recursos proporcionan información adicional y ejemplos sobre el uso del operador + y la concatenación de cadenas en Java.<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

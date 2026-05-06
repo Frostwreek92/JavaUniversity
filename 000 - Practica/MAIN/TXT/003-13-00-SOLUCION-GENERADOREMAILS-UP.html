@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>003-13-00-SOLUCION-GENERADOREMAILS-UP</title>
+        </head>
+        <body>
+            <p>
+    public class GeneradorEmails {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Generador de Emails ***");<br>
+&emsp;&emsp;// Nombre completo del usuario<br>
+&emsp;&emsp;var nombreCompleto = " Ubaldo Acosta Soto ";<br>
+&emsp;&emsp;System.out.println("nombreCompleto = " + nombreCompleto);<br>
+<br>
+&emsp;&emsp;// Procesar o normalizar el nombrel del usuario<br>
+&emsp;&emsp;// Limpiar los espacios en blanco al inicio y al final<br>
+&emsp;&emsp;var nombreNormalizado = nombreCompleto.strip();<br>
+&emsp;&emsp;// Reemplazar los espacios en blanco por punto<br>
+&emsp;&emsp;nombreNormalizado = nombreNormalizado.replace(" ", ".");<br>
+&emsp;&emsp;// Convertimos a minúsculas<br>
+&emsp;&emsp;nombreNormalizado = nombreNormalizado.toLowerCase();<br>
+&emsp;&emsp;System.out.println("nombreNormalizado = " + nombreNormalizado);<br>
+<br>
+&emsp;&emsp;// Datos de la empresa<br>
+&emsp;&emsp;var nombreEmpresa = " Global Mentoring ";<br>
+&emsp;&emsp;System.out.println("\nNombre empresa: " + nombreEmpresa);<br>
+&emsp;&emsp;var extensionDominio = ".com.mx";<br>
+&emsp;&emsp;System.out.println("Extensión del dominio: " + extensionDominio);<br>
+<br>
+&emsp;&emsp;// Quitamos los espacios en blanco y convertimos a minúsculas<br>
+&emsp;&emsp;var nombreEmpresaNormalizado = nombreEmpresa.strip().replace(" ", ".").toLowerCase();<br>
+&emsp;&emsp;var dominioEmailNormalizado = "@" + nombreEmpresaNormalizado + extensionDominio;<br>
+&emsp;&emsp;System.out.println("dominioEmailNormalizado = " + dominioEmailNormalizado);<br>
+&emsp;&emsp;<br>
+&emsp;&emsp;// Creamos el email final<br>
+&emsp;&emsp;var emailNormalizado = nombreNormalizado + dominioEmailNormalizado;<br>
+&emsp;&emsp;System.out.println("emailNormalizado = " + emailNormalizado);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

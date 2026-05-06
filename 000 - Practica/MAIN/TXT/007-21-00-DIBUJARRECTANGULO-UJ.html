@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>007-21-00-DIBUJARRECTANGULO-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class DibujaTriangulo {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Dibuja un Triángulo ***");<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+&emsp;&emsp;System.out.print("Proporciona el número de filas: ");<br>
+&emsp;&emsp;var numeroFilas = consola.nextInt();<br>
+<br>
+&emsp;&emsp;//Iteramos sobre cada fila del triángulo<br>
+&emsp;&emsp;for(var fila = 1; fila &lt;= numeroFilas; fila++){<br>
+&emsp;&emsp;&emsp;var espaciosBlanco = " ".repeat(numeroFilas - fila);<br>
+&emsp;&emsp;&emsp;var asteriscos = "*".repeat(2 * fila - 1);<br>
+&emsp;&emsp;&emsp;System.out.println(espaciosBlanco + asteriscos);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

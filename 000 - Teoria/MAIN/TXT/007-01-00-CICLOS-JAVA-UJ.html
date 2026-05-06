@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>007-01-00-CICLOS-JAVA-UJ</title>
+        </head>
+        <body>
+            <p>
+    Ciclos en Java<br>
+<br>
+Los ciclos (o bucles) en Java se utilizan para ejecutar repetidamente un bloque de código mientras se cumpla una condición específica. Java proporciona varios tipos de ciclos: for, while y do-while. En esta lección, exploraremos cada uno de estos ciclos con su sintaxis, ejemplos, ejercicios y aplicaciones del mundo real.<br>
+<br>
+1. Ciclo while<br>
+- Sintaxis while (condicion) { // Bloque de código a ejecutar }<br>
+&emsp;• condición: Evalúa si el ciclo debe continuar o no antes de cada iteración.<br>
+<br>
+- Ejemplo: Imprimir los números del 1 al 10<br>
+&emsp;public class CicloWhileEjemplo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int i = 1;<br>
+&emsp;&emsp;&emsp;while (i &lt;= 10) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println(i);<br>
+&emsp;&emsp;&emsp;&emsp;i++;<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- Ejercicio: Imprimir los números impares del 1 al 20<br>
+&emsp;public class NumerosImpares {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int i = 1;<br>
+&emsp;&emsp;&emsp;while (i &lt;= 20) {<br>
+&emsp;&emsp;&emsp;&emsp;if (i % 2 != 0) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println(i);<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;i++;<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+2. Ciclo do-while<br>
+- Sintaxis<br>
+&emsp;do {<br>
+&emsp;&emsp;// Bloque de código a ejecutar<br>
+&emsp;} while (condicion);<br>
+<br>
+&emsp;• condición: Evalúa si el ciclo debe continuar o no después de cada iteración. El bloque de código se ejecuta al menos una vez.<br>
+<br>
+- Ejemplo: Imprimir los números del 1 al 10<br>
+&emsp;public class CicloDoWhileEjemplo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int i = 1;<br>
+&emsp;&emsp;&emsp;do {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println(i);<br>
+&emsp;&emsp;&emsp;&emsp;i++;<br>
+&emsp;&emsp;&emsp;} while (i &lt;= 10);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- Ejercicio 3: Imprimir los números del 1 al 10 en orden inverso<br>
+&emsp;public class NumerosInversos {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int i = 10;<br>
+&emsp;&emsp;&emsp;do {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println(i);<br>
+&emsp;&emsp;&emsp;&emsp;i--;<br>
+&emsp;&emsp;&emsp;} while (i &gt; 0);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+3. Ciclo for<br>
+- Sintaxis<br>
+&emsp;for (inicializacion; condicion; actualizacion) {<br>
+&emsp;&emsp;// Bloque de código a ejecutar<br>
+&emsp;}<br>
+&emsp;• inicialización: Se ejecuta una vez al principio del ciclo y se utiliza para inicializar la variable de control.<br>
+&emsp;• condición: Evalúa si el ciclo debe continuar o no.<br>
+&emsp;• actualización: Se ejecuta al final de cada iteración del ciclo y se utiliza para actualizar la variable de control.<br>
+<br>
+- Ejemplo: Imprimir los números del 1 al 10<br>
+&emsp;public class CicloForEjemplo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;for (int i = 1; i &lt;= 10; i++) {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println(i);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+- Ejercicio: Imprimir los números pares del 1 al 20<br>
+&emsp;public class NumerosPares {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;for (int i = 1; i &lt;= 20; i++) {<br>
+&emsp;&emsp;&emsp;&emsp;if (i % 2 == 0) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println(i);<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Ejercicio Final<br>
+<br>
+- Ejercicio: Crear un menú interactivo<br>
+- Crea un programa que muestre un menú interactivo utilizando un ciclo do-while. El menú debe permitir al usuario elegir entre diferentes opciones y realizar acciones según la elección. Por ejemplo, mostrar un mensaje, realizar una operación matemática, o salir del menú.<br>
+<br>
+&emsp;import java.util.Scanner;<br>
+<br>
+&emsp;public class MenuInteractivo {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;var consola = new Scanner(System.in);<br>
+&emsp;&emsp;&emsp;var salir = false;<br>
+&emsp;&emsp;&emsp;do {<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Menú:");<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("1. Mostrar mensaje");<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("2. Sumar dos números");<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("3. Salir");<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Elige una opción: ");<br>
+&emsp;&emsp;&emsp;&emsp;var opcion = consola.nextInt();<br>
+<br>
+&emsp;&emsp;&emsp;&emsp;switch (opcion) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;case 1:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("¡Hola, bienvenido al menú interactivo!");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;case 2:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.print("Ingresa el primer número: ");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;var num1 = consola.nextInt();<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.print("Ingresa el segundo número: ");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;var num2 = consola.nextInt();<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;var suma = num1 + num2;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("La suma es: " + suma);<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;case 3:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;salir = true;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Saliendo del sistema...");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;default:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Opción no válida, intenta de nuevo.");<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println();<br>
+&emsp;&emsp;&emsp;} while (!salir);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Resumen<br>
+- En esta lección, hemos cubierto los ciclos for, while y do-while en Java, proporcionando la sintaxis básica, ejemplos simples, ejercicios y ejemplos del mundo real. Los ciclos son fundamentales en la programación y permiten automatizar tareas repetitivas de manera eficiente.<br>
+<br>
+¡Espero que esta lección te sea muy útil!<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

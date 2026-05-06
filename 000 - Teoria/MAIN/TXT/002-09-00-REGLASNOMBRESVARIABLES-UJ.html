@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>002-09-00-REGLASNOMBRESVARIABLES-UJ</title>
+        </head>
+        <body>
+            <p>
+    Reglas y Buenas Prácticas en Nombres de Variables en Java<br>
+- Los nombres de variables en Java son esenciales para la legibilidad y mantenibilidad del código. Seguir buenas prácticas y convenciones de nomenclatura ayuda a que el código sea más comprensible y profesional. A continuación, se detallan las reglas y buenas prácticas para nombrar variables en Java, con ejemplos.<br>
+<br>
+Reglas Básicas para Nombres de Variables<br>
+&emsp;1. Debe comenzar con una letra, un símbolo de dólar ($) o un guion bajo (_):<br>
+&emsp;&emsp;o Correcto: nombre, _nombre, $nombre<br>
+&emsp;&emsp;o Incorrecto: 1nombre, -nombre<br>
+&emsp;2. No puede contener espacios ni caracteres especiales:<br>
+&emsp;&emsp;o Correcto: nombreCliente<br>
+&emsp;&emsp;o Incorrecto: nombre cliente, nombre-cliente<br>
+&emsp;3. No puede ser una palabra reservada de Java:<br>
+&emsp;&emsp;o Correcto: int numero<br>
+&emsp;&emsp;o Incorrecto: int int<br>
+&emsp;4. Distingue entre mayúsculas y minúsculas:<br>
+&emsp;&emsp;o nombre, Nombre, NOMBRE son variables diferentes.<br>
+<br>
+Buenas Prácticas<br>
+&emsp;1. Usar Camel Case para Nombres de Variables:<br>
+&emsp;&emsp;o Utilizar camel case para nombres de variables, comenzando con minúscula y cada nueva palabra con mayúscula.<br>
+&emsp;&emsp;o Ejemplo: nombreCompleto, numeroDeTelefono<br>
+&emsp;2. Ser Descriptivo y Claro:<br>
+&emsp;&emsp;o Los nombres de las variables deben describir claramente su propósito.<br>
+&emsp;&emsp;o Ejemplo: edadPersona, precioProducto<br>
+&emsp;3. Prefijos y Sufijos Claros (si es necesario):<br>
+&emsp;&emsp;o Usar prefijos como is o has para variables booleanas.<br>
+&emsp;&emsp;o Ejemplo: isActivo, hasSaldo<br>
+&emsp;4. Evitar Nombres de Variables de una Sola Letra:<br>
+&emsp;&emsp;o A menos que se usen en bucles pequeños o contextos muy específicos.<br>
+&emsp;&emsp;o Ejemplo: int i en un bucle for, pero preferir indice fuera de ese contexto.<br>
+&emsp;5. No Abusar de Abreviaturas:<br>
+&emsp;&emsp;o Usar nombres completos siempre que sea posible para mayor claridad.<br>
+&emsp;&emsp;o Ejemplo: totalPiezas en lugar de totPzs<br>
+&emsp;6. Usar Nombres Significativos Incluso en Variables Temporales:<br>
+&emsp;&emsp;o Asegurarse de que los nombres de las variables temporales también sean descriptivos.<br>
+&emsp;&emsp;o Ejemplo: sumaParcial en lugar de temp<br>
+<br>
+Ejemplos de Buenas y Malas Prácticas<br>
+- Buenas Prácticas<br>
+&emsp;public class EjemploBuenasPracticas {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int edadPersona = 25; // Claro y descriptivo<br>
+&emsp;&emsp;&emsp;boolean isActivo = true; // Prefijo claro para booleanos<br>
+&emsp;&emsp;&emsp;double salarioMensual = 1500.50; // Uso de camel case y descriptivo<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+- Malas Prácticas<br>
+&emsp;public class EjemploMalasPracticas {<br>
+&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;int e = 25; // No descriptivo<br>
+&emsp;&emsp;&emsp;boolean b = true; // No claro<br>
+&emsp;&emsp;&emsp;double sal = 1500.50; // Abreviatura no clara<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+<br>
+Resumen<br>
+- Seguir las reglas y buenas prácticas para nombrar variables en Java mejora significativamente la legibilidad y mantenibilidad del código. Los nombres descriptivos y claros facilitan la comprensión del propósito de cada variable, lo que es crucial para trabajar en equipo y mantener el código a largo plazo.<br>
+<br>
+Recursos Adicionales<br>
+&emsp;• Java Naming Conventions - Oracle<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

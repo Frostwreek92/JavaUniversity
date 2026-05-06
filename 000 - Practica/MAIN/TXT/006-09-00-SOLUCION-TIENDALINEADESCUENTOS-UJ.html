@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>006-09-00-SOLUCION-TIENDALINEADESCUENTOS-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class TiendaEnLinea {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Tienda en Línea con Descuentos ***");<br>
+<br>
+&emsp;&emsp;// Condiciones<br>
+&emsp;&emsp;final var MONTO_COMPRA_DESC = 1000.00;<br>
+<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;System.out.print("Cual fue el monto de tu compra? ");<br>
+&emsp;&emsp;var montoCompra = Double.parseDouble(consola.nextLine());<br>
+<br>
+&emsp;&emsp;System.out.print("Eres miembro de la tienda (true/false)? ");<br>
+&emsp;&emsp;var eresMiembro = Boolean.parseBoolean(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Calculamos el descuento<br>
+&emsp;&emsp;var descuento = 0.0;<br>
+&emsp;&emsp;// Verificamos cada caso, con los datos proporcionados<br>
+&emsp;&emsp;if (montoCompra &gt;= MONTO_COMPRA_DESC && eresMiembro) {<br>
+&emsp;&emsp;&emsp;descuento = 0.1; // Descuento del 10%<br>
+&emsp;&emsp;} else if (eresMiembro){<br>
+&emsp;&emsp;&emsp;descuento = 0.05; // Descuento del 5%<br>
+&emsp;&emsp;} else { // No supero el monto minimo ni es miembro<br>
+&emsp;&emsp;&emsp;descuento = 0; // Descuento del 0%<br>
+&emsp;&emsp;}<br>
+<br>
+&emsp;&emsp;// Hacemos los calculos respectivos para obtener el monto final<br>
+&emsp;&emsp;if (descuento != 0) {<br>
+&emsp;&emsp;&emsp;var montoDescuento = montoCompra * descuento;<br>
+&emsp;&emsp;&emsp;var montoFinal = montoCompra - montoDescuento;<br>
+&emsp;&emsp;&emsp;System.out.printf("""<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;%nFelicidades!, has obtenido un descuento del %.0f%%<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Monto de la compra: $%.2f<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Monto del descuento: $%.2f<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Monto final de la compra con descuento: $%.2f%n<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;""", descuento * 100, montoCompra, montoDescuento, montoFinal);<br>
+&emsp;&emsp;} else {<br>
+&emsp;&emsp;&emsp;System.out.printf("""<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;%nNo obtuviste ningún tipo de descuento.<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Te invitamos a hacerte miembro de la tienda!<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;Monto final de la compra: $%.2f%n<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;""", montoCompra);<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

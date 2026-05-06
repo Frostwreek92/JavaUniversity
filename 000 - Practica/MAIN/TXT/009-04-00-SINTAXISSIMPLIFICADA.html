@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>009-04-00-SINTAXISSIMPLIFICADA</title>
+        </head>
+        <body>
+            <p>
+    public class Matrices {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;// Definimos una matriz<br>
+&emsp;&emsp;var matriz = new int[][]{<br>
+&emsp;&emsp;&emsp;&emsp;{100, 200, 300},<br>
+&emsp;&emsp;&emsp;&emsp;{400, 500, 600}<br>
+&emsp;&emsp;};<br>
+&emsp;&emsp;// Recorrer una matriz<br>
+&emsp;&emsp;// 1. Ciclo mas externo. Recorrer los renglones<br>
+&emsp;&emsp;for(var ren = 0; ren &lt; matriz.length; ren++){<br>
+&emsp;&emsp;&emsp;// 2. Ciclo interno. Recorrer las columnas<br>
+&emsp;&emsp;&emsp;for(var col = 0; col &lt; matriz[ren].length; col++){<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Valor[" + ren + "][" + col + "] = " + matriz[ren][col]);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>005-10-00-DESCUENTOVIP-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class SistemaDescuentosVIP {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Sistema de Descuentos VIP*** ");<br>
+&emsp;&emsp;final var NO_PRODUCTOS_DESCUENTO = 10;<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;System.out.print("Cuántos productos compraste hoy? ");<br>
+&emsp;&emsp;var cantidadProductos = Integer.parseInt(consola.nextLine());<br>
+<br>
+&emsp;&emsp;System.out.print("Tienes la membresía de la tienda (true/false)? ");<br>
+&emsp;&emsp;var tienesMembresia = Boolean.parseBoolean(consola.nextLine());<br>
+<br>
+&emsp;&emsp;var esElegibleDescuento =<br>
+&emsp;&emsp;&emsp;&emsp;cantidadProductos &gt;= NO_PRODUCTOS_DESCUENTO && tienesMembresia;<br>
+<br>
+&emsp;&emsp;System.out.println("Tienes acceso al descuento VIP ? " + esElegibleDescuento);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

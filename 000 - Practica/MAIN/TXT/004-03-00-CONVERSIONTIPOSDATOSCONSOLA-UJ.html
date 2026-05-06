@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>004-03-00-CONVERSIONTIPOSDATOSCONSOLA-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class LeerTiposDatos {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;// Leer distintos tipos de datos<br>
+&emsp;&emsp;// Leer un tipo int<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+&emsp;&emsp;System.out.print("Ingresa tu edad: ");<br>
+&emsp;&emsp;var edad = consola.nextInt();<br>
+&emsp;&emsp;System.out.println("edad = " + edad);<br>
+&emsp;&emsp;// Leer un tipo double<br>
+&emsp;&emsp;System.out.print("Ingresa tu altura: ");<br>
+&emsp;&emsp;var altura = consola.nextDouble();<br>
+&emsp;&emsp;System.out.println("altura = " + altura);<br>
+&emsp;&emsp;// Consumimos el caracter de salto de linea<br>
+&emsp;&emsp;consola.nextLine();<br>
+&emsp;&emsp;// Leer un tipo String<br>
+&emsp;&emsp;System.out.print("Ingresa tu nombre: ");<br>
+&emsp;&emsp;var nombre = consola.nextLine();<br>
+&emsp;&emsp;System.out.println("nombre = " + nombre);<br>
+<br>
+&emsp;&emsp;// Conversion de datos<br>
+&emsp;&emsp;System.out.print("Proporciona un valor entero: ");<br>
+//&emsp;&emsp;var enteroString = consola.nextLine();<br>
+//&emsp;&emsp;var entero = Integer.parseInt(enteroString);<br>
+&emsp;&emsp;var entero = Integer.parseInt(consola.nextLine());<br>
+&emsp;&emsp;System.out.println("entero = " + entero);<br>
+&emsp;&emsp;// Tipo flotante<br>
+&emsp;&emsp;System.out.print("Proporciona un valor flotante: ");<br>
+&emsp;&emsp;var flotante = Float.parseFloat(consola.nextLine());<br>
+&emsp;&emsp;System.out.println("flotante = " + flotante);<br>
+&emsp;&emsp;//Double.parseDouble()<br>
+&emsp;&emsp;//Boolean.parseBoolean()<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

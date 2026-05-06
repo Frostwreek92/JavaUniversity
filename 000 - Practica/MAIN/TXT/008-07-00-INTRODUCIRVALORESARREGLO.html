@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>008-07-00-INTRODUCIRVALORESARREGLO</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class Arreglos {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;// Introducir valores a un arreglo<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+&emsp;&emsp;// Declarar el arreglo<br>
+&emsp;&emsp;System.out.print("Proporciona el largo del arreglo: ");<br>
+&emsp;&emsp;var largoArreglo = Integer.parseInt(consola.nextLine());<br>
+&emsp;&emsp;// Creamos de manera dinámica el arreglo<br>
+&emsp;&emsp;var enteros = new int[largoArreglo];<br>
+&emsp;&emsp;// Solicitar los valores del arreglo<br>
+&emsp;&emsp;for(var i=0; i &lt; largoArreglo; i++){<br>
+&emsp;&emsp;&emsp;System.out.print("Proporciona enteros[" + i + "] = ");<br>
+&emsp;&emsp;&emsp;enteros[i] = Integer.parseInt(consola.nextLine());<br>
+&emsp;&emsp;}<br>
+&emsp;&emsp;// Imprimir los valores del arreglo<br>
+&emsp;&emsp;System.out.println("\nImpresión del Arreglo: ");<br>
+&emsp;&emsp;for(var i=0; i &lt; largoArreglo; i++)<br>
+&emsp;&emsp;&emsp;System.out.println("enteros[" + i + "] = " + enteros[i]);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

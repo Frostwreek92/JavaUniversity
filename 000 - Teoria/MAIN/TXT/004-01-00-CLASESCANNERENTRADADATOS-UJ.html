@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>004-01-00-CLASESCANNERENTRADADATOS-UJ</title>
+        </head>
+        <body>
+            <p>
+    Leer datos de la consola usando la clase Scanner en Java<br>
+<br>
+Introducción a Scanner<br>
+- La clase Scanner es parte del paquete java.util y se utiliza para leer la entrada del usuario desde varias fuentes, como el teclado, archivos, cadenas y flujos de entrada.<br>
+<br>
+Sintaxis Básica<br>
+- Para utilizar la clase Scanner, primero debes importarla y luego crear una instancia de Scanner asociada a la fuente de entrada.<br>
+<br>
+Importación de la clase Scanner:<br>
+&emsp;import java.util.Scanner;<br>
+Creación de una instancia de Scanner:<br>
+&emsp;var scanner = new Scanner(System.in);<br>
+<br>
+Ejemplos de Uso<br>
+<br>
+Leer Datos Primitivos<br>
+&emsp;1. Leer un int:<br>
+&emsp;&emsp;import java.util.Scanner;<br>
+&emsp;&emsp;public class LeerInt {<br>
+&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;var scanner = new Scanner(System.in);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Introduce un número entero: ");<br>
+&emsp;&emsp;&emsp;&emsp;var numero = scanner.nextInt();<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("El número introducido es: " + numero);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+<br>
+&emsp;2. Leer un double:<br>
+&emsp;&emsp;import java.util.Scanner;<br>
+&emsp;&emsp;public class LeerDouble {<br>
+&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;var scanner = new Scanner(System.in);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Introduce un número decimal: ");<br>
+&emsp;&emsp;&emsp;&emsp;double numero = scanner.nextDouble();<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("El número decimal introducido es: " + numero);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+<br>
+&emsp;3. Leer un boolean:<br>
+&emsp;&emsp;import java.util.Scanner;<br>
+&emsp;&emsp;public class LeerBoolean {<br>
+&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;var scanner = new Scanner(System.in);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Introduce un valor booleano (true/false): ");<br>
+&emsp;&emsp;&emsp;&emsp;var valor = scanner.nextBoolean();<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("El valor booleano introducido es: " + valor);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+<br>
+Leer Cadenas (Strings)<br>
+&emsp;1. Leer una línea completa:<br>
+&emsp;&emsp;import java.util.Scanner;<br>
+&emsp;&emsp;public class LeerLinea {<br>
+&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;var scanner = new Scanner(System.in);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Introduce una línea de texto: ");<br>
+&emsp;&emsp;&emsp;&emsp;var linea = scanner.nextLine();<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("La línea introducida es: " + linea);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;2. Leer una palabra:<br>
+&emsp;&emsp;import java.util.Scanner;<br>
+&emsp;&emsp;public class LeerPalabra {<br>
+&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;var scanner = new Scanner(System.in);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Introduce una palabra: ");<br>
+&emsp;&emsp;&emsp;&emsp;var palabra = scanner.next();<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("La palabra introducida es: " + palabra);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+<br>
+Conversión de Datos<br>
+- A veces es necesario convertir los datos leídos a otro tipo de datos. Aquí algunos ejemplos:<br>
+&emsp;1. De String a int:<br>
+&emsp;&emsp;import java.util.Scanner;<br>
+&emsp;&emsp;public class ConversionStringAInt {<br>
+&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;var scanner = new Scanner(System.in);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Introduce un número: ");<br>
+&emsp;&emsp;&emsp;&emsp;var entrada = scanner.nextLine();<br>
+&emsp;&emsp;&emsp;&emsp;var numero = Integer.parseInt(entrada);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("El número convertido es: " + numero);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+&emsp;2. De String a double:<br>
+&emsp;&emsp;import java.util.Scanner;<br>
+&emsp;&emsp;public class ConversionStringADouble {<br>
+&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;var scanner = new Scanner(System.in);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Introduce un número decimal: ");<br>
+&emsp;&emsp;&emsp;&emsp;var entrada = scanner.nextLine();<br>
+&emsp;&emsp;&emsp;&emsp;var numero = Double.parseDouble(entrada);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("El número decimal convertido es: " + numero);<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+<br>
+Buenas Prácticas<br>
+&emsp;1. Cerrar el Scanner:<br>
+&emsp;&emsp;o Siempre cierra el Scanner cuando ya no lo necesites para liberar los recursos.<br>
+&emsp;&emsp;&emsp;scanner.close();<br>
+&emsp;2. Manejo de Excepciones:<br>
+&emsp;&emsp;o Usa bloques try-catch para manejar posibles excepciones al leer datos. Este tema lo estudiaremos a detalle en la lección de manejo de excepciones, así que solo es un adelanto de esta lección y cómo se puede aplicar al trabajar con la consola de Java.<br>
+&emsp;&emsp;&emsp;import java.util.InputMismatchException;<br>
+&emsp;&emsp;&emsp;import java.util.Scanner;<br>
+&emsp;&emsp;&emsp;public class ManejoExcepciones {<br>
+&emsp;&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;var scanner = new Scanner(System.in);<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;try {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.print("Introduce un número entero: ");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;var numero = scanner.nextInt();<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("El número introducido es: " + numero);<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;} catch (InputMismatchException e) {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;System.out.println("Entrada no válida. Introduce un entero.");<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;} finally {<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;scanner.close();<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;&emsp;}<br>
+<br>
+- Estos recursos te proporcionarán más información y ejemplos sobre cómo utilizar la clase Scanner en Java.<br>
+<br>
+Uso de Scanner en Java y Problemas con el Buffer<br>
+<br>
+Problema Común con nextInt y nextLine<br>
+- Cuando se utilizan métodos como nextInt, nextDouble, etc., y luego se utiliza nextLine, a veces parece que nextLine no funciona correctamente. Esto ocurre porque los métodos como nextInt no consumen el carácter de nueva línea (Enter) que queda en el buffer de entrada.<br>
+- Explicación del Problema<br>
+&emsp;- Cuando se llama a nextInt, nextDouble, etc., se lee el valor numérico, pero no se consume el carácter de nueva línea (Enter) que el usuario presiona después de ingresar el valor. Esto deja el carácter de nueva línea en el buffer, y cuando se llama a nextLine, éste lee el carácter de nueva línea restante en lugar de la siguiente línea de entrada.<br>
+<br>
+Solución: Vaciar el Buffer<br>
+- Para solucionar este problema, se debe consumir el carácter de nueva línea restante en el buffer antes de llamar a nextLine. Esto se puede hacer llamando a nextLine inmediatamente después de nextInt, nextDouble, etc.<br>
+- Ejemplo de Código<br>
+&emsp;- A continuación, se muestra un ejemplo de cómo manejar este problema:<br>
+&emsp;&emsp;import java.util.Scanner;<br>
+&emsp;&emsp;public class ScannerExample {<br>
+&emsp;&emsp;&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;&emsp;&emsp;var scanner = new Scanner(System.in);<br>
+&emsp;&emsp;&emsp;&emsp;// Leer un número entero<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Introduce un número entero: ");<br>
+&emsp;&emsp;&emsp;&emsp;var numero = scanner.nextInt();<br>
+&emsp;&emsp;&emsp;&emsp;// Consumir el carácter de nueva línea restante<br>
+&emsp;&emsp;&emsp;&emsp;scanner.nextLine(); // Esto limpia el buffer<br>
+&emsp;&emsp;&emsp;&emsp;// Leer una línea de texto<br>
+&emsp;&emsp;&emsp;&emsp;System.out.print("Introduce una línea de texto: ");<br>
+&emsp;&emsp;&emsp;&emsp;var linea = scanner.nextLine();<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Número: " + numero);<br>
+&emsp;&emsp;&emsp;&emsp;System.out.println("Texto: " + linea);<br>
+&emsp;&emsp;&emsp;&emsp;scanner.close();<br>
+&emsp;&emsp;&emsp;}<br>
+&emsp;&emsp;}<br>
+<br>
+Explicación del Ejemplo<br>
+&emsp;1. Lectura de un Entero:<br>
+&emsp;&emsp;o var numero = scanner.nextInt(); lee un número entero del usuario.<br>
+&emsp;2. Consumo del Carácter de Nueva Línea:<br>
+&emsp;&emsp;o scanner.nextLine(); se usa para consumir el carácter de nueva línea restante en el buffer.<br>
+&emsp;3. Lectura de una Línea de Texto:<br>
+&emsp;&emsp;o var linea = scanner.nextLine(); lee la siguiente línea de entrada del usuario correctamente.<br>
+<br>
+Otras Buenas Prácticas<br>
+&emsp;• Uso de try-with-resources: Cierra automáticamente el Scanner al final del bloque, evitando fugas de recursos. Este tema lo estudiaremos a detalle cuando veamos el Manejo de Excepciones. Esto es sólo un adelanto de cómo se puede aplicar cuando usamos la consola en Java.<br>
+&emsp;&emsp;try (Scanner scanner = new Scanner(System.in)) {<br>
+&emsp;&emsp;// Código para leer entradas<br>
+&emsp;&emsp;}<br>
+&emsp;• Validación de Entradas: Siempre valida las entradas del usuario para manejar entradas no válidas y evitar excepciones. El tema de sentencias de decisión como if-else lo estudiaremos a detalle en la lección de Sentencias de Decisión, esto es sólo un adelanto de cómo se puede utilizar cuando trabajamos con la consola de Java.<br>
+&emsp;&emsp;if (scanner.hasNextInt()) {<br>
+&emsp;&emsp;&emsp;var numero = scanner.nextInt();<br>
+&emsp;&emsp;} else {<br>
+&emsp;&emsp;&emsp;System.out.println("Entrada no válida.");<br>
+&emsp;&emsp;}<br>
+<br>
+Conclusión<br>
+- La clase Scanner es una herramienta poderosa y flexible para leer datos de entrada en Java. Conociendo su sintaxis y métodos, puedes manejar diferentes tipos de datos de manera eficiente. Siguiendo las mejores prácticas, te aseguras de que tu código sea robusto y fácil de mantener.<br>
+<br>
+Recursos Adicionales<br>
+&emsp;• Java Documentation - Scanner<br>
+&emsp;• Common Scanner Issues - Stack Overflow<br>
+<br>
+Saludos!<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

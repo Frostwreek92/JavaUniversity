@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>005-18-00-SOLUCION-CALCULOAREARECTANGULO-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class CalculoAreaRectangulo {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Cálculo del Área de un Rectángulo ***");<br>
+<br>
+&emsp;&emsp;var consola = new Scanner(System.in);<br>
+<br>
+&emsp;&emsp;System.out.print("Proporciona la base: ");<br>
+&emsp;&emsp;var base = Integer.parseInt(consola.nextLine());<br>
+<br>
+&emsp;&emsp;System.out.print("Proporciona la altura: ");<br>
+&emsp;&emsp;var altura = Integer.parseInt(consola.nextLine());<br>
+<br>
+&emsp;&emsp;// Realizamos el calculo del area<br>
+&emsp;&emsp;var areaRectangulo = base * altura;<br>
+&emsp;&emsp;System.out.println("Área del rectángulo: " + areaRectangulo);<br>
+<br>
+&emsp;&emsp;// Realizamos el cálculo del perímetro<br>
+&emsp;&emsp;var perimetroRectangulo = (base + altura) * 2;<br>
+&emsp;&emsp;System.out.println("Perímetro del rectángulo: " + perimetroRectangulo);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->

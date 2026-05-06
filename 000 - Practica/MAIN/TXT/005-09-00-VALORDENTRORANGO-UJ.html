@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" type="text/css" href="../CSS/estiloTXT.css" media="screen" />
+            <title>005-09-00-VALORDENTRORANGO-UJ</title>
+        </head>
+        <body>
+            <p>
+    import java.util.Scanner;<br>
+<br>
+public class ValorDentroRango {<br>
+&emsp;public static void main(String[] args) {<br>
+&emsp;&emsp;System.out.println("*** Valor Dentro Rango ***");<br>
+&emsp;&emsp;// Definimos los limites<br>
+&emsp;&emsp;final var MINIMO = 0;<br>
+&emsp;&emsp;final var MAXIMO = 5;<br>
+&emsp;&emsp;// Solicitar un valor entre 0 y 5<br>
+&emsp;&emsp;System.out.print("Proporciona un dato entre 0 y 5: ");<br>
+&emsp;&emsp;var dato = Integer.parseInt(new Scanner(System.in).nextLine());<br>
+&emsp;&emsp;// Verificar si el dato esta dentro de rango<br>
+&emsp;&emsp;var estaDentroRango = dato &gt;= MINIMO && dato &lt;= MAXIMO;<br>
+&emsp;&emsp;System.out.println("estaDentroRango?  " + estaDentroRango);<br>
+&emsp;}<br>
+}<br>
+<br>
+
+            </p>
+        </body>
+    </html>
+            <!--
+                &emsp; = Tabular grande
+                &ensp; = Tabular pequeña
+                <br> = Salto de línea
+                &lt; = <
+                &gt; = >
+            -->
